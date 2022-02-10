@@ -258,6 +258,7 @@ p {
         -ms-flex-pack: center;
             justify-content: center;
     gap: 2em;
+    margin-bottom: 1em;
   }
   h4 {
     margin: 0;
@@ -273,6 +274,7 @@ p {
         -ms-flex-pack: center;
             justify-content: center;
     gap: 5em;
+    margin-bottom: 1em;
   }
   .contact-section .container .contact-left .contact-left-right .container {
     display: -webkit-box;
