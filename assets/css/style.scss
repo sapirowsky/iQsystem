@@ -1,0 +1,327 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap");
+
+:root{
+    --defaultText-color: white;
+    --primary-color: #373a3c;
+    --secondary-color: #6c63ff;
+    --secondary-color2: rgb(60, 60, 220);
+    --addons-color: rgb(134, 3, 3);
+    --background-color: #ffffff;
+    --second-background-color: #20272e;
+    --link-color: #444444;
+    --subhead-color: gray;
+}
+
+body{
+    background: var(--background-color);
+    margin: 0;
+    font-family: "Poppins";
+    line-height: 1.5;
+    
+}
+
+header{
+    background: var(--background-color);
+    padding: 1em;
+    box-shadow: 0 1px 10px 0 rgba(0, 0, 0, .4);
+    .logo{
+        text-decoration: none;
+        font-weight: bold;
+        color: var(--secondary-color2);
+        font-size: 1.2em;
+
+        span{
+        color: var(--addons-color);
+        }
+    }
+    nav{
+        display: none;
+    }
+    .container{
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        place-content: space-between;
+    }
+    .mobile-menu{
+        cursor: pointer;
+    }
+}
+.contact{
+    margin-bottom: 1.5em;
+}
+.menu-btn{
+    display: block;
+}
+.mobile-menu-exit{
+    float: right;
+    padding: 0.5em;
+    cursor: pointer;
+}
+nav {
+overflow-y: scroll;
+position: fixed;
+z-index: 999;
+width: 66%;
+right: 0;
+top: 0;
+color: var(--defaultText-color);
+background: var(--second-background-color);
+height: 100vh;
+padding: 1em;
+text-align: right;
+    .a-start{
+        margin-top: 5em;
+    }
+    a{
+        color: white;
+        text-decoration: none;
+        display: block;
+        padding: 0.5em;
+        font-size: 1.3em;
+        
+
+        &:hover{
+            font-weight: bold;
+        }
+    }
+    .div-click{
+        // float: right;
+        color: white;
+        text-decoration: none;
+        display: block;
+        padding: 0.5em;
+        font-size: 1.3em;
+        text-align: right;
+        &:hover{
+            cursor: pointer;
+            font-weight: bold;
+        }
+    }
+}
+.subnav-content{
+    display: none;
+}
+.subnav-content-active{
+    display: block !important;
+    color: white;
+    text-decoration: none;
+    display: block;
+    padding: 0.5em;
+    font-size: 0.6em;
+    text-align: right;
+}
+.spacer-img{
+    width: 100%;
+}
+a{
+    color: var(--link-color);
+    text-decoration: none;
+}
+ul{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+section{
+    padding: 2em 2em;
+}
+.hero{
+    text-align: center;
+
+}
+.left-col {
+    .subhead{
+      text-transform: uppercase;
+      font-weight: bold;
+      color: var(--subhead-color);
+    }
+  
+    h1{
+      font-size: 2.3em;
+      line-height: 1.3em;
+      margin-top: 0.2em;
+    }
+    .primary-cta{
+      background-color: var(--secondary-color);
+      color: var(--defaultText-color);
+      padding: 0.6em 1.3em;
+      font-size: 1.4em;
+      border-radius: 5em;
+      font-weight: bold;
+      display: inline-block;
+      &:hover{
+        background-color: var(--secondary-color2);
+      }
+    }
+}
+.hero-img{
+    width: 70%;
+    margin-top: 3em;
+}
+.rotated{
+    transform: rotate(-90deg);
+}
+.tiles{
+    display: flex;
+    flex-wrap: wrap;
+    padding: 1em 0;
+    gap: 10px;
+    .tile{
+        width: calc(50% - 5px);
+        height: 310px;
+        background-color: #f2f2f2;
+        background-size: cover;
+        background-repeat: no-repeat;
+        border-radius: 5px;
+    }
+}
+// .first-tile{
+//     background-image: url("https://www.komputronik.pl/informacje/wp-content/uploads/2019/03/czym-jest-inteligenty-dom.jpg");
+//     background-position-x: 50%;
+//     background-position-y: 70%;
+// }
+// .second-tile{
+//     background-image: url("https://www.bram-serwis.pl/images/BS_blog_obrazek_wyrozniajacy_inteligentny_dom.jpg");
+// }
+// .third-tile{
+//     background-image: url("https://i0.wp.com/www.budnews.pl/wp-content/uploads/2014/05/inteligentny-dom-szkieletowy.jpg");
+// }
+// .fourth-tile{
+//     background-image: url("https://static.kb.pl/media/uploads/tags/inteligentne-domy/logo2/inteligentne-domy.jpeg");
+// }
+
+
+footer{
+    box-shadow: 0 1px 10px 0 rgba(0, 0, 0, .4);
+    // background-image: linear-gradient(var(--background-color), gray);
+    padding: 0.2em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    p{
+        font-size: 0.7em;
+    }
+}
+
+
+
+@media only screen and (min-width: 768px) {
+  .mobile-menu,
+  .mobile-menu-exit {
+    display: none;
+  }
+
+  .container {
+    display: grid;
+    grid-template-columns: 180px auto;
+  }
+
+  nav .subnav .div-click{
+    display: flex;
+    justify-content: space-between;
+    background: none;
+    position: unset;
+    height: auto;
+    width: 100%;
+    padding: 0;
+    a {
+      font-size: 1em;
+      padding: 0.1em 1em;
+    }
+  
+
+  }
+}
+
+
+
+
+
+@media only screen and (min-width: 1080px) {
+    .container {
+      width: 1080px;
+      margin: 0 auto;
+    }
+  
+    section {
+      padding: 6em 4em;
+    }
+  
+    .hero .container {
+      display: flex;
+      justify-content: space-between;
+      text-align: left;
+  
+      .left-col {
+        margin: 3em 3em 0 5em;
+  
+        h1 {
+          font-size: 3em;
+          width: 90%;
+        }
+      }
+    }
+  
+    .hero-img {
+      width: 30%;
+      margin-right: 8em;
+    }
+  
+    .hero-cta {
+      display: flex;
+    }
+    .primary-cta {
+      margin-right: 1em;
+    }
+  
+    ul.features-list {
+      display: block;
+      margin-left: 5em;
+  
+      li {
+        font-size: 1.4em;
+  
+        &:before {
+          width: 30px;
+          height: 30px;
+        }
+      }
+    }
+    .features-section {
+      position: relative;
+  
+      img {
+        display: block;
+        position: absolute;
+        right: 0;
+        width: 350px;
+        bottom: -2em;
+      }
+    }
+    .testimonials-section ul {
+      display: flex;
+  
+      li {
+        margin: 0 1em;
+      }
+    }
+    .contact-section {
+      position: relative;
+  
+      .container {
+        display: flex;
+      }
+    }
+    .contact-right {
+      position: absolute;
+      right: 0;
+      top: 0;
+      width: 45%;
+      height: 100%;
+  
+      iframe {
+        height: 100%;
+      }
+    }
+  }
