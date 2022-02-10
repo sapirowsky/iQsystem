@@ -22,7 +22,7 @@ body{
 
 header{
     background: var(--background-color);
-    padding: 1em;
+    padding: 1em 2em;
     box-shadow: 0 1px 10px 0 rgba(0, 0, 0, .4);
     .logo{
         text-decoration: none;
@@ -128,7 +128,6 @@ section{
 }
 .hero{
     text-align: center;
-
 }
 .left-col {
     .subhead{
@@ -176,22 +175,14 @@ section{
         border-radius: 5px;
     }
 }
-// .first-tile{
-//     background-image: url("https://www.komputronik.pl/informacje/wp-content/uploads/2019/03/czym-jest-inteligenty-dom.jpg");
-//     background-position-x: 50%;
-//     background-position-y: 70%;
-// }
-// .second-tile{
-//     background-image: url("https://www.bram-serwis.pl/images/BS_blog_obrazek_wyrozniajacy_inteligentny_dom.jpg");
-// }
-// .third-tile{
-//     background-image: url("https://i0.wp.com/www.budnews.pl/wp-content/uploads/2014/05/inteligentny-dom-szkieletowy.jpg");
-// }
-// .fourth-tile{
-//     background-image: url("https://static.kb.pl/media/uploads/tags/inteligentne-domy/logo2/inteligentne-domy.jpeg");
-// }
-
-
+.contact-section .container{
+  height: 100%;
+  width: 100%;
+}
+iframe {
+  width: 100%;
+  height: 300px;
+}
 footer{
     box-shadow: 0 1px 10px 0 rgba(0, 0, 0, .4);
     // background-image: linear-gradient(var(--background-color), gray);
@@ -205,21 +196,70 @@ footer{
 }
 
 
+h2{
+  margin: 0.5rem 0rem;
+} 
+h4{
+  margin: 0rem 0.2rem;
+}
+p{
+margin: 0.2rem 0.4rem;
+}
+@media only screen and (max-width: 500px){
+  .contact-left{
+    margin-left: 2em;
+    margin-bottom: 2em;
+  }
+}
+@media only screen and (min-width: 500px) and (max-width: 700px){
+  .contact-left{
+    display: flex;
+    justify-content: center;
+    gap: 2em;
+  }
+  h4{
+    margin: 0;
+  }
+}
 
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 700px) and (max-width: 850px){
+  .contact-section{
+    .container{
+      .contact-left{
+        display: flex;
+        justify-content: center;
+        gap: 5em;
+        .contact-left-right{
+          .container{
+            display: flex;
+            justify-content: center;
+            gap: 2em;
+          }
+        }
+      }
+    }
+  }  
+}
+@media only screen and (min-width: 850px) {
   .mobile-menu,
   .mobile-menu-exit {
     display: none;
   }
 
-  .container {
+  header div.container {
     display: grid;
     grid-template-columns: 180px auto;
   }
-
-  nav .subnav .div-click{
+  header nav{
+    display: flex;
+  }
+  a.logo{
+    font-size: 1.5rem;
+  }
+  nav{
     display: flex;
     justify-content: space-between;
+    overflow-y: hidden;
     background: none;
     position: unset;
     height: auto;
@@ -227,10 +267,43 @@ footer{
     padding: 0;
     a {
       font-size: 1em;
-      padding: 0.1em 1em;
+      padding: 0.5rem;
+      color: black;
+      margin: 0 !important;
     }
-  
-
+    div.div-click{
+      color: black;
+      font-size: 1em;
+    }
+  }
+  .contact-section {
+    position: relative;
+    height: 74vh;
+    .container {
+      display: flex;
+    }  
+  }
+  .contact-left{
+    margin: auto auto auto 1em;
+  }
+  .contact-right {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 45%;
+    height: 100%;
+    iframe {
+      height: 100%;
+    }
+  }
+  .contact{
+    background-color: var(--secondary-color);
+    color: var(--defaultText-color);
+    border-radius: 5em;
+    font-weight: bold;
+    &:hover{
+      background-color: var(--secondary-color2);
+    }
   }
 }
 
@@ -240,7 +313,7 @@ footer{
 
 @media only screen and (min-width: 1080px) {
     .container {
-      width: 1080px;
+      width: 90vw;
       margin: 0 auto;
     }
   
@@ -308,7 +381,8 @@ footer{
     }
     .contact-section {
       position: relative;
-  
+      padding: 2.9%;
+      height: 73.5vh;
       .container {
         display: flex;
       }
@@ -319,9 +393,29 @@ footer{
       top: 0;
       width: 45%;
       height: 100%;
-  
       iframe {
         height: 100%;
       }
     }
+  }
+
+
+@media only screen and (min-width: 1260px){
+    .contact-left{
+      margin: auto auto auto 1em;
+    }
+    .contact-left-left{
+      min-width: 10em;
+    }
+    .contact-left-right{
+      .container{
+      display: flex;
+      gap: 2em;
+      max-width: 30vw;
+    }}
+    .contactData-h2{
+      margin-top: .7rem !important;
+    }
+    
+    
   }
