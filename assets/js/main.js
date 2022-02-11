@@ -73,3 +73,9 @@ divClick4.addEventListener('click', () => {
         subnavContent4.classList.add('subnav-content-active')
     }
 })
+
+const bodyClick = document.querySelector('.click')
+
+bodyClick.addEventListener('click', () => {
+    subnavContentHiding()
+})
