@@ -38,22 +38,38 @@ function subnavContentHiding() {
 // Poniższe linie nasluchuja czy uzytkownik kliknal w 1 z 4 opcji menu
 // Po kliknieciu uruchamiana jest powyzsza funkcja oraz wysuwane podmenu
 divClick1.addEventListener('click', () => {
-    subnavContentHiding()
-    i1.classList.add('rotated')
-    subnavContent1.classList.add('subnav-content-active')
+    if (subnavContent1.classList.contains('subnav-content-active')) {
+        subnavContentHiding()
+    } else {
+        subnavContentHiding()
+        i1.classList.add('rotated')
+        subnavContent1.classList.add('subnav-content-active')
+    }
 })
 divClick2.addEventListener('click', () => {
-    subnavContentHiding()
-    i2.classList.add('rotated')
-    subnavContent2.classList.add('subnav-content-active')
+    if (subnavContent2.classList.contains('subnav-content-active')) {
+        subnavContentHiding()
+    } else {
+        subnavContentHiding()
+        i2.classList.add('rotated')
+        subnavContent2.classList.add('subnav-content-active')
+    }
 })
 divClick3.addEventListener('click', () => {
-    subnavContentHiding()
-    i3.classList.add('rotated')
-    subnavContent3.classList.add('subnav-content-active')
+    if (subnavContent3.classList.contains('subnav-content-active')) {
+        subnavContentHiding()
+    } else {
+        subnavContentHiding()
+        i3.classList.add('rotated')
+        subnavContent3.classList.add('subnav-content-active')
+    }
 })
 divClick4.addEventListener('click', () => {
-    subnavContentHiding()
-    i4.classList.add('rotated')
-    subnavContent4.classList.add('subnav-content-active')
+    if (subnavContent4.classList.contains('subnav-content-active')) {
+        subnavContentHiding()
+    } else {
+        subnavContentHiding()
+        i4.classList.add('rotated')
+        subnavContent4.classList.add('subnav-content-active')
+    }
 })
