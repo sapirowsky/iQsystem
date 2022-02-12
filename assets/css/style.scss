@@ -10,6 +10,7 @@
     --second-background-color: #20272e;
     --link-color: #444444;
     --subhead-color: gray;
+    --background-color-darker: #f2f2f2;
 }
 
 body{
@@ -132,6 +133,9 @@ section{
 .hero{
     text-align: center;
 }
+.left-col-range{
+  margin-top: 2rem;
+}
 .left-col {
     .subhead{
       text-transform: uppercase;
@@ -166,17 +170,42 @@ section{
 }
 .tiles{
     display: flex;
+    justify-content: center;
     flex-wrap: wrap;
     padding: 1em 0;
-    gap: 10px;
+    gap: 20px;
+    margin: 1rem 2rem;
     .tile{
-        width: calc(50% - 5px);
-        height: 310px;
-        background-color: #f2f2f2;
+        width: 100%;
+        padding: 2rem;
+        height: auto;
+        background-color: var(--background-color-darker);
         background-size: cover;
         background-repeat: no-repeat;
         border-radius: 5px;
-    }
+        .link-container{
+          width: 100%;
+          overflow: auto;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          .learnMore{
+            background-color: var(--secondary-color);
+            border-radius: 5rem;
+            color: var(--defaultText-color);
+            font-weight: bold;
+            height: 3rem;
+            width: 10rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 1em;
+            &:hover{
+              background-color: var(--secondary-color2);
+            }
+          }
+        }
+    }    
 }
 .contact-section .container{
   height: 100%;
@@ -279,9 +308,163 @@ main.about{
     }
   }
 }
+main.about{
+  .container{
+    .fewwords3{
+      margin-top: 2em;
+      display: flex;
+      justify-content: center;
+      .caption3{
+        display: grid;
+        grid-template-columns: auto;
+        grid-template-rows: auto;
+        grid-template-areas:"start ." ". end";
+        margin-left: 2.7rem;
+        column-gap: 1rem;
+        height: 6.5rem;
+        .start3{
+          grid-area: start;
+        }
+        .end3{
+          grid-area: end;
+        }
+        .line3{
+          height: 6.5rem;
+          width: 2px;
+          background-image: linear-gradient(var(--addons-color), var(--secondary-color));
+          position: absolute;
+          left: 50%;
+        }
+      }
+    }
+    h1{
+      font-weight: normal;
+      font-size: large;
+    }
+  }
+}
 
-
-
+main.partners-page{
+  section, .partners{
+    padding: 1rem 2rem;
+  }
+  .left-col{
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: auto;
+    grid-template-areas:"nexwell moeller" "legrand satel";
+    
+    .nexwell{
+      grid-area: nexwell;
+      border: 1px solid rgba(0,0,0,.125);
+      border-top-left-radius: .25rem;
+    }
+    .moeller{
+      grid-area: moeller;
+      border: 1px solid rgba(0,0,0,.125);
+      border-left: 0;
+      border-top-right-radius: .25rem;
+    }
+    .legrand{
+      grid-area: legrand;
+      border: 1px solid rgba(0,0,0,.125);
+      border-top: 0;
+      
+    }
+    .satel{
+      grid-area: satel;
+      border: 1px solid rgba(0,0,0,.125);
+      border-left: 0;
+      border-top: 0;
+      
+    }
+    .nexwell,.moeller,.legrand,.satel{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 12px 20px;
+      a{
+        font-weight: normal;
+      }
+      &:hover{
+        background-color: var(--secondary-color);
+        border-color: var(--secondary-color);
+        a{
+          color: white;
+        }
+      }
+    }
+    .active{
+      background-color: var(--secondary-color);
+      border-color: var(--secondary-color);
+      a{
+        color: white;
+      }
+    }
+  }
+  .right-col{
+    border: 1px solid rgba(0,0,0,.125);
+    border-top: 0;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    padding: 12px 20px;
+    div{
+      display: none;
+    }
+    .active{
+      display: block !important;
+      .partner-link-div{
+        display: flex;
+        justify-content: end;
+        width: 100%;
+        height: auto;
+        .partner-link{
+          display: block ;
+          margin: 1rem;
+          padding: 1rem;
+          color: var(--defaultText-color);
+          border-radius: 5rem;
+          background-color: var(--secondary-color);
+          width: auto;
+          &:hover{
+            background-color: var(--secondary-color2);
+          }
+        }
+      }
+    }
+  }
+}
+.partnership{
+  padding: 0 2rem 1rem 2rem;
+  span{
+    font-weight: bold;
+  }
+  .container{
+    display: flex;
+    flex-wrap: wrap;
+    img{
+      margin: 1rem;
+    }
+  }
+  .partner-link-div{
+    display: flex;
+    justify-content: end;
+    width: 100%;
+    height: auto;
+    .partner-link{
+      display: block ;
+      margin: 1rem;
+      padding: 1rem;
+      color: var(--defaultText-color);
+      border-radius: 5rem;
+      background-color: var(--secondary-color);
+      width: auto;
+      &:hover{
+        background-color: var(--secondary-color2);
+      }
+    }
+  }
+}
 
 
 
@@ -334,6 +517,7 @@ main.about{
   }
   header nav{
     display: flex;
+
   }
   a.logo{
     font-size: 1.5rem;
@@ -406,7 +590,7 @@ main.about{
         position: absolute;
         content: '';
         height: 2px;
-        bottom: 0px;
+        bottom: 6px;
 
         margin: 0 auto;
 		    left: 0;
@@ -428,6 +612,85 @@ main.about{
       }
     }
   }
+  .tiles{
+    display: flex;
+    .tile{
+      width: calc(40% - 5px);
+        .link-container{
+          display: flex;
+          justify-content: end;
+          .learnMore-range{
+            margin-top: 4em;
+          }
+        }
+    }
+}
+main.partners-page{
+  section, .partners{
+    padding: 2rem 6rem;
+  }
+  div.partners{
+    display: flex;
+  }
+  .left-col{
+    display: block;
+    position: absolute;
+    height: 100%;
+    margin: auto;
+    .nexwell{
+      border: 1px solid rgba(0,0,0,.125);
+      border-radius: 0;
+      border-right: 0;
+      border-bottom: 0;
+      border-top-left-radius: 5px;
+    }
+    .moeller{
+      border: 1px solid rgba(0,0,0,.125);
+      border-radius: 0;
+      border-right: 0;
+      border-bottom: 0;
+    }
+    .legrand{
+      border: 1px solid rgba(0,0,0,.125);
+      border-radius: 0;
+      border-right: 0;
+      border-bottom: 0;
+    }
+    .satel{
+      border: 1px solid rgba(0,0,0,.125);
+      border-radius: 0;
+      border-right: 0;
+      border-bottom-left-radius: 5px;
+    }
+  }
+  .right-col{
+    border: 1px solid rgba(0,0,0,.125);
+    border-radius: 0;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    position: relative;
+    left: 105px;
+    width: 89%;
+   
+  }
+  .partnership{
+    padding: 0 6rem 2rem 6rem;
+    span{
+      font-weight: bold;
+    }
+    .container{
+      display: flex;
+      flex-wrap: wrap;
+      img{
+        margin: 1rem;
+      }
+      
+    }
+  }
+}
+.partners-footer{
+  margin-top: 5rem;
+}
 }
 @media only screen and (min-width: 1080px) {
     .container {
@@ -453,7 +716,6 @@ main.about{
         }
       }
     }
-  
     .hero-img {
       width: 30%;
       margin-right: 8em;
@@ -525,12 +787,13 @@ main.about{
       }
     }
   }
+  .contact-left{
+    margin: auto auto auto 4em;
+  }
 }
-
-
 @media only screen and (min-width: 1260px){
     .contact-left{
-      margin: auto auto auto 1em;
+      margin: auto auto auto 5em;
     }
     .contact-left-left{
       min-width: 10em;
@@ -544,6 +807,4 @@ main.about{
     .contactData-h2{
       margin-top: .7rem !important;
     }
-    
-    
-  }
+}
