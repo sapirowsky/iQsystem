@@ -132,6 +132,14 @@ section{
 }
 .hero{
     text-align: center;
+    .left-col{
+      ul{
+        list-style-type: disc;
+      }
+      li{
+        margin-left: 3rem;
+      }
+    }
 }
 .left-col-range{
   margin-top: 2rem;
@@ -465,8 +473,34 @@ main.partners-page{
     }
   }
 }
-
-
+.container-certyficates{
+  display: block;
+  .left{
+    
+    padding: 1rem;
+    
+    img{
+      display: block;
+      margin: auto;
+    }
+  }
+  .right{
+    padding: 1rem;
+    img{
+      display: block;
+      margin: auto;
+    }
+    ul{
+      list-style-type: disc;
+    }
+    li{
+      margin-left: 3rem;
+    }
+  }
+}
+.img-margin-top{
+  margin-top: 3rem !important;
+}
 
 @media only screen and (max-width: 500px){
   .contact-left{
@@ -790,6 +824,28 @@ main.partners-page{
   .contact-left{
     margin: auto auto auto 4em;
   }
+  .container-certyficates{
+    display: flex;
+    justify-content: space-between;
+    padding: 0 6rem;
+    gap: 10px;
+    .left{
+      width: 45vw;
+      padding: 1rem;
+    }
+    .right{
+      width: 45vw;
+      padding: 1rem;
+    }
+    .greatline{
+      position: absolute;
+      content: '';
+      height: 34rem;
+      width: 2px;
+      left: 50%;
+      background-image: linear-gradient(var(--addons-color), var(--secondary-color));
+    }
+  }
 }
 @media only screen and (min-width: 1260px){
     .contact-left{
@@ -806,5 +862,8 @@ main.partners-page{
     }}
     .contactData-h2{
       margin-top: .7rem !important;
+    }
+    main.partners-page{
+      padding: 1rem 2rem;
     }
 }

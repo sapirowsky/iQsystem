@@ -151,6 +151,14 @@ section {
   text-align: center;
 }
 
+.hero .left-col ul {
+  list-style-type: disc;
+}
+
+.hero .left-col li {
+  margin-left: 3rem;
+}
+
 .left-col-range {
   margin-top: 2rem;
 }
@@ -612,6 +620,40 @@ main.partners-page .right-col .active .partner-link-div .partner-link:hover {
   background-color: var(--secondary-color2);
 }
 
+.container-certyficates {
+  display: block;
+}
+
+.container-certyficates .left {
+  padding: 1rem;
+}
+
+.container-certyficates .left img {
+  display: block;
+  margin: auto;
+}
+
+.container-certyficates .right {
+  padding: 1rem;
+}
+
+.container-certyficates .right img {
+  display: block;
+  margin: auto;
+}
+
+.container-certyficates .right ul {
+  list-style-type: disc;
+}
+
+.container-certyficates .right li {
+  margin-left: 3rem;
+}
+
+.img-margin-top {
+  margin-top: 3rem !important;
+}
+
 @media only screen and (max-width: 500px) {
   .contact-left {
     margin-left: 2em;
@@ -948,6 +990,33 @@ main.partners-page .right-col .active .partner-link-div .partner-link:hover {
   .contact-left {
     margin: auto auto auto 4em;
   }
+  .container-certyficates {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    padding: 0 6rem;
+    gap: 10px;
+  }
+  .container-certyficates .left {
+    width: 45vw;
+    padding: 1rem;
+  }
+  .container-certyficates .right {
+    width: 45vw;
+    padding: 1rem;
+  }
+  .container-certyficates .greatline {
+    position: absolute;
+    content: '';
+    height: 34rem;
+    width: 2px;
+    left: 50%;
+    background-image: -webkit-gradient(linear, left top, left bottom, from(var(--addons-color)), to(var(--secondary-color)));
+    background-image: linear-gradient(var(--addons-color), var(--secondary-color));
+  }
 }
 
 @media only screen and (min-width: 1260px) {
@@ -966,6 +1035,9 @@ main.partners-page .right-col .active .partner-link-div .partner-link:hover {
   }
   .contactData-h2 {
     margin-top: .7rem !important;
+  }
+  main.partners-page {
+    padding: 1rem 2rem;
   }
 }
 /*# sourceMappingURL=style.css.map */
