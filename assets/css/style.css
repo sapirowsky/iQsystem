@@ -56,6 +56,10 @@ header .mobile-menu {
   cursor: pointer;
 }
 
+.currently-active-nav {
+  font-weight: bold;
+}
+
 .contact {
   margin-bottom: 1.5em;
 }
@@ -163,7 +167,7 @@ section {
   margin-top: 2rem;
 }
 
-.left-col .subhead {
+.subhead {
   text-transform: uppercase;
   font-weight: bold;
   color: var(--subhead-color);
@@ -222,6 +226,11 @@ section {
   background-size: cover;
   background-repeat: no-repeat;
   border-radius: 5px;
+}
+
+.tiles .tile ul {
+  list-style-type: disc;
+  padding-left: 3rem;
 }
 
 .tiles .tile .link-container {
@@ -665,6 +674,11 @@ main.subpages ul {
 
 main.subpages ul ol {
   list-style-type: circle;
+  padding-left: 1.5rem;
+}
+
+main.subpages ul ol ul {
+  padding-left: 1.5rem;
 }
 
 main.subpages ul li {
@@ -681,6 +695,14 @@ main.subpages .h3-non-margin {
 
 main.subpages h2 {
   margin-top: 4rem;
+}
+
+.electric {
+  color: var(--secondary-color);
+}
+
+.electric:hover {
+  color: var(--secondary-color2);
 }
 
 @media only screen and (max-width: 500px) {

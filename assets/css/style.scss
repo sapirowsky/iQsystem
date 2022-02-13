@@ -51,6 +51,9 @@ header{
         cursor: pointer;
     }
 }
+.currently-active-nav{
+  font-weight: bold;
+}
 .contact{
     margin-bottom: 1.5em;
 }
@@ -144,13 +147,12 @@ section{
 .left-col-range{
   margin-top: 2rem;
 }
+.subhead{
+  text-transform: uppercase;
+  font-weight: bold;
+  color: var(--subhead-color);
+}
 .left-col {
-    .subhead{
-      text-transform: uppercase;
-      font-weight: bold;
-      color: var(--subhead-color);
-    }
-  
     h1{
       font-size: 2.3em;
       line-height: 1.3em;
@@ -191,6 +193,11 @@ section{
         background-size: cover;
         background-repeat: no-repeat;
         border-radius: 5px;
+        ul{
+          list-style-type: disc;
+          padding-left: 3rem;
+
+        }
         .link-container{
           width: 100%;
           overflow: auto;
@@ -507,6 +514,10 @@ main.subpages{
     list-style-type: disc;
     ol{
       list-style-type: circle;
+      padding-left: 1.5rem;
+      ul{
+        padding-left: 1.5rem;
+      }
     }
     li{
       margin-left: 3rem;
@@ -520,6 +531,12 @@ main.subpages{
   }
   h2{
     margin-top: 4rem;
+  }
+}
+.electric{
+  color: var(--secondary-color);
+  &:hover{
+    color: var(--secondary-color2);
   }
 }
 @media only screen and (max-width: 500px){
@@ -746,6 +763,7 @@ main.partners-page{
   margin-top: 5rem;
 }
 }
+
 @media only screen and (min-width: 1080px) {
     .container {
       width: 90vw;
