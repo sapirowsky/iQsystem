@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pl">
 
 <head>
 
@@ -7,6 +7,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- Font awesome dla strzałek menu -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+
+
     <link rel="stylesheet" href="assets/css/style.css">
     <title>iQsystem - Inteligentne</title>
     <meta name="description"
@@ -17,259 +22,295 @@
 </head>
 
 <body>
-    <header>
-        <div class="container">
-            <a class="logo" href="index.html"><span>iQ</span>system</a>
+    <div class="position-fixed">
+        <header>
+            <div class="container">
+                <a class="logo" href="index.html"><span>iQ</span>system</a>
 
-            <img id="mobile-cta" class="mobile-menu" src="assets/img/menu.svg" alt="Open nav">
+                <img id="mobile-cta" class="mobile-menu" src="assets/img/menu.svg" alt="Open nav">
 
-            <nav>
-                <img id="mobile-exit" class="mobile-menu-exit" src="assets/img/exit.svg" alt="Close nav">
-                <a class="a-start" style="top: 15%;" href="index.html">Start</a>
-                <div class="subnav">
+                <nav>
+                    <img id="mobile-exit" class="mobile-menu-exit" src="assets/img/exit.svg" alt="Close nav">
+                    <a class="a-start" style="top: 15%;" href="index.html">Start</a>
+                    <div class="subnav">
 
-                    <div id="div-click1" class="div-click">Firma <i id="i1" class="fa fa-caret-down ii"></i></div>
-                    <div id="subnav-content1" class="subnav-content">
-                        <a href="about.html">O firmie</a>
-                        <a href="partners.html">Partnerzy</a>
-                        <a href="certificates.html">Certyfikaty</a>
+                        <div id="div-click1" class="div-click">Firma <i id="i1" class="fa fa-caret-down ii"></i></div>
+                        <div id="subnav-content1" class="subnav-content">
+                            <a href="about.html">O firmie</a>
+                            <a href="partners.html">Partnerzy</a>
+                            <a href="certificates.html">Certyfikaty</a>
+                        </div>
                     </div>
-                </div>
-                <div class="subnav">
-                    <div id="div-click2" class="div-click">Usługi <i id="i2" class="fa fa-caret-down ii"></i></div>
-                    <div id="subnav-content2" class="subnav-content">
-                        <a href="offer.html">Oferta</a>
-                        <a href="project.html">Projekt</a>
-                        <a href="execution.html">Wykonanie</a>
-                        <a href="activation.html">Uruchomienie</a>
+                    <div class="subnav">
+                        <div id="div-click2" class="div-click">Usługi <i id="i2" class="fa fa-caret-down ii"></i></div>
+                        <div id="subnav-content2" class="subnav-content">
+                            <a href="offer.html">Oferta</a>
+                            <a href="project.html">Projekt</a>
+                            <a href="execution.html">Wykonanie</a>
+                            <a href="activation.html">Uruchomienie</a>
+                        </div>
                     </div>
-                </div>
-                <div class="subnav">
-                    <div id="div-click3" class="div-click currently-active-nav">Instalacje <i id="i3"
-                            class="fa fa-caret-down ii"></i></div>
-                    <div id="subnav-content3" class="subnav-content">
-                        <a href="introduction.html">Wstęp</a>
-                        <a href="electric.html">Elektryczne</a>
-                        <a href="intelligent.html" class="currently-active-nav">Inteligentne</a>
-                        <a href="alarm.html">Alarmowe</a>
-                        <a href="telecommunication.html">Teletechniczne</a>
+                    <div class="subnav">
+                        <div id="div-click3" class="div-click currently-active-nav">Instalacje <i id="i3"
+                                class="fa fa-caret-down ii"></i></div>
+                        <div id="subnav-content3" class="subnav-content">
+                            <a href="introduction.html">Wstęp</a>
+                            <a href="electric.html">Elektryczne</a>
+                            <a href="intelligent.html" class="currently-active-nav">Inteligentne</a>
+                            <a href="alarm.html">Alarmowe</a>
+                            <a href="telecommunication.html">Teletechniczne</a>
+                        </div>
                     </div>
-                </div>
-                <div class="subnav">
-                    <div id="div-click4" class="div-click">Inteligentny Budynek <i id="i4"
-                            class="fa fa-caret-down ii"></i></div>
-                    <div id="subnav-content4" class="subnav-content">
-                        <a href="definition.html">Definicja</a>
-                        <a href="benefits.html">Korzyści</a>
-                        <a href="application.html">Zastosowanie</a>
+                    <div class="subnav">
+                        <div id="div-click4" class="div-click">Inteligentny Budynek <i id="i4"
+                                class="fa fa-caret-down ii"></i></div>
+                        <div id="subnav-content4" class="subnav-content">
+                            <a href="definition.html">Definicja</a>
+                            <a href="benefits.html">Korzyści</a>
+                            <a href="application.html">Zastosowanie</a>
+                        </div>
                     </div>
-                </div>
-                <a class="contact" href="contact.html">Kontakt</a>
-            </nav>
-        </div>
-    </header>
-    <main class="subpages click">
-        <h1>INTELIGENTNE INSTALACJE</h1>
-        <p class="subhead">INTEGRACJA wszystkich instalacji ELEKTRYCZNYCH i MULTIMEDIALNYCH!</p>
-        <h3>Integracja instalacji w budynku</h3>
-        <p>Celem inteligentnej instalacji jest integracja wszystkich występujących w budynku instalacji i systemów w
-            jedną funkcjonalną całość. Uzyskane w ten sposób zależności pomiędzy instalacjami umożliwiają połączenie
-            funkcji współpracujących ze sobą systemów oraz ich optymalizację. Rozwiązanie takie znacząco podnosi komfort
-            obsługi, bezpieczeństwo i wpływa na zmniejszenie zużycia energii. Integracja instalacji obniża koszty
-            zarówno na poziomie wykonawstwa, jak również podczas użytkowania i serwisowania obiektu. Pozwala także na
-            późniejsze dokonywanie zmian bez ingerencji w okablowanie i bez kucia ścian. Tego typu inteligentne
-            rozwiązania znajdują zastosowanie w szeroko pojętym budownictwie mieszkaniowym, w obiektach użyteczności
-            publicznej i przemyśle. </p>
-        <h3>Cechy inteligentnej instalacji</h3>
-        <ol>
-            <li>
-                <p><b>Łatwa obsługa</b></p>
-                <p>To istotna zaleta inteligentnej instalacji elektrycznej. Każdy klawisz na wyłączniku jest dokładnie
-                    opisany, dzięki czemu nie musimy zastanawiać się, które urządzenie lub jaką grupę właśnie
-                    uruchamiamy. Z myślą o najmłodszych stworzono możliwość wstawienia obrazków do przycisków,
-                    obrazujących dziecku funkcję danego klawisza.</p>
-            </li>
-            <li>
-                <p><b>Jeden wyłącznik</b></p>
-                <p>W instalacji inteligentnej dowolny klawisz wyłącznika lub przycisk panelu LCD służy zarówno do
-                    obsługi oświetlenia, rolet, regulacji i odczytu temperatury, sterowania klimatyzacją oraz
-                    urządzeniami audio-wizualnymi.</p>
-            </li>
-            <li>
-                <p><b>Sceny</b></p>
-                <p>To niekonwencjonalna metoda sterowania obwodami elektrycznymi. Poszczególne odbiorniki mogą być
-                    załączane pojedynczo lub grupami, a to wszystko za jednym dotknięciem przycisku. W każdej scenie
-                    może brać udział różna ilość odbiorników, w różnej konfiguracji.
-                    Naciśnięcie dowolnie wybranego klawisza wyłącznika w danym pomieszczeniu, powoduje na przykład
-                    jednoczesne przyciemnienie światła, opuszczenie żaluzji i ekranu, włączenie systemu audiowizualnego
-                    i klimatyzacji, przygotowując w ten sposób pomieszczenie do oglądania filmu z projektora.</p>
-            </li>
-            <li>
-                <p><b>Prostota</b></p>
-                <p>Wszystkie urządzenia oraz przyciski połączone są jednym kablem magistralnym, umożliwiającym
-                    komunikowanie się wszystkich instalacji w budynku bez dodatkowego okablowania. Zastosowanie
-                    magistrali komunikacyjnej wyraźnie upraszcza strukturę instalacji w stosunku do tradycyjnych
-                    rozwiązań, dając inwestorowi więcej możliwości w kształtowaniu swoich obecnych i przyszłych wymagań
-                    co do ostatecznego kształtu instalacji w budynku. Inwestor nie musi już na etapie projektowania
-                    instalacji określać powiązań pomiędzy urządzeniami i wyłącznikami (przyciskami sterującymi), a
-                    jedynie ich lokalizację. Powiązania zostaną zaprogramowane podczas ostatniego etapu realizacji.</p>
-            </li>
-            <li>
-                <p><b>Elastyczność</b></p>
-                <p>Możliwość przyporządkowania dowolnej funkcji do wybranego klawisza, bez jakiejkolwiek ingerencji w
-                    instalację, sprawia, że dostosowanie funkcjonalności systemu do zmieniających się potrzeb
-                    użytkownika już w trakcie eksploatacji budynku, staje się bardzo łatwe. Odpowiednio przygotowane
-                    okablowanie pozwala na późniejszą rozbudowę systemu i dołożenie nowych funkcji - zgodnie z
-                    aktualnymi oczekiwaniami użytkownika. Nie jest zatem konieczne kupowanie wszystkich urządzeń od
-                    razu.</p>
-            </li>
-            <li>
-                <p><b>Niezawodność</b></p>
-                <p>Systemy automatyki domowej uznawane są za jedne z najbardziej niezawodnych. Ewentualne uszkodzenie
-                    dowolnego urządzenia nie powoduje awarii całego systemu, a jedynie przypisanych do tego elementu
-                    funkcji. Możliwa przerwa w dostawie zasilania nie powoduje wykasowania zaprogramowanych funkcji -
-                    system po awarii zasilania powraca do swoich pierwotnych ustawień.</p>
-            </li>
-        </ol>
-        <h3>Rozwiązania przewodowe</h3>
-        <p>Prawie wszystkie urządzenia aktualnie używane w gospodarstwach domowych są urządzeniami elektrycznymi.
-            Podstawowym zadaniem konwencjonalnej instalacji elektrycznej jest dostarczanie i dystrybucja energii
-            elektrycznej do tych urządzeń oraz wszystkich pozostałych instalacji w budynku, takich jak:</p>
-        <ul>
-            <li>instalacje oświetleniowe wewnętrzne i zewnętrzne,</li>
-            <li>instalacje gniazd zasilających 230V i siły,</li>
-            <li>instalacje sterowania roletami, żaluzjami, markizami, karniszami, siłownikami okiennymi,</li>
-            <li>instalacje sterowania ogrzewaniem, wentylacją, klimatyzacją,</li>
-            <li>instalacje alarmowe i telewizji dozorowej CCTV,</li>
-            <li>instalacje audio-video, multiroom.</li>
-        </ul>
-        <p>Na tym kończy się jej rola. Inteligentna instalacja natomiast, spełnia podobne zadania z tą różnicą, że
-            instalacja elektryczna w inteligentnym budynku ma dodatkową zdolność generowania i wymiany informacji, która
-            może zostać wykorzystana do sterowania, zarządzania bądź nadzoru instalacji i urządzeń elektrycznych - a nie
-            tylko ich zasilania.
-            Dokładając inteligentny, programowalny system sterowania do dedykowanej dla niego, specjalnie
-            zaprojektowanej instalacji elektrycznej otrzymujemy możliwość programowania, konfiguracji i zmiany dowolnych
-            funkcji sterowania urządzeń elektrycznych. Przycisk w dowolnie wybranym łączniku lub ściennym panelu
-            klawiszowym czy dotykowym, któremu przypisana jest przykładowo funkcja włącz/wyłącz oświetlenie w salonie,
-            można w łatwy sposób przeprogramować i przystosować do realizacji dowolnej innej funkcji. Może on sterować
-            scenami świetlnymi, roletą bądź zestawem rolet albo włączać/wyłączać wentylator w dowolnie wybranym
-            pomieszczeniu itp.
-            Na tym nie koniec. Odpowiednio zaprojektowana inteligentna instalacja elektryczna umożliwia rozszerzenie
-            inteligentnego systemu o kolejne urządzenia (czujniki, urządzenia wykonawcze) w dowolnie odległym momencie.
+                    <a class="contact" href="contact.html">Kontakt</a>
+                </nav>
+            </div>
+        </header>
+        <div class="scroll-line"></div>
+    </div>
+    <article>
+        <main class="subpages click">
+            <h1>INTELIGENTNE INSTALACJE</h1>
+            <p class="subhead">INTEGRACJA wszystkich instalacji ELEKTRYCZNYCH i MULTIMEDIALNYCH!</p>
+            <h3>Integracja instalacji w budynku</h3>
+            <p>Celem inteligentnej instalacji jest integracja wszystkich występujących w budynku instalacji i systemów w
+                jedną funkcjonalną całość. Uzyskane w ten sposób zależności pomiędzy instalacjami umożliwiają połączenie
+                funkcji współpracujących ze sobą systemów oraz ich optymalizację. Rozwiązanie takie znacząco podnosi
+                komfort
+                obsługi, bezpieczeństwo i wpływa na zmniejszenie zużycia energii. Integracja instalacji obniża koszty
+                zarówno na poziomie wykonawstwa, jak również podczas użytkowania i serwisowania obiektu. Pozwala także
+                na
+                późniejsze dokonywanie zmian bez ingerencji w okablowanie i bez kucia ścian. Tego typu inteligentne
+                rozwiązania znajdują zastosowanie w szeroko pojętym budownictwie mieszkaniowym, w obiektach użyteczności
+                publicznej i przemyśle. </p>
+            <h3>Cechy inteligentnej instalacji</h3>
+            <ol>
+                <li>
+                    <p><b>Łatwa obsługa</b></p>
+                    <p>To istotna zaleta inteligentnej instalacji elektrycznej. Każdy klawisz na wyłączniku jest
+                        dokładnie
+                        opisany, dzięki czemu nie musimy zastanawiać się, które urządzenie lub jaką grupę właśnie
+                        uruchamiamy. Z myślą o najmłodszych stworzono możliwość wstawienia obrazków do przycisków,
+                        obrazujących dziecku funkcję danego klawisza.</p>
+                </li>
+                <li>
+                    <p><b>Jeden wyłącznik</b></p>
+                    <p>W instalacji inteligentnej dowolny klawisz wyłącznika lub przycisk panelu LCD służy zarówno do
+                        obsługi oświetlenia, rolet, regulacji i odczytu temperatury, sterowania klimatyzacją oraz
+                        urządzeniami audio-wizualnymi.</p>
+                </li>
+                <li>
+                    <p><b>Sceny</b></p>
+                    <p>To niekonwencjonalna metoda sterowania obwodami elektrycznymi. Poszczególne odbiorniki mogą być
+                        załączane pojedynczo lub grupami, a to wszystko za jednym dotknięciem przycisku. W każdej scenie
+                        może brać udział różna ilość odbiorników, w różnej konfiguracji.
+                        Naciśnięcie dowolnie wybranego klawisza wyłącznika w danym pomieszczeniu, powoduje na przykład
+                        jednoczesne przyciemnienie światła, opuszczenie żaluzji i ekranu, włączenie systemu
+                        audiowizualnego
+                        i klimatyzacji, przygotowując w ten sposób pomieszczenie do oglądania filmu z projektora.</p>
+                </li>
+                <li>
+                    <p><b>Prostota</b></p>
+                    <p>Wszystkie urządzenia oraz przyciski połączone są jednym kablem magistralnym, umożliwiającym
+                        komunikowanie się wszystkich instalacji w budynku bez dodatkowego okablowania. Zastosowanie
+                        magistrali komunikacyjnej wyraźnie upraszcza strukturę instalacji w stosunku do tradycyjnych
+                        rozwiązań, dając inwestorowi więcej możliwości w kształtowaniu swoich obecnych i przyszłych
+                        wymagań
+                        co do ostatecznego kształtu instalacji w budynku. Inwestor nie musi już na etapie projektowania
+                        instalacji określać powiązań pomiędzy urządzeniami i wyłącznikami (przyciskami sterującymi), a
+                        jedynie ich lokalizację. Powiązania zostaną zaprogramowane podczas ostatniego etapu realizacji.
+                    </p>
+                </li>
+                <li>
+                    <p><b>Elastyczność</b></p>
+                    <p>Możliwość przyporządkowania dowolnej funkcji do wybranego klawisza, bez jakiejkolwiek ingerencji
+                        w
+                        instalację, sprawia, że dostosowanie funkcjonalności systemu do zmieniających się potrzeb
+                        użytkownika już w trakcie eksploatacji budynku, staje się bardzo łatwe. Odpowiednio przygotowane
+                        okablowanie pozwala na późniejszą rozbudowę systemu i dołożenie nowych funkcji - zgodnie z
+                        aktualnymi oczekiwaniami użytkownika. Nie jest zatem konieczne kupowanie wszystkich urządzeń od
+                        razu.</p>
+                </li>
+                <li>
+                    <p><b>Niezawodność</b></p>
+                    <p>Systemy automatyki domowej uznawane są za jedne z najbardziej niezawodnych. Ewentualne
+                        uszkodzenie
+                        dowolnego urządzenia nie powoduje awarii całego systemu, a jedynie przypisanych do tego elementu
+                        funkcji. Możliwa przerwa w dostawie zasilania nie powoduje wykasowania zaprogramowanych funkcji
+                        -
+                        system po awarii zasilania powraca do swoich pierwotnych ustawień.</p>
+                </li>
+            </ol>
+            <h3>Rozwiązania przewodowe</h3>
+            <p>Prawie wszystkie urządzenia aktualnie używane w gospodarstwach domowych są urządzeniami elektrycznymi.
+                Podstawowym zadaniem konwencjonalnej instalacji elektrycznej jest dostarczanie i dystrybucja energii
+                elektrycznej do tych urządzeń oraz wszystkich pozostałych instalacji w budynku, takich jak:</p>
+            <ul>
+                <li>instalacje oświetleniowe wewnętrzne i zewnętrzne,</li>
+                <li>instalacje gniazd zasilających 230V i siły,</li>
+                <li>instalacje sterowania roletami, żaluzjami, markizami, karniszami, siłownikami okiennymi,</li>
+                <li>instalacje sterowania ogrzewaniem, wentylacją, klimatyzacją,</li>
+                <li>instalacje alarmowe i telewizji dozorowej CCTV,</li>
+                <li>instalacje audio-video, multiroom.</li>
+            </ul>
+            <p>Na tym kończy się jej rola. Inteligentna instalacja natomiast, spełnia podobne zadania z tą różnicą, że
+                instalacja elektryczna w inteligentnym budynku ma dodatkową zdolność generowania i wymiany informacji,
+                która
+                może zostać wykorzystana do sterowania, zarządzania bądź nadzoru instalacji i urządzeń elektrycznych - a
+                nie
+                tylko ich zasilania.
+                Dokładając inteligentny, programowalny system sterowania do dedykowanej dla niego, specjalnie
+                zaprojektowanej instalacji elektrycznej otrzymujemy możliwość programowania, konfiguracji i zmiany
+                dowolnych
+                funkcji sterowania urządzeń elektrycznych. Przycisk w dowolnie wybranym łączniku lub ściennym panelu
+                klawiszowym czy dotykowym, któremu przypisana jest przykładowo funkcja włącz/wyłącz oświetlenie w
+                salonie,
+                można w łatwy sposób przeprogramować i przystosować do realizacji dowolnej innej funkcji. Może on
+                sterować
+                scenami świetlnymi, roletą bądź zestawem rolet albo włączać/wyłączać wentylator w dowolnie wybranym
+                pomieszczeniu itp.
+                Na tym nie koniec. Odpowiednio zaprojektowana inteligentna instalacja elektryczna umożliwia rozszerzenie
+                inteligentnego systemu o kolejne urządzenia (czujniki, urządzenia wykonawcze) w dowolnie odległym
+                momencie.
+            </p>
+            <h3>Rozwiązania bezprzewodowe</h3>
+            <p>W miejscach, do których nie ma możliwości poprowadzenia przewodów (np.: przycisk na szklanej szybie lub
+                ścianie zabytkowego obiektu) można stosować instalacje komunikujące się ze sobą bezprzewodowo (za pomocą
+                radia lub podczerwieni). Przykładem takiego rozwiązania może być bezprzewodowy, ścienny przycisk
+                zasilany
+                baterią o kilkuletniej żywotności, który komunikuje się z inteligentną instalacją przy pomocy fal
+                radiowych.
+                Przyciski takie montowane są najczęściej przy pomocy śrub lub kleju w estetycznych ramkach.
+                Dokładając do instalacji elektrycznej piloty radiowe lub działające w paśmie podczerwieni, w łatwy
+                sposób
+                podniesiemy komfort sterowania inteligentną instalacją. Pilot działający w paśmie podczerwieni ze
+                względu na
+                krótki zasięg działania przeznaczony jest do pracy z urządzeniami, na które zostaje w danym momencie
+                nakierowany oraz obwodami, które włącza/wyłącza przypisany im włącznik ścienny z sensorem IR. Pilot
+                radiowy
+                posiada o wiele większy zasięg, a tym samym działanie globalne, tzn. niezależnie od miejsca, w którym
+                się
+                znajduje załącza zawsze te same, zaprogramowane wcześniej, obwody.</p>
+            <h3>Metody sterowania urządzeniami elektrycznymi</h3>
+            <p>Sterować urządzeniami elektrycznymi inteligentnej instalacji możemy na kilka sposobów: za pośrednictwem
+                najprostszych urządzeń wejściowych jakimi są tradycyjne łączniki bezstanowe (tzw. dzwonkowe), poprzez
+                dedykowane ścienne panele wieloklawiszowe, aż po bardziej skomplikowane jakimi są interaktywne piloty,
+                tablety czy komputery PC - służące do interaktywnego zarządzania całym systemem. Poniżej wymienione
+                zostały
+                podstawowe urządzenia wejściowe inteligentnej instalacji umożliwiające nam bezpośrednie oddziaływanie na
+                stan urządzeń elektrycznych w budynku i jego otoczeniu:</p>
+            <ul class="listaEnd">
+                <li>
+                    <b>Łącznik zwykły</b> - tradycyjny łącznik bezstanowy z ogólnie dostępnych linii wzorniczych,
+                    który po
+                    zamontowaniu w nim specjalnego adaptera łączącego go z magistralą inteligentnej instalacji
+                    umożliwiają
+                    sterowanie dowolnymi urządzeniami w budynku niezależnie od ich umiejscowienia.
+                </li>
+                <li>
+                    <b>Łącznik dedykowany</b> - wielofunkcyjny sterownik dedykowany dla inteligentnych rozwiązań
+                    umożliwiający
+                    integrację różnych systemów. Taki łącznik sterować może oświetleniem, roletami i ogrzewaniem.
+                </li>
+                <li>
+                    <b>Czujnik ruchu i obecności</b> - jest praktycznym uzupełnieniem inteligentnej instalacji, który
+                    sprawdza
+                    się doskonale w mało uczęszczanych pomieszczeniach i ciągach komunikacyjnych budynków, takich jak
+                    korytarze,
+                    garderoby czy WC. Głównym jego przeznaczeniem jest automatyczne sterowanie funkcją włącz/wyłącz
+                    oświetlenie.
+                </li>
+                <li>
+                    <b>Pilot zdalnego sterowania</b> - pozwala na komfortowe zdalne sterowanie przy pomocy fal
+                    radiowych lub
+                    podczerwieni. Na rynku dostępne są programowalne piloty różniące się funkcjami i ilością
+                    obsługiwanych
+                    zdarzeń.
+                </li>
+                <li>
+                    <b>Panel klawiszowy</b> - montowany na ścianie w najbardziej wygodnym dla użytkownika miejscu.
+                    Standardowo posiada podświetlane programowalne klawisze umożliwiające sterowanie
+                    wszystkimi rodzajami funkcji domowych oraz wbudowany odbiornik podczerwieni pilota. Opcjonalnie może
+                    posiadać
+                    prosty wyświetlacz LCD używany do odczytu temperatury, wilgotności, natężenia światła, wiadomości
+                    oraz
+                    alarmów.
+                </li>
+                <li>
+                    <b>Panel dotykowy</b> - montowany także na ścianie, posiada okno z czułym obszarem, które zawiera
+                    programowalne przyciski umożliwiające sterowanie wszystkimi rodzajami funkcji domowych oraz
+                    wbudowany
+                    odbiornik
+                    podczerwieni pilota. Każdy panel posiada diodę sprzężenia zwrotnego, która odzwierciedla stan
+                    przycisku.
+                    Opcjonalnie mogą posiadać prosty wyświetlacz LCD używany do odczytu temperatury, wilgotności,
+                    natężenia
+                    światła,
+                    wiadomości oraz alarmów.
+                </li>
+                <li>
+                    <b>Ścienny ekran dotykowy</b> - umożliwia centralne sterowanie urządzeniami i wyświetlanie
+                    parametrów
+                    inteligentnej instalacji w postaci tekstów lub wizualizacji wraz z podglądem obrazu z kamer czy
+                    video-domofonu.
+                </li>
+                <li>
+                    <b>Tablet</b> - przenośny wyświetlacz dotykowy umożliwiający podgląd parametrów instalacji i
+                    sterowanie
+                    urządzeniami wchodzącymi w jej skład. Jest to odpowiednik bardziej zaawansowanych technologicznie
+                    ściennych
+                    ekranów dotykowych.
+                </li>
+                <li>
+                    <b>Odbiornik telewizyjny</b> - w połączeniu z dodatkowym, dedykowanym dla odbiornika TV
+                    urządzeniem do
+                    wizualizacji, sterować inteligentną instalacją można także z poziomu tego odbiornika za
+                    pośrednictwem
+                    pilota TV.
+                </li>
+                <li>
+                    <b>Telefon</b> - przy użyciu zwykłego telefonu możliwe jest zrealizowanie prostego sterowania, a
+                    przy
+                    użyciu rozbudowanego smatrphone'a nawet wirtualizacji.
+                </li>
+                <li>
+                    <b>Internet</b> - wykorzystując dodatkowy serwer dostępowy dla systemu inteligentnego - podłączony
+                    do
+                    Internetu - możliwe jest uzyskanie wirtualizacji i dostępu zdalnego z dowolnego miejsca, które
+                    gwarantuje
+                    możliwość podłączenia się do Internetu. Zarządzanie zdalne realizuje się za pośrednictwem
+                    przeglądarki
+                    internetowej uruchomionej na komputerze stacjonarnym, laptopie, PDA itp.
+                </li>
+            </ul>
+            <h3>A może jednak Inteligentny dom?</h3>
+            <p>
+                Pojęcia typu <b>inteligentne instalacje elektryczne</b>, <b>inteligentny dom</b>,
+                <b>inteligentny budynek</b> lub <b>domotyka</b> czy <b>automatyka budynkowa</b>
+                niedługo na stałe zagoszczą w naszym słownictwie. Są to pojęcia bardzo szerokie.
+                Co one naprawdę oznaczają ...? Jeżeli są Państwo zainteresowani odpowiedzią na to i inne pytania oraz
+                poszerzeniem
+                wiadomości na temat inteligentnych instalacji, a także możliwościami jakie oferują inteligentne budynki,
+                zapraszamy do
+                zakładki <b><a href="definition.html" class="electric">inteligentny
+                        budynek</a></b>...
+            </p>
+        </main>
+    </article>
+    <footer>
+        <p>Copyright © 2022 - <span class="date"></span> IQ SYSTEM Artur Niemczyk. Wszelkie prawa zastrzeżone.
         </p>
-        <h3>Rozwiązania bezprzewodowe</h3>
-        <p>W miejscach, do których nie ma możliwości poprowadzenia przewodów (np.: przycisk na szklanej szybie lub
-            ścianie zabytkowego obiektu) można stosować instalacje komunikujące się ze sobą bezprzewodowo (za pomocą
-            radia lub podczerwieni). Przykładem takiego rozwiązania może być bezprzewodowy, ścienny przycisk zasilany
-            baterią o kilkuletniej żywotności, który komunikuje się z inteligentną instalacją przy pomocy fal radiowych.
-            Przyciski takie montowane są najczęściej przy pomocy śrub lub kleju w estetycznych ramkach.
-            Dokładając do instalacji elektrycznej piloty radiowe lub działające w paśmie podczerwieni, w łatwy sposób
-            podniesiemy komfort sterowania inteligentną instalacją. Pilot działający w paśmie podczerwieni ze względu na
-            krótki zasięg działania przeznaczony jest do pracy z urządzeniami, na które zostaje w danym momencie
-            nakierowany oraz obwodami, które włącza/wyłącza przypisany im włącznik ścienny z sensorem IR. Pilot radiowy
-            posiada o wiele większy zasięg, a tym samym działanie globalne, tzn. niezależnie od miejsca, w którym się
-            znajduje załącza zawsze te same, zaprogramowane wcześniej, obwody.</p>
-        <h3>Metody sterowania urządzeniami elektrycznymi</h3>
-        <p>Sterować urządzeniami elektrycznymi inteligentnej instalacji możemy na kilka sposobów: za pośrednictwem
-            najprostszych urządzeń wejściowych jakimi są tradycyjne łączniki bezstanowe (tzw. dzwonkowe), poprzez
-            dedykowane ścienne panele wieloklawiszowe, aż po bardziej skomplikowane jakimi są interaktywne piloty,
-            tablety czy komputery PC - służące do interaktywnego zarządzania całym systemem. Poniżej wymienione zostały
-            podstawowe urządzenia wejściowe inteligentnej instalacji umożliwiające nam bezpośrednie oddziaływanie na
-            stan urządzeń elektrycznych w budynku i jego otoczeniu:</p>
-        <ul class="listaEnd">
-            <li>
-                <b>Łącznik zwykły</b> - tradycyjny łącznik bezstanowy z ogólnie dostępnych linii wzorniczych,
-                który po
-                zamontowaniu w nim specjalnego adaptera łączącego go z magistralą inteligentnej instalacji umożliwiają
-                sterowanie dowolnymi urządzeniami w budynku niezależnie od ich umiejscowienia.
-            </li>
-            <li>
-                <b>Łącznik dedykowany</b> - wielofunkcyjny sterownik dedykowany dla inteligentnych rozwiązań
-                umożliwiający
-                integrację różnych systemów. Taki łącznik sterować może oświetleniem, roletami i ogrzewaniem.
-            </li>
-            <li>
-                <b>Czujnik ruchu i obecności</b> - jest praktycznym uzupełnieniem inteligentnej instalacji, który
-                sprawdza
-                się doskonale w mało uczęszczanych pomieszczeniach i ciągach komunikacyjnych budynków, takich jak
-                korytarze,
-                garderoby czy WC. Głównym jego przeznaczeniem jest automatyczne sterowanie funkcją włącz/wyłącz
-                oświetlenie.
-            </li>
-            <li>
-                <b>Pilot zdalnego sterowania</b> - pozwala na komfortowe zdalne sterowanie przy pomocy fal
-                radiowych lub
-                podczerwieni. Na rynku dostępne są programowalne piloty różniące się funkcjami i ilością obsługiwanych
-                zdarzeń.
-            </li>
-            <li>
-                <b>Panel klawiszowy</b> - montowany na ścianie w najbardziej wygodnym dla użytkownika miejscu.
-                Standardowo posiada podświetlane programowalne klawisze umożliwiające sterowanie
-                wszystkimi rodzajami funkcji domowych oraz wbudowany odbiornik podczerwieni pilota. Opcjonalnie może
-                posiadać
-                prosty wyświetlacz LCD używany do odczytu temperatury, wilgotności, natężenia światła, wiadomości oraz
-                alarmów.
-            </li>
-            <li>
-                <b>Panel dotykowy</b> - montowany także na ścianie, posiada okno z czułym obszarem, które zawiera
-                programowalne przyciski umożliwiające sterowanie wszystkimi rodzajami funkcji domowych oraz wbudowany
-                odbiornik
-                podczerwieni pilota. Każdy panel posiada diodę sprzężenia zwrotnego, która odzwierciedla stan przycisku.
-                Opcjonalnie mogą posiadać prosty wyświetlacz LCD używany do odczytu temperatury, wilgotności, natężenia
-                światła,
-                wiadomości oraz alarmów.
-            </li>
-            <li>
-                <b>Ścienny ekran dotykowy</b> - umożliwia centralne sterowanie urządzeniami i wyświetlanie
-                parametrów
-                inteligentnej instalacji w postaci tekstów lub wizualizacji wraz z podglądem obrazu z kamer czy
-                video-domofonu.
-            </li>
-            <li>
-                <b>Tablet</b> - przenośny wyświetlacz dotykowy umożliwiający podgląd parametrów instalacji i
-                sterowanie
-                urządzeniami wchodzącymi w jej skład. Jest to odpowiednik bardziej zaawansowanych technologicznie
-                ściennych
-                ekranów dotykowych.
-            </li>
-            <li>
-                <b>Odbiornik telewizyjny</b> - w połączeniu z dodatkowym, dedykowanym dla odbiornika TV
-                urządzeniem do
-                wizualizacji, sterować inteligentną instalacją można także z poziomu tego odbiornika za pośrednictwem
-                pilota TV.
-            </li>
-            <li>
-                <b>Telefon</b> - przy użyciu zwykłego telefonu możliwe jest zrealizowanie prostego sterowania, a
-                przy
-                użyciu rozbudowanego smatrphone'a nawet wirtualizacji.
-            </li>
-            <li>
-                <b>Internet</b> - wykorzystując dodatkowy serwer dostępowy dla systemu inteligentnego - podłączony
-                do
-                Internetu - możliwe jest uzyskanie wirtualizacji i dostępu zdalnego z dowolnego miejsca, które
-                gwarantuje
-                możliwość podłączenia się do Internetu. Zarządzanie zdalne realizuje się za pośrednictwem przeglądarki
-                internetowej uruchomionej na komputerze stacjonarnym, laptopie, PDA itp.
-            </li>
-        </ul>
-        <h3>A może jednak Inteligentny dom?</h3>
-        <p>
-            Pojęcia typu <b>inteligentne instalacje elektryczne</b>, <b>inteligentny dom</b>,
-            <b>inteligentny budynek</b> lub <b>domotyka</b> czy <b>automatyka budynkowa</b>
-            niedługo na stałe zagoszczą w naszym słownictwie. Są to pojęcia bardzo szerokie.
-            Co one naprawdę oznaczają ...? Jeżeli są Państwo zainteresowani odpowiedzią na to i inne pytania oraz
-            poszerzeniem
-            wiadomości na temat inteligentnych instalacji, a także możliwościami jakie oferują inteligentne budynki,
-            zapraszamy do
-            zakładki <b><a href="definition.html" class="electric">inteligentny
-                    budynek</a></b>...
-        </p>
-    </main>
-    <footer class="partners-footer">
-        <p>Copyright © 2008 - 2009 IQ SYSTEM Artur Niemczyk. Wszelkie prawa zastrzeżone.</p>
     </footer>
     <script src="assets/js/main.js"></script>
-    <!-- Code writed by: Kamil Kruszona -->
+    <!-- Writed by: Kamil Kruszona -->
 </body>
 
 </html>

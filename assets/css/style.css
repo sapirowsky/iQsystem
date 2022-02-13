@@ -56,6 +56,30 @@ header .mobile-menu {
   cursor: pointer;
 }
 
+.position-fixed {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  width: 100%;
+  border-bottom: 1px solid #ccc;
+}
+
+.scroll-line {
+  height: 2px;
+  margin-bottom: -4px;
+  background: var(--secondary-color);
+  width: 0%;
+}
+
+article {
+  margin-top: 72px;
+}
+
+article.about {
+  margin-top: 100px;
+}
+
 .currently-active-nav {
   font-weight: bold;
 }
@@ -90,6 +114,7 @@ nav {
 
 nav .a-start {
   margin-top: 5em;
+  width: 3rem;
 }
 
 nav a {
@@ -116,6 +141,22 @@ nav .div-click {
 nav .div-click:hover {
   cursor: pointer;
   font-weight: bold;
+}
+
+#div-click1 {
+  width: 4rem;
+}
+
+#div-click2 {
+  width: 4.5rem;
+}
+
+#div-click3 {
+  width: 6rem;
+}
+
+#div-click4 {
+  width: 12rem;
 }
 
 .subnav-content {

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pl">
 
 <head>
 
@@ -7,6 +7,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- Font awesome dla strzałek menu -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+
+
     <link rel="stylesheet" href="assets/css/style.css">
     <title>iQsystem - Wstęp</title>
     <meta name="description"
@@ -17,106 +22,117 @@
 </head>
 
 <body>
-    <header>
-        <div class="container">
-            <a class="logo" href="index.html"><span>iQ</span>system</a>
+    <div class="position-fixed">
+        <header>
+            <div class="container">
+                <a class="logo" href="index.html"><span>iQ</span>system</a>
 
-            <img id="mobile-cta" class="mobile-menu" src="assets/img/menu.svg" alt="Open nav">
+                <img id="mobile-cta" class="mobile-menu" src="assets/img/menu.svg" alt="Open nav">
 
-            <nav>
-                <img id="mobile-exit" class="mobile-menu-exit" src="assets/img/exit.svg" alt="Close nav">
-                <a class="a-start" href="index.html">Start</a>
-                <div class="subnav">
+                <nav>
+                    <img id="mobile-exit" class="mobile-menu-exit" src="assets/img/exit.svg" alt="Close nav">
+                    <a class="a-start" href="index.html">Start</a>
+                    <div class="subnav">
 
-                    <div id="div-click1" class="div-click">Firma <i id="i1" class="fa fa-caret-down ii"></i></div>
-                    <div id="subnav-content1" class="subnav-content">
-                        <a href="about.html">O firmie</a>
-                        <a href="partners.html">Partnerzy</a>
-                        <a href="certificates.html">Certyfikaty</a>
+                        <div id="div-click1" class="div-click">Firma <i id="i1" class="fa fa-caret-down ii"></i></div>
+                        <div id="subnav-content1" class="subnav-content">
+                            <a href="about.html">O firmie</a>
+                            <a href="partners.html">Partnerzy</a>
+                            <a href="certificates.html">Certyfikaty</a>
+                        </div>
                     </div>
-                </div>
-                <div class="subnav">
-                    <div id="div-click2" class="div-click">Usługi <i id="i2" class="fa fa-caret-down ii"></i></div>
-                    <div id="subnav-content2" class="subnav-content">
-                        <a href="offer.html">Oferta</a>
-                        <a href="project.html">Projekt</a>
-                        <a href="execution.html">Wykonanie</a>
-                        <a href="activation.html">Uruchomienie</a>
+                    <div class="subnav">
+                        <div id="div-click2" class="div-click">Usługi <i id="i2" class="fa fa-caret-down ii"></i></div>
+                        <div id="subnav-content2" class="subnav-content">
+                            <a href="offer.html">Oferta</a>
+                            <a href="project.html">Projekt</a>
+                            <a href="execution.html">Wykonanie</a>
+                            <a href="activation.html">Uruchomienie</a>
+                        </div>
                     </div>
-                </div>
-                <div class="subnav">
-                    <div id="div-click3" class="div-click currently-active-nav">Instalacje <i id="i3"
-                            class="fa fa-caret-down ii"></i></div>
-                    <div id="subnav-content3" class="subnav-content">
-                        <a href="introduction.html" class="currently-active-nav">Wstęp</a>
-                        <a href="electric.html">Elektryczne</a>
-                        <a href="intelligent.html">Inteligentne</a>
-                        <a href="alarm.html">Alarmowe</a>
-                        <a href="telecommunication.html">Teletechniczne</a>
+                    <div class="subnav">
+                        <div id="div-click3" class="div-click currently-active-nav">Instalacje <i id="i3"
+                                class="fa fa-caret-down ii"></i></div>
+                        <div id="subnav-content3" class="subnav-content">
+                            <a href="introduction.html" class="currently-active-nav">Wstęp</a>
+                            <a href="electric.html">Elektryczne</a>
+                            <a href="intelligent.html">Inteligentne</a>
+                            <a href="alarm.html">Alarmowe</a>
+                            <a href="telecommunication.html">Teletechniczne</a>
+                        </div>
                     </div>
-                </div>
-                <div class="subnav">
-                    <div id="div-click4" class="div-click">Inteligentny Budynek <i id="i4"
-                            class="fa fa-caret-down ii"></i></div>
-                    <div id="subnav-content4" class="subnav-content">
-                        <a href="definition.html">Definicja</a>
-                        <a href="benefits.html">Korzyści</a>
-                        <a href="application.html">Zastosowanie</a>
+                    <div class="subnav">
+                        <div id="div-click4" class="div-click">Inteligentny Budynek <i id="i4"
+                                class="fa fa-caret-down ii"></i></div>
+                        <div id="subnav-content4" class="subnav-content">
+                            <a href="definition.html">Definicja</a>
+                            <a href="benefits.html">Korzyści</a>
+                            <a href="application.html">Zastosowanie</a>
+                        </div>
                     </div>
-                </div>
-                <a class="contact" href="contact.html">Kontakt</a>
-            </nav>
-        </div>
-    </header>
-    <main class="subpages click">
-        <h1>INSTALACJE</h1>
-        <p class="subhead">sprawdź jak BARDZO jesteśmy WSZECHSTRONNI w dziedzinie INSTALACJI!</p>
-        <h3>Tytułem wstępu...</h3>
-        <p>Jeżeli szukacie Państwo informacji na temat nowoczesnych rozwiązań w dziedzinie instalacji elektrycznych,
-            alarmowych lub teletechnicznych, to dobrze trafiliście. Możecie się tu zaznajomić z różnego rodzaju
-            rozwiązaniami, począwszy od tych tradycyjnych, aż po zaawansowane technologicznie - integrujące wszystkie
-            możliwe instalacje i urządzenia elektryczne w jeden programowalny, dający sobą sterować system.</p>
-        <h3>Zanim inwestor zleci wykonanie instalacji</h3>
-        <p>Zlecając architektowi projekt budynku, liczycie Państwo na to, że przewidzi on wszystkie Wasze obecne i
-            przyszłe wymagania - także odnośnie całego zaplecza instalacyjnego w domu czy biurze. Warto jednak zwrócić
-            uwagę na szerokość wachlarza proponowanych rozwiązań oraz zaznajomić się wcześniej z różnego rodzaju
-            instalacjami, które można by wdrożyć w projektowanym budynku. Pomoże to Państwu ocenić wiedzę oraz
-            zaangażowanie projektanta w stworzenie budynku na miarę nie tyle Waszych możliwości finansowych, co
-            przyszłych oczekiwań, których możecie nie być jeszcze świadomi na tym etapie projektu.
-            Właśnie z tą myślą nasza firma stworzyła dział poświęcony wprowadzeniu inwestora do świata instalacji,
-            abyście Państwo mieli możliwość podjęcia rozmów na temat zlecanego projektu i późniejszego wykonawstwa
-            instalacji w swoim domu, z poziomu inwestora mającego jakiekolwiek już pojęcie o instalacjach i swych
-            oczekiwaniach co do nich.
-            Jeżeli po przeczytaniu, zamieszczonych na naszej stronie www, wiadomości, poczujecie Państwo pewien niedosyt
-            otrzymanych informacji na którykolwiek temat, związany z wykonywanymi przez nas instalacjami elektrycznymi,
-            chętnie odpowiemy na każde zapytanie, zadane telefonicznie bądź poprzez zamieszczony w naszym serwisie
-            formularz kontaktowy. Wyraziwszy chęć zlecenia nam którejkolwiek z wymienionych w serwisie instalacji,
-            staramy się doprowadzić do niezobowiązującego spotkania celem sprecyzowania Państwa oczekiwań oraz
-            przedstawienia własnych autorskich propozycji.</p>
-        <h3>Kto pyta nie błądzi</h3>
-        <ul>
-            <p>W dziale tym możecie uzyskać odpowiedź na niejedno nurtujące Was pytanie związane z instalacjami. Oto
-                niektóre z nich:</p>
-            <li>jak załatwić przyłącze energetyczne oraz na co zwrócić uwagę planując modernizację starej lub
-                wykonanie nowej instalacji elektrycznej,</li>
-            <li>jakie alternatywne rozwiązania z zakresu instalacji elektrycznych są dostępne na rynku i czym się
-                charakteryzują</li>
-            <li>czy i ile można zaoszczędzić łącząc wszystkie domowe instalacje w jedną zintegrowaną całość - w tzw.
-                inteligentną instalację elektryczną</li>
-            <li>czym się kierować przy wyborze systemu alarmowego i jaki jest najkorzystniejszy moment na jego
-                instalację</li>
-            <li>do czego służy i gdzie jest używany system kontroli dostępu oraz system telewizji dozorowej CCTV</li>
-            <li>jak zapewnić sobie bezproblemowy dostęp w całym domu lub biurze do telefonu, sieci LAN czy Internetu
-            </li>
-            <li>co to jest multiroom i co go odróżnia od tradycyjnych rozwiązań audio-wizualnych</li>
-            <li>jakie rozwiązania stosowane są obecnie dla instalacji domofonowych i video-domofonowych</li>
-        </ul>
-    </main>
-    <footer class="partners-footer">
-        <p>Copyright © 2008 - 2009 IQ SYSTEM Artur Niemczyk. Wszelkie prawa zastrzeżone.</p>
+                    <a class="contact" href="contact.html">Kontakt</a>
+                </nav>
+            </div>
+        </header>
+        <div class="scroll-line"></div>
+    </div>
+    <article>
+        <main class="subpages click">
+            <h1>INSTALACJE</h1>
+            <p class="subhead">sprawdź jak BARDZO jesteśmy WSZECHSTRONNI w dziedzinie INSTALACJI!</p>
+            <h3>Tytułem wstępu...</h3>
+            <p>Jeżeli szukacie Państwo informacji na temat nowoczesnych rozwiązań w dziedzinie instalacji elektrycznych,
+                alarmowych lub teletechnicznych, to dobrze trafiliście. Możecie się tu zaznajomić z różnego rodzaju
+                rozwiązaniami, począwszy od tych tradycyjnych, aż po zaawansowane technologicznie - integrujące
+                wszystkie
+                możliwe instalacje i urządzenia elektryczne w jeden programowalny, dający sobą sterować system.</p>
+            <h3>Zanim inwestor zleci wykonanie instalacji</h3>
+            <p>Zlecając architektowi projekt budynku, liczycie Państwo na to, że przewidzi on wszystkie Wasze obecne i
+                przyszłe wymagania - także odnośnie całego zaplecza instalacyjnego w domu czy biurze. Warto jednak
+                zwrócić
+                uwagę na szerokość wachlarza proponowanych rozwiązań oraz zaznajomić się wcześniej z różnego rodzaju
+                instalacjami, które można by wdrożyć w projektowanym budynku. Pomoże to Państwu ocenić wiedzę oraz
+                zaangażowanie projektanta w stworzenie budynku na miarę nie tyle Waszych możliwości finansowych, co
+                przyszłych oczekiwań, których możecie nie być jeszcze świadomi na tym etapie projektu.
+                Właśnie z tą myślą nasza firma stworzyła dział poświęcony wprowadzeniu inwestora do świata instalacji,
+                abyście Państwo mieli możliwość podjęcia rozmów na temat zlecanego projektu i późniejszego wykonawstwa
+                instalacji w swoim domu, z poziomu inwestora mającego jakiekolwiek już pojęcie o instalacjach i swych
+                oczekiwaniach co do nich.
+                Jeżeli po przeczytaniu, zamieszczonych na naszej stronie www, wiadomości, poczujecie Państwo pewien
+                niedosyt
+                otrzymanych informacji na którykolwiek temat, związany z wykonywanymi przez nas instalacjami
+                elektrycznymi,
+                chętnie odpowiemy na każde zapytanie, zadane telefonicznie bądź poprzez zamieszczony w naszym serwisie
+                formularz kontaktowy. Wyraziwszy chęć zlecenia nam którejkolwiek z wymienionych w serwisie instalacji,
+                staramy się doprowadzić do niezobowiązującego spotkania celem sprecyzowania Państwa oczekiwań oraz
+                przedstawienia własnych autorskich propozycji.</p>
+            <h3>Kto pyta nie błądzi</h3>
+            <ul>
+                <p>W dziale tym możecie uzyskać odpowiedź na niejedno nurtujące Was pytanie związane z instalacjami. Oto
+                    niektóre z nich:</p>
+                <li>jak załatwić przyłącze energetyczne oraz na co zwrócić uwagę planując modernizację starej lub
+                    wykonanie nowej instalacji elektrycznej,</li>
+                <li>jakie alternatywne rozwiązania z zakresu instalacji elektrycznych są dostępne na rynku i czym się
+                    charakteryzują</li>
+                <li>czy i ile można zaoszczędzić łącząc wszystkie domowe instalacje w jedną zintegrowaną całość - w tzw.
+                    inteligentną instalację elektryczną</li>
+                <li>czym się kierować przy wyborze systemu alarmowego i jaki jest najkorzystniejszy moment na jego
+                    instalację</li>
+                <li>do czego służy i gdzie jest używany system kontroli dostępu oraz system telewizji dozorowej CCTV
+                </li>
+                <li>jak zapewnić sobie bezproblemowy dostęp w całym domu lub biurze do telefonu, sieci LAN czy Internetu
+                </li>
+                <li>co to jest multiroom i co go odróżnia od tradycyjnych rozwiązań audio-wizualnych</li>
+                <li>jakie rozwiązania stosowane są obecnie dla instalacji domofonowych i video-domofonowych</li>
+            </ul>
+        </main>
+    </article>
+    <footer>
+        <p>Copyright © 2022 - <span class="date"></span> IQ SYSTEM Artur Niemczyk. Wszelkie prawa zastrzeżone.
+        </p>
     </footer>
     <script src="assets/js/main.js"></script>
-    <!-- Code writed by: Kamil Kruszona -->
+    <!-- Writed by: Kamil Kruszona -->
 </body>
 
 </html>

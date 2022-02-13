@@ -74,8 +74,24 @@ divClick4.addEventListener('click', () => {
     }
 })
 
-const bodyClick = document.querySelector('.click')
+const click = document.querySelector('.click')
 
-bodyClick.addEventListener('click', () => {
+click.addEventListener('click', () => {
     subnavContentHiding()
+})
+
+// Bieżący rok
+const currentYear = document.querySelector('.date')
+const date = new Date()
+currentYear.textContent = date.getFullYear()
+
+
+//przechwytuje scrolowonie i procenty
+$(window).scroll(function () {
+    let wintop = $(window).scrollTop(), docheight =
+
+        $(document).height(), winheight = $(window).height()
+    let scrolled = (wintop / (docheight - winheight)) * 100
+
+    $('.scroll-line').css('width', (scrolled + '%'))
 })

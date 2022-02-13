@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pl">
 
 <head>
 
@@ -7,6 +7,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- Font awesome dla strzałek menu -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+
+
     <link rel="stylesheet" href="assets/css/style.css">
     <title>iQsystem - Teletechniczne</title>
     <meta name="description"
@@ -17,111 +22,122 @@
 </head>
 
 <body>
-    <header>
-        <div class="container">
-            <a class="logo" href="index.html"><span>iQ</span>system</a>
+    <div class="position-fixed">
+        <header>
+            <div class="container">
+                <a class="logo" href="index.html"><span>iQ</span>system</a>
 
-            <img id="mobile-cta" class="mobile-menu" src="assets/img/menu.svg" alt="Open nav">
+                <img id="mobile-cta" class="mobile-menu" src="assets/img/menu.svg" alt="Open nav">
 
-            <nav>
-                <img id="mobile-exit" class="mobile-menu-exit" src="assets/img/exit.svg" alt="Close nav">
-                <a class="a-start" href="index.html">Start</a>
-                <div class="subnav">
+                <nav>
+                    <img id="mobile-exit" class="mobile-menu-exit" src="assets/img/exit.svg" alt="Close nav">
+                    <a class="a-start" href="index.html">Start</a>
+                    <div class="subnav">
 
-                    <div id="div-click1" class="div-click">Firma <i id="i1" class="fa fa-caret-down ii"></i></div>
-                    <div id="subnav-content1" class="subnav-content">
-                        <a href="about.html">O firmie</a>
-                        <a href="partners.html">Partnerzy</a>
-                        <a href="certificates.html">Certyfikaty</a>
+                        <div id="div-click1" class="div-click">Firma <i id="i1" class="fa fa-caret-down ii"></i></div>
+                        <div id="subnav-content1" class="subnav-content">
+                            <a href="about.html">O firmie</a>
+                            <a href="partners.html">Partnerzy</a>
+                            <a href="certificates.html">Certyfikaty</a>
+                        </div>
                     </div>
-                </div>
-                <div class="subnav">
-                    <div id="div-click2" class="div-click">Usługi <i id="i2" class="fa fa-caret-down ii"></i></div>
-                    <div id="subnav-content2" class="subnav-content">
-                        <a href="offer.html">Oferta</a>
-                        <a href="project.html">Projekt</a>
-                        <a href="execution.html">Wykonanie</a>
-                        <a href="activation.html">Uruchomienie</a>
+                    <div class="subnav">
+                        <div id="div-click2" class="div-click">Usługi <i id="i2" class="fa fa-caret-down ii"></i></div>
+                        <div id="subnav-content2" class="subnav-content">
+                            <a href="offer.html">Oferta</a>
+                            <a href="project.html">Projekt</a>
+                            <a href="execution.html">Wykonanie</a>
+                            <a href="activation.html">Uruchomienie</a>
+                        </div>
                     </div>
-                </div>
-                <div class="subnav">
-                    <div id="div-click3" class="div-click currently-active-nav">Instalacje <i id="i3"
-                            class="fa fa-caret-down ii"></i></div>
-                    <div id="subnav-content3" class="subnav-content">
-                        <a href="introduction.html">Wstęp</a>
-                        <a href="electric.html">Elektryczne</a>
-                        <a href="intelligent.html">Inteligentne</a>
-                        <a href="alarm.html">Alarmowe</a>
-                        <a href="telecommunication.html" class="currently-active-nav">Teletechniczne</a>
+                    <div class="subnav">
+                        <div id="div-click3" class="div-click currently-active-nav">Instalacje <i id="i3"
+                                class="fa fa-caret-down ii"></i></div>
+                        <div id="subnav-content3" class="subnav-content">
+                            <a href="introduction.html">Wstęp</a>
+                            <a href="electric.html">Elektryczne</a>
+                            <a href="intelligent.html">Inteligentne</a>
+                            <a href="alarm.html">Alarmowe</a>
+                            <a href="telecommunication.html" class="currently-active-nav">Teletechniczne</a>
+                        </div>
                     </div>
-                </div>
-                <div class="subnav">
-                    <div id="div-click4" class="div-click">Inteligentny Budynek <i id="i4"
-                            class="fa fa-caret-down ii"></i></div>
-                    <div id="subnav-content4" class="subnav-content">
-                        <a href="definition.html">Definicja</a>
-                        <a href="benefits.html">Korzyści</a>
-                        <a href="application.html">Zastosowanie</a>
+                    <div class="subnav">
+                        <div id="div-click4" class="div-click">Inteligentny Budynek <i id="i4"
+                                class="fa fa-caret-down ii"></i></div>
+                        <div id="subnav-content4" class="subnav-content">
+                            <a href="definition.html">Definicja</a>
+                            <a href="benefits.html">Korzyści</a>
+                            <a href="application.html">Zastosowanie</a>
+                        </div>
                     </div>
-                </div>
-                <a class="contact" href="contact.html">Kontakt</a>
-            </nav>
-        </div>
-    </header>
-    <main class="subpages click">
-        <h1>INSTALACJE TELETECHNICZNE</h1>
-        <p class="subhead">teraz dostęp do INTERNETU i TELEFONU w każdym pomieszczeniu!</p>
-        <h3>Okablowanie strukturalne budynku</h3>
-        <p>Na system okablowania strukturalnego składają się wszystkie urządzenia sieciowe i telekomunikacyjne oraz cała
-            infrastruktura połączeń kablowych stworzona specjalnie dla tych urządzeń. Istotą systemu okablowania
-            strukturalnego jest zagwarantowanie odpowiedniej ilości punktów dostępowych w budynku, umożliwiających
-            skorzystanie z dowolnej usługi telekomunikacyjnej lub teleinformatycznej, obsługiwanej przez ten system.
-            Wymaga to instalacji odpowiedniej ilości gniazd dostępowych w całym obiekcie, których zasięg obejmować
-            będzie wszystkie obszary, gdzie może zaistnieć potrzeba skorzystania z dostępu do oferowanych usług.</p>
-        <p>Typowy punkt abonencki składa się z podwójnego gniazda typu RJ45, umieszczonego najczęściej w puszce lub
-            listwie instalacyjnej oraz podwójnego gniazda dedykowanej sieci zasilającej 230V, zapewniającej prawidłową,
-            pozbawioną zakłóceń pracę podłączonego do niej urządzenia.</p>
-        <p>Tego typu rozwiązania pozwalają przesunąć dowolne stanowisko pracy do wybranego miejsca w budynku i zapewnić
-            użytkownikowi dostęp zarówno do sieci lokalnej, jak i do Internetu czy telefonu. Pozostaje tylko wpiąć
-            urządzenie do istniejącego przyłącza abonenckiego, dokonać odpowiednich zmian w szafie dystrybucyjnej i
-            użytkownik może korzystać w pełni z oferowanych usług.</p>
-        <p>Dla zapewnienia prawidłowej komunikacji pomiędzy urządzeniami sieciowymi stosuje się specjalne standardy
-            (Ethernet 100Base-T, 1000Base-T, Token Ring, FDDI, ATM). Określają one sposób wymiany danych pomiędzy
-            urządzeniami sieciowymi, które umożliwiają współpracę ze sobą urządzeń produkowanych przez różnych
-            producentów.</p>
-        <p>Systemy okablowania strukturalnego znacznie ułatwiają zarządzanie siecią komputerową w biurze i
-            niejednokrotnie nawet w budynku mieszkalnym, obniżają koszt zmiany aranżacji pomieszczeń, są podatne na
-            zmiany w konfiguracji oraz są zupełnie niezależne od zmian urządzeń aktywnych pracujących w sieci
-            teleinformatycznej.</p>
-        <h3>Systemy domofonowe i video-domofonowe</h3>
-        <p>Domofon - zwany Unifonem - jest urządzeniem elektronicznym, stosowanym do komunikacji głosowej na małe
-            odległości bez pośrednictwa centrali. Najczęściej wykorzystywany do zdalnej identyfikacji osoby chcącej się
-            dostać do domu, mieszkania lub innego budynku oraz zdalnego otwarcia jej wejścia bądź zatrzymania
-            niepożądanego gościa.</p>
-        <p>Domofony pracują w dwóch systemach:</p>
-        <ul>
-            <li>analogowym:</li>
-            <ol>
-                <li>prostota montażu i uruchomienia</li>
-                <li>niska cena</li>
-            </ol>
-            <li>cyfrowym:</li>
+                    <a class="contact" href="contact.html">Kontakt</a>
+                </nav>
+            </div>
+        </header>
+        <div class="scroll-line"></div>
+    </div>
+    <article>
+        <main class="subpages click">
+            <h1>INSTALACJE TELETECHNICZNE</h1>
+            <p class="subhead">teraz dostęp do INTERNETU i TELEFONU w każdym pomieszczeniu!</p>
+            <h3>Okablowanie strukturalne budynku</h3>
+            <p>Na system okablowania strukturalnego składają się wszystkie urządzenia sieciowe i telekomunikacyjne oraz
+                cała
+                infrastruktura połączeń kablowych stworzona specjalnie dla tych urządzeń. Istotą systemu okablowania
+                strukturalnego jest zagwarantowanie odpowiedniej ilości punktów dostępowych w budynku, umożliwiających
+                skorzystanie z dowolnej usługi telekomunikacyjnej lub teleinformatycznej, obsługiwanej przez ten system.
+                Wymaga to instalacji odpowiedniej ilości gniazd dostępowych w całym obiekcie, których zasięg obejmować
+                będzie wszystkie obszary, gdzie może zaistnieć potrzeba skorzystania z dostępu do oferowanych usług.</p>
+            <p>Typowy punkt abonencki składa się z podwójnego gniazda typu RJ45, umieszczonego najczęściej w puszce lub
+                listwie instalacyjnej oraz podwójnego gniazda dedykowanej sieci zasilającej 230V, zapewniającej
+                prawidłową,
+                pozbawioną zakłóceń pracę podłączonego do niej urządzenia.</p>
+            <p>Tego typu rozwiązania pozwalają przesunąć dowolne stanowisko pracy do wybranego miejsca w budynku i
+                zapewnić
+                użytkownikowi dostęp zarówno do sieci lokalnej, jak i do Internetu czy telefonu. Pozostaje tylko wpiąć
+                urządzenie do istniejącego przyłącza abonenckiego, dokonać odpowiednich zmian w szafie dystrybucyjnej i
+                użytkownik może korzystać w pełni z oferowanych usług.</p>
+            <p>Dla zapewnienia prawidłowej komunikacji pomiędzy urządzeniami sieciowymi stosuje się specjalne standardy
+                (Ethernet 100Base-T, 1000Base-T, Token Ring, FDDI, ATM). Określają one sposób wymiany danych pomiędzy
+                urządzeniami sieciowymi, które umożliwiają współpracę ze sobą urządzeń produkowanych przez różnych
+                producentów.</p>
+            <p>Systemy okablowania strukturalnego znacznie ułatwiają zarządzanie siecią komputerową w biurze i
+                niejednokrotnie nawet w budynku mieszkalnym, obniżają koszt zmiany aranżacji pomieszczeń, są podatne na
+                zmiany w konfiguracji oraz są zupełnie niezależne od zmian urządzeń aktywnych pracujących w sieci
+                teleinformatycznej.</p>
+            <h3>Systemy domofonowe i video-domofonowe</h3>
+            <p>Domofon - zwany Unifonem - jest urządzeniem elektronicznym, stosowanym do komunikacji głosowej na małe
+                odległości bez pośrednictwa centrali. Najczęściej wykorzystywany do zdalnej identyfikacji osoby chcącej
+                się
+                dostać do domu, mieszkania lub innego budynku oraz zdalnego otwarcia jej wejścia bądź zatrzymania
+                niepożądanego gościa.</p>
+            <p>Domofony pracują w dwóch systemach:</p>
             <ul>
-                <li>stała liczba żył w magistrali sygnałowej niezależnie od ilości użytkowników</li>
-                <li>mniejsze panele wejściowe z możliwością elektronicznego spisu lokatorów</li>
-                <li>możliwość otwarcia drzwi z zewnątrz po wpisaniu wcześniej zaprogramowanego kodu</li>
+                <li>analogowym:</li>
+                <ol>
+                    <li>prostota montażu i uruchomienia</li>
+                    <li>niska cena</li>
+                </ol>
+                <li>cyfrowym:</li>
+                <ul>
+                    <li>stała liczba żył w magistrali sygnałowej niezależnie od ilości użytkowników</li>
+                    <li>mniejsze panele wejściowe z możliwością elektronicznego spisu lokatorów</li>
+                    <li>możliwość otwarcia drzwi z zewnątrz po wpisaniu wcześniej zaprogramowanego kodu</li>
+                </ul>
             </ul>
-        </ul>
-        <p>Doskonalszym rozwiązaniem do identyfikacji osób odwiedzających obiekt okazuje się być video-domofon - zestaw
-            wyposażony w kamerę i monitor. Video-domofony występują w wersji czarno-białej i kolorowej, z kamerą
-            wbudowaną w panel zewnętrzny lub przeznaczoną do montażu na budynku.</p>
-        <p>Zarówno domofony jak i videodomofony występują w wersji jednoabonentowej oraz wieloabonentowej.</p>
-    </main>
-    <footer class="partners-footer">
-        <p>Copyright © 2008 - 2009 IQ SYSTEM Artur Niemczyk. Wszelkie prawa zastrzeżone.</p>
+            <p>Doskonalszym rozwiązaniem do identyfikacji osób odwiedzających obiekt okazuje się być video-domofon -
+                zestaw
+                wyposażony w kamerę i monitor. Video-domofony występują w wersji czarno-białej i kolorowej, z kamerą
+                wbudowaną w panel zewnętrzny lub przeznaczoną do montażu na budynku.</p>
+            <p>Zarówno domofony jak i videodomofony występują w wersji jednoabonentowej oraz wieloabonentowej.</p>
+        </main>
+    </article>
+    <footer>
+        <p>Copyright © 2022 - <span class="date"></span> IQ SYSTEM Artur Niemczyk. Wszelkie prawa zastrzeżone.
+        </p>
     </footer>
     <script src="assets/js/main.js"></script>
-    <!-- Code writed by: Kamil Kruszona -->
+    <!-- Writed by: Kamil Kruszona -->
 </body>
 
 </html>

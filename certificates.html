@@ -7,6 +7,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- Font awesome dla strzałek menu -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+
+
     <!-- Wlasny css -->
     <link rel="stylesheet" href="assets/css/style.css">
 
@@ -21,162 +26,175 @@
 </head>
 
 <body>
-    <header>
-        <div class="container">
-            <a class="logo" href="index.html"><span>iQ</span>system</a>
-
-            <img id="mobile-cta" class="mobile-menu" src="assets/img/menu.svg" alt="Open nav">
-
-            <nav>
-                <img id="mobile-exit" class="mobile-menu-exit" src="assets/img/exit.svg" alt="Close nav">
-                <a class="a-start" href="index.html">Start</a>
-                <div class="subnav">
-
-                    <div id="div-click1" class="div-click currently-active-nav">Firma <i id="i1"
-                            class="fa fa-caret-down ii"></i></div>
-                    <div id="subnav-content1" class="subnav-content">
-                        <a href="about.html">O firmie</a>
-                        <a href="partners.html">Partnerzy</a>
-                        <a href="certificates.html" class="currently-active-nav">Certyfikaty</a>
-                    </div>
-                </div>
-                <div class="subnav">
-                    <div id="div-click2" class="div-click">Usługi <i id="i2" class="fa fa-caret-down ii"></i></div>
-                    <div id="subnav-content2" class="subnav-content">
-                        <a href="offer.html">Oferta</a>
-                        <a href="project.html">Projekt</a>
-                        <a href="execution.html">Wykonanie</a>
-                        <a href="activation.html">Uruchomienie</a>
-                    </div>
-                </div>
-                <div class="subnav">
-                    <div id="div-click3" class="div-click">Instalacje <i id="i3" class="fa fa-caret-down ii"></i></div>
-                    <div id="subnav-content3" class="subnav-content">
-                        <a href="introduction.html">Wstęp</a>
-                        <a href="electric.html">Elektryczne</a>
-                        <a href="intelligent.html">Inteligentne</a>
-                        <a href="alarm.html">Alarmowe</a>
-                        <a href="telecommunication.html">Teletechniczne</a>
-                    </div>
-                </div>
-                <div class="subnav">
-                    <div id="div-click4" class="div-click">Inteligentny Budynek <i id="i4"
-                            class="fa fa-caret-down ii"></i></div>
-                    <div id="subnav-content4" class="subnav-content">
-                        <a href="definition.html">Definicja</a>
-                        <a href="benefits.html">Korzyści</a>
-                        <a href="application.html">Zastosowanie</a>
-                    </div>
-                </div>
-                <a class="contact" href="contact.html">Kontakt</a>
-            </nav>
-        </div>
-    </header>
-    <main class="click">
-        <section class="hero">
-            <h1>POSIADANE CERTYFIKATY i UPRAWNIENIA</h1>
+    <div class="position-fixed">
+        <header>
             <div class="container">
-                <div class="left-col">
-                    <h3>Tradycyjne i inteligentne instalacje elektryczne</h3>
-                    <p>Wiarygodny <b>elektryk</b> to taki, który potrafi udokumentować swoją wiedzę i umiejętności z
-                        zakresu
-                        ogólnie pojętego elektroinstalatorstwa. Każdy elektroinstalator, zatrudniony w mojej firmie,
-                        dysponuje odpowiednimi kwalifikacjami, które narzuca ustawodawca. Jako elektryk bedący
-                        jednocześnie
-                        właścicielem firmy, zobowiązany jestem do prawidłowego i rzetelnego wykonywania zleconych mi
-                        zadań
-                        oraz do nadzorowania działań, które powierzam moim podwładnym. Posiadam, wymagane do
-                        realizacji
-                        tych
-                        obowiązków, imienne <b>Świadectwa Kwalifikacyjne</b>, uprawniające do wykonywania pracy na
-                        stanowiskach
-                        <b>eksploatacji i dozoru</b> urządzeń, instalacji i sieci elektroenergetycznych,
-                        wytwarzających,
-                        przetwarzających, przesyłających i zużywających energię elektryczną, w zakresie: obsługi,
-                        konserwacji, remontów, kontrolno-pomiarowym i montażu (wydane dnia 18.06.2008r. w
-                        Bielsko-Biała,
-                        woj. śląskie).
-                    </p>
-                </div>
-                <div class="right-col">
-                    <img src="assets/img/eksploatacja.jpg" alt="Certyfikat">
-                    <img src="assets/img/dozor.jpg" alt="Certyfikat">
-                </div>
-            </div>
-        </section>
+                <a class="logo" href="index.html"><span>iQ</span>system</a>
 
-        <div class="container-certyficates">
-            <div class="left">
-                <p>Certyfikat Inteligentnego Systemu Automatyki Domowej TELETASK, nadający status Certyfikowanego
-                    Instalatora, uprawniający do wykonywania projektów i nadzoru inteligentnych instalacji domowych oraz
-                    ich programowania:</p>
-                <img src="assets/img/certyfikat-teletask-A.jpg" class="img-margin-top" alt="Certyfikat">
+                <img id="mobile-cta" class="mobile-menu" src="assets/img/menu.svg" alt="Open nav">
+
+                <nav>
+                    <img id="mobile-exit" class="mobile-menu-exit" src="assets/img/exit.svg" alt="Close nav">
+                    <a class="a-start" href="index.html">Start</a>
+                    <div class="subnav">
+
+                        <div id="div-click1" class="div-click currently-active-nav">Firma <i id="i1"
+                                class="fa fa-caret-down ii"></i></div>
+                        <div id="subnav-content1" class="subnav-content">
+                            <a href="about.html">O firmie</a>
+                            <a href="partners.html">Partnerzy</a>
+                            <a href="certificates.html" class="currently-active-nav">Certyfikaty</a>
+                        </div>
+                    </div>
+                    <div class="subnav">
+                        <div id="div-click2" class="div-click">Usługi <i id="i2" class="fa fa-caret-down ii"></i></div>
+                        <div id="subnav-content2" class="subnav-content">
+                            <a href="offer.html">Oferta</a>
+                            <a href="project.html">Projekt</a>
+                            <a href="execution.html">Wykonanie</a>
+                            <a href="activation.html">Uruchomienie</a>
+                        </div>
+                    </div>
+                    <div class="subnav">
+                        <div id="div-click3" class="div-click">Instalacje <i id="i3" class="fa fa-caret-down ii"></i>
+                        </div>
+                        <div id="subnav-content3" class="subnav-content">
+                            <a href="introduction.html">Wstęp</a>
+                            <a href="electric.html">Elektryczne</a>
+                            <a href="intelligent.html">Inteligentne</a>
+                            <a href="alarm.html">Alarmowe</a>
+                            <a href="telecommunication.html">Teletechniczne</a>
+                        </div>
+                    </div>
+                    <div class="subnav">
+                        <div id="div-click4" class="div-click">Inteligentny Budynek <i id="i4"
+                                class="fa fa-caret-down ii"></i></div>
+                        <div id="subnav-content4" class="subnav-content">
+                            <a href="definition.html">Definicja</a>
+                            <a href="benefits.html">Korzyści</a>
+                            <a href="application.html">Zastosowanie</a>
+                        </div>
+                    </div>
+                    <a class="contact" href="contact.html">Kontakt</a>
+                </nav>
             </div>
-            <div class="greatline"></div>
-            <div class="right">
-                <p>Certyfikat poręczający posiadanie odpowiedniego przeszkolenia w zakresie instalacji oraz
-                    programowania Systemów Automatyki Domowej D2000 i MiniDo, obejmującego:</p>
-                <ul>
-                    <li>zapoznanie z możliwościami systemu i jego poszczególnymi elementami,</li>
-                    <li>zasady projektowania instalacji dla inteligentnych budynków,</li>
-                    <li>zasady okablowania systemu i montażu urządzeń,</li>
-                    <li>praktyczną naukę programowania systemu.</li>
-                </ul>
-                <img src="assets/img/certyfikat-AnB-A.jpg" class="img-margin-top" alt="Certyfikat">
-            </div>
-        </div>
-        <section class="hero">
-            <div class="container">
-                <div class="left-col">
-                    <h3>Zabezpieczanie osób i mienia</h3>
-                    <p>Licencja pracownika zabezpieczenia technicznego drugiego stopnia, wydana przez Komendanta
-                        Wojewódzkiego Policji w Katowicach (woj. śląskie), która uprawnia do:</p>
+        </header>
+        <div class="scroll-line"></div>
+    </div>
+    <article>
+        <main class="click">
+            <section class="hero">
+                <h1>POSIADANE CERTYFIKATY i UPRAWNIENIA</h1>
+                <div class="container">
+                    <div class="left-col">
+                        <h3>Tradycyjne i inteligentne instalacje elektryczne</h3>
+                        <p>Wiarygodny <b>elektryk</b> to taki, który potrafi udokumentować swoją wiedzę i umiejętności z
+                            zakresu
+                            ogólnie pojętego elektroinstalatorstwa. Każdy elektroinstalator, zatrudniony w mojej firmie,
+                            dysponuje odpowiednimi kwalifikacjami, które narzuca ustawodawca. Jako elektryk bedący
+                            jednocześnie
+                            właścicielem firmy, zobowiązany jestem do prawidłowego i rzetelnego wykonywania zleconych mi
+                            zadań
+                            oraz do nadzorowania działań, które powierzam moim podwładnym. Posiadam, wymagane do
+                            realizacji
+                            tych
+                            obowiązków, imienne <b>Świadectwa Kwalifikacyjne</b>, uprawniające do wykonywania pracy na
+                            stanowiskach
+                            <b>eksploatacji i dozoru</b> urządzeń, instalacji i sieci elektroenergetycznych,
+                            wytwarzających,
+                            przetwarzających, przesyłających i zużywających energię elektryczną, w zakresie: obsługi,
+                            konserwacji, remontów, kontrolno-pomiarowym i montażu (wydane dnia 18.06.2008r. w
+                            Bielsko-Biała,
+                            woj. śląskie).
+                        </p>
+                    </div>
+                    <div class="right-col">
+                        <img src="assets/img/eksploatacja.jpg" alt="Certyfikat">
+                        <img src="assets/img/dozor.jpg" alt="Certyfikat">
+                    </div>
+                </div>
+            </section>
+
+            <div class="container-certyficates">
+                <div class="left">
+                    <p>Certyfikat Inteligentnego Systemu Automatyki Domowej TELETASK, nadający status Certyfikowanego
+                        Instalatora, uprawniający do wykonywania projektów i nadzoru inteligentnych instalacji domowych
+                        oraz
+                        ich programowania:</p>
+                    <img src="assets/img/certyfikat-teletask-A.jpg" class="img-margin-top" alt="Certyfikat">
+                </div>
+                <div class="greatline"></div>
+                <div class="right">
+                    <p>Certyfikat poręczający posiadanie odpowiedniego przeszkolenia w zakresie instalacji oraz
+                        programowania Systemów Automatyki Domowej D2000 i MiniDo, obejmującego:</p>
                     <ul>
-                        <li>montażu elektronicznych urządzeń i systemów alarmowych, sygnalizujących zagrożenie
-                            chronionych osób i mienia, oraz eksploatacji, konserwacji i napraw w miejscach ich
-                            zainstalowania,</li>
-                        <li>montażu urządzeń i środków mechanicznego zabezpieczenia oraz ich eksploatacji, konserwacji,
-                            napraw i awaryjnego otwierania w miejscach ich zainstalowania,</li>
-                        <li>opracowywania projektów zabezpieczenia technicznego,</li>
-                        <li>organizowania i kierowania zespołami pracowników zabezpieczenia technicznego.</li>
+                        <li>zapoznanie z możliwościami systemu i jego poszczególnymi elementami,</li>
+                        <li>zasady projektowania instalacji dla inteligentnych budynków,</li>
+                        <li>zasady okablowania systemu i montażu urządzeń,</li>
+                        <li>praktyczną naukę programowania systemu.</li>
                     </ul>
+                    <img src="assets/img/certyfikat-AnB-A.jpg" class="img-margin-top" alt="Certyfikat">
                 </div>
-                <img src="assets/img/licencja-A_p-z-t-2st.jpg" class="img-margin-top" alt="Certyfikat">
             </div>
-        </section>
-        <div class="container-certyficates">
-            <div class="left">
-                <p>Certyfikat ukończenia zaawansowanego szkolenia z zakresu prawidłowego montażu oraz programowania
-                    systemów alarmowych Satel w oparciu o centrale serii INTEGRA:</p>
-                <img src="assets/img/certyfikat-satel-A.jpg" class="img-margin-top" alt="Certyfikat">
-            </div>
-            <div class="greatline"></div>
-            <div class="right">
-                <p>Certyfikat poręczający posiadanie odpowiedniego przeszkolenia z zakresu prawidłowego montażu szaf
-                    teleinformatycznych firmy Moeller:</p>
-                <img src="assets/img/certyfikat-szafy-A-moeller.jpg" class="img-margin-top" alt="Certyfikat">
-            </div>
-        </div>
-        <section class="hero">
-            <div class="container">
-                <div class="left-col">
-                    <h3>Systemy teleinformatyczne i teletechniczne</h3>
-                    <p>Certyfikaty nadające status Certyfikowanego Instalatora VDI, potwierdzające posiadanie wysokich
-                        kwalifikacji oraz umiejętności projektowania i wykonywania instalacji okablowania strukturalnego
-                        miedzianego i światłowodowego w oparciu o system Legrand VDI, zgodnie z normami PN-EN 50173/A1,
-                        PN-EN 50174-2, ISO/IEC 11801:2002 2nd:</p>
+            <section class="hero">
+                <div class="container">
+                    <div class="left-col">
+                        <h3>Zabezpieczanie osób i mienia</h3>
+                        <p>Licencja pracownika zabezpieczenia technicznego drugiego stopnia, wydana przez Komendanta
+                            Wojewódzkiego Policji w Katowicach (woj. śląskie), która uprawnia do:</p>
+                        <ul>
+                            <li>montażu elektronicznych urządzeń i systemów alarmowych, sygnalizujących zagrożenie
+                                chronionych osób i mienia, oraz eksploatacji, konserwacji i napraw w miejscach ich
+                                zainstalowania,</li>
+                            <li>montażu urządzeń i środków mechanicznego zabezpieczenia oraz ich eksploatacji,
+                                konserwacji,
+                                napraw i awaryjnego otwierania w miejscach ich zainstalowania,</li>
+                            <li>opracowywania projektów zabezpieczenia technicznego,</li>
+                            <li>organizowania i kierowania zespołami pracowników zabezpieczenia technicznego.</li>
+                        </ul>
+                    </div>
+                    <img src="assets/img/licencja-A_p-z-t-2st.jpg" class="img-margin-top" alt="Certyfikat">
                 </div>
-
-                <img src="assets/img/certyfikat-inst-vdi-A-legrand.jpg" class="img-margin-top" alt="Certyfikat">
-                <img src="assets/img/certyfikat-inst-vdi-legrand.jpg" class="img-margin-top" alt="Certyfikat">
-
+            </section>
+            <div class="container-certyficates">
+                <div class="left">
+                    <p>Certyfikat ukończenia zaawansowanego szkolenia z zakresu prawidłowego montażu oraz programowania
+                        systemów alarmowych Satel w oparciu o centrale serii INTEGRA:</p>
+                    <img src="assets/img/certyfikat-satel-A.jpg" class="img-margin-top" alt="Certyfikat">
+                </div>
+                <div class="greatline"></div>
+                <div class="right">
+                    <p>Certyfikat poręczający posiadanie odpowiedniego przeszkolenia z zakresu prawidłowego montażu szaf
+                        teleinformatycznych firmy Moeller:</p>
+                    <img src="assets/img/certyfikat-szafy-A-moeller.jpg" class="img-margin-top" alt="Certyfikat">
+                </div>
             </div>
-        </section>
-    </main>
+            <section class="hero">
+                <div class="container">
+                    <div class="left-col">
+                        <h3>Systemy teleinformatyczne i teletechniczne</h3>
+                        <p>Certyfikaty nadające status Certyfikowanego Instalatora VDI, potwierdzające posiadanie
+                            wysokich
+                            kwalifikacji oraz umiejętności projektowania i wykonywania instalacji okablowania
+                            strukturalnego
+                            miedzianego i światłowodowego w oparciu o system Legrand VDI, zgodnie z normami PN-EN
+                            50173/A1,
+                            PN-EN 50174-2, ISO/IEC 11801:2002 2nd:</p>
+                    </div>
+
+                    <img src="assets/img/certyfikat-inst-vdi-A-legrand.jpg" class="img-margin-top" alt="Certyfikat">
+                    <img src="assets/img/certyfikat-inst-vdi-legrand.jpg" class="img-margin-top" alt="Certyfikat">
+
+                </div>
+            </section>
+        </main>
+    </article>
     <footer>
-        <p>Copyright © 2008 - 2009 IQ SYSTEM Artur Niemczyk. Wszelkie prawa zastrzeżone.</p>
+        <p>Copyright © 2022 - <span class="date"></span> IQ SYSTEM Artur Niemczyk. Wszelkie prawa zastrzeżone.
+        </p>
     </footer>
     <script src="assets/js/main.js"></script>
+    <!-- Writed by: Kamil Kruszona -->
 </body>
 
 </html>

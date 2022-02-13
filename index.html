@@ -9,6 +9,10 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <!-- Wlasny css -->
     <link rel="stylesheet" href="assets/css/style.css">
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+
 
     <title>iQsystem - Inteligentny dom</title>
     <!-- opis -->
@@ -17,120 +21,128 @@
     <!-- tagi -->
     <meta name="Keywords"
         content="usługi elektroinstalatorskie, usługi elektroinstalacyjne, instalacje elektryczne, inteligentne instalacje elektryczne, inteligentny dom, instalacja systemów alarmowych, okablowanie teleinformatyczne, okablowanie strukturalne, telewizja dozorowa, telewizja przemysłowa, CCTV, domofony, videofony, instalacja domofonów, telefonia internetowa, sieć internetowa, zabezpieczenie techniczne budynku, inteligentny budynek, pomiary elektryczne, pomiary instalacji odgromowych, pomiary instalacji elektrycznych, okresowe pomiary elektryczne, pomiary odbiorcze, sterowanie oświetleniem, EIB, TELETASK, LUTRON, Xcomfort, Legrand, Moeller, Molex, Emiter, projektowanie inteligentnych instalacji elektrycznych, Śląsk, powiat cieszyński, Cieszyn, Bielsko-Biała, Żory, Jastrzębie-Zdrój">
-
 </head>
 
 <body>
-    <header>
-        <div class="container">
-            <a class="logo" href="index.html"><span>iQ</span>system</a>
+    <div class="position-fixed">
+        <header>
+            <div class="container">
+                <a class="logo" href="index.html"><span>iQ</span>system</a>
 
-            <img id="mobile-cta" class="mobile-menu" src="assets/img/menu.svg" alt="Open nav">
+                <img id="mobile-cta" class="mobile-menu" src="assets/img/menu.svg" alt="Open nav">
 
-            <nav>
-                <img id="mobile-exit" class="mobile-menu-exit" src="assets/img/exit.svg" alt="Close nav">
-                <a class="a-start currently-active-nav" href="index.html">Start</a>
-                <div class="subnav">
+                <nav>
+                    <img id="mobile-exit" class="mobile-menu-exit" src="assets/img/exit.svg" alt="Close nav">
+                    <a class="a-start currently-active-nav" href="index.html">Start</a>
+                    <div class="subnav">
 
-                    <div id="div-click1" class="div-click">Firma <i id="i1" class="fa fa-caret-down ii"></i></div>
-                    <div id="subnav-content1" class="subnav-content">
-                        <a href="about.html">O firmie</a>
-                        <a href="partners.html">Partnerzy</a>
-                        <a href="certificates.html">Certyfikaty</a>
+                        <div id="div-click1" class="div-click">Firma <i id="i1" class="fa fa-caret-down ii"></i></div>
+                        <div id="subnav-content1" class="subnav-content">
+                            <a href="about.html">O firmie</a>
+                            <a href="partners.html">Partnerzy</a>
+                            <a href="certificates.html">Certyfikaty</a>
+                        </div>
+                    </div>
+                    <div class="subnav">
+                        <div id="div-click2" class="div-click">Usługi <i id="i2" class="fa fa-caret-down ii"></i></div>
+                        <div id="subnav-content2" class="subnav-content">
+                            <a href="offer.html">Oferta</a>
+                            <a href="project.html">Projekt</a>
+                            <a href="execution.html">Wykonanie</a>
+                            <a href="activation.html">Uruchomienie</a>
+                        </div>
+                    </div>
+                    <div class="subnav">
+                        <div id="div-click3" class="div-click">Instalacje <i id="i3" class="fa fa-caret-down ii"></i>
+                        </div>
+                        <div id="subnav-content3" class="subnav-content">
+                            <a href="introduction.html">Wstęp</a>
+                            <a href="electric.html">Elektryczne</a>
+                            <a href="intelligent.html">Inteligentne</a>
+                            <a href="alarm.html">Alarmowe</a>
+                            <a href="telecommunication.html">Teletechniczne</a>
+                        </div>
+                    </div>
+                    <div class="subnav">
+                        <div id="div-click4" class="div-click">Inteligentny Budynek <i id="i4"
+                                class="fa fa-caret-down ii"></i></div>
+                        <div id="subnav-content4" class="subnav-content">
+                            <a href="definition.html">Definicja</a>
+                            <a href="benefits.html">Korzyści</a>
+                            <a href="application.html">Zastosowanie</a>
+                        </div>
+                    </div>
+                    <a class="contact" href="contact.html">Kontakt</a>
+                </nav>
+            </div>
+        </header>
+        <div class="scroll-line"></div>
+    </div>
+    <article>
+        <section class="hero click">
+            <div class="container">
+                <div class="left-col">
+                    <p class="subhead">INTELIGENTNY DOM</p>
+                    <h1>Nowy standard życia dostępny także dla Ciebie!</h1>
+                    <div class="hero-cta">
+                        <a href="about.html" class="primary-cta">Więcej o nas</a>
                     </div>
                 </div>
-                <div class="subnav">
-                    <div id="div-click2" class="div-click">Usługi <i id="i2" class="fa fa-caret-down ii"></i></div>
-                    <div id="subnav-content2" class="subnav-content">
-                        <a href="offer.html">Oferta</a>
-                        <a href="project.html">Projekt</a>
-                        <a href="execution.html">Wykonanie</a>
-                        <a href="activation.html">Uruchomienie</a>
-                    </div>
-                </div>
-                <div class="subnav">
-                    <div id="div-click3" class="div-click">Instalacje <i id="i3" class="fa fa-caret-down ii"></i></div>
-                    <div id="subnav-content3" class="subnav-content">
-                        <a href="introduction.html">Wstęp</a>
-                        <a href="electric.html">Elektryczne</a>
-                        <a href="intelligent.html">Inteligentne</a>
-                        <a href="alarm.html">Alarmowe</a>
-                        <a href="telecommunication.html">Teletechniczne</a>
-                    </div>
-                </div>
-                <div class="subnav">
-                    <div id="div-click4" class="div-click">Inteligentny Budynek <i id="i4"
-                            class="fa fa-caret-down ii"></i></div>
-                    <div id="subnav-content4" class="subnav-content">
-                        <a href="definition.html">Definicja</a>
-                        <a href="benefits.html">Korzyści</a>
-                        <a href="application.html">Zastosowanie</a>
-                    </div>
-                </div>
-                <a class="contact" href="contact.html">Kontakt</a>
-            </nav>
-        </div>
-    </header>
-    <section class="hero click">
-        <div class="container">
-            <div class="left-col">
-                <p class="subhead">INTELIGENTNY DOM</p>
-                <h1>Nowy standard życia dostępny także dla Ciebie!</h1>
-                <div class="hero-cta">
-                    <a href="about.html" class="primary-cta">Więcej o nas</a>
-                </div>
+                <img src="assets/img/undraw_smart_home_re_orvn.svg" class="hero-img" alt="illustration">
             </div>
-            <img src="assets/img/undraw_smart_home_re_orvn.svg" class="hero-img" alt="illustration">
-        </div>
-    </section>
-    <section class="tiles click">
-        <div class="tile first-tile">
+        </section>
+        <section class="tiles click">
+            <div class="tile first-tile">
 
-            <h4>Zakres działalności</h4>
-            <p>Głównym profilem działalności firmy są tzw. inteligentne instalacje (inteligentny dom) oraz wszystkie
-                instalacje z tym powiązane. Należą do nich instalacje elektryczne, alarmowe, telewizji przemysłowej,
-                domofonowe i video-domofonowe, sieci telefoniczne i komputerowe (tzw. teleinformatyczne okablowanie
-                strukturalne) oraz systemy audio-video (tzw. multiroom'y) itp.</p>
-            <div class="link-container">
-                <a href="about.html#zakresDzialalnosci" class="learnMore">Czytaj dalej</a>
+                <h4>Zakres działalności</h4>
+                <p>Głównym profilem działalności firmy są tzw. inteligentne instalacje (inteligentny dom) oraz wszystkie
+                    instalacje z tym powiązane. Należą do nich instalacje elektryczne, alarmowe, telewizji przemysłowej,
+                    domofonowe i video-domofonowe, sieci telefoniczne i komputerowe (tzw. teleinformatyczne okablowanie
+                    strukturalne) oraz systemy audio-video (tzw. multiroom'y) itp.</p>
+                <div class="link-container">
+                    <a href="about.html#zakresDzialalnosci" class="learnMore">Czytaj dalej</a>
+                </div>
             </div>
-        </div>
-        <div class="tile second-tile">
-            <h4>Obszar działalności</h4>
-            <p>Działamy na terenie województwa śląskiego. Nasze usługi elektryczne kierujemy głównie do inwestorów z
-                powiatów: cieszyńskiego (w Cieszynie mamy swoją siedzibę), bielskiego, pszczyńskiego...</p>
-            <div class="link-container">
-                <a href="about.html#obszarDzialalnosci" class="learnMore learnMore-range">Czytaj dalej</a>
+            <div class="tile second-tile">
+                <h4>Obszar działalności</h4>
+                <p>Działamy na terenie województwa śląskiego. Nasze usługi elektryczne kierujemy głównie do inwestorów z
+                    powiatów: cieszyńskiego (w Cieszynie mamy swoją siedzibę), bielskiego, pszczyńskiego...</p>
+                <div class="link-container">
+                    <a href="about.html#obszarDzialalnosci" class="learnMore learnMore-range">Czytaj dalej</a>
+                </div>
             </div>
-        </div>
-        <div class="tile third-tile">
-            <h4>Ogólny zarys oferowanych usług</h4>
-            <p>Szeroka oferta usług elektroinstalacyjnych, którą firma "IQ SYSTEM" proponuje, skierowana jest głównie do
-                podmiotów ze Śląska (województwo śląskie), które realizują inwestycje budowlane, budują, modernizują lub
-                remontują, zarówno do firm, jak i osób prywatnych.</p>
-            <div class="link-container">
-                <a href="offer.html" class="learnMore">Czytaj dalej</a>
+            <div class="tile third-tile">
+                <h4>Ogólny zarys oferowanych usług</h4>
+                <p>Szeroka oferta usług elektroinstalacyjnych, którą firma "IQ SYSTEM" proponuje, skierowana jest
+                    głównie do
+                    podmiotów ze Śląska (województwo śląskie), które realizują inwestycje budowlane, budują, modernizują
+                    lub
+                    remontują, zarówno do firm, jak i osób prywatnych.</p>
+                <div class="link-container">
+                    <a href="offer.html" class="learnMore">Czytaj dalej</a>
+                </div>
             </div>
-        </div>
-        <div class="tile fourth-tile">
-            <h4>Korzyści:</h4>
-            <ul>
-                <li>Bezpieczeństwo</li>
-                <li>Oszczędność i ekologia</li>
-                <li>Komfort i estetyka</li>
-                <li>Prosta obsługa i elastyczność instalacji</li>
-                <li>Spojrzenie w pszyszłość</li>
-            </ul>
-            <div class="link-container">
-                <a href="benefits.html" class="learnMore">Czytaj dalej</a>
+            <div class="tile fourth-tile">
+                <h4>Korzyści:</h4>
+                <ul>
+                    <li>Bezpieczeństwo</li>
+                    <li>Oszczędność i ekologia</li>
+                    <li>Komfort i estetyka</li>
+                    <li>Prosta obsługa i elastyczność instalacji</li>
+                    <li>Spojrzenie w pszyszłość</li>
+                </ul>
+                <div class="link-container">
+                    <a href="benefits.html" class="learnMore">Czytaj dalej</a>
+                </div>
             </div>
-        </div>
-    </section>
-
+        </section>
+    </article>
     <footer>
-        <p>Copyright © 2008 - 2009 IQ SYSTEM Artur Niemczyk. Wszelkie prawa zastrzeżone.</p>
+        <p>Copyright © 2022 - <span class="date"></span> IQ SYSTEM Artur Niemczyk. Wszelkie prawa zastrzeżone.
+        </p>
     </footer>
     <script src="assets/js/main.js"></script>
+    <!-- Writed by: Kamil Kruszona -->
 </body>
 
 </html>

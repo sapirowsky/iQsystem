@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pl">
 
 <head>
 
@@ -7,6 +7,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- Font awesome dla strzałek menu -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+
+
     <link rel="stylesheet" href="assets/css/style.css">
     <title>iQsystem - Oferta</title>
     <meta name="description"
@@ -17,191 +22,207 @@
 </head>
 
 <body>
-    <header>
-        <div class="container">
-            <a class="logo" href="index.html"><span>iQ</span>system</a>
+    <div class="position-fixed">
+        <header>
+            <div class="container">
+                <a class="logo" href="index.html"><span>iQ</span>system</a>
 
-            <img id="mobile-cta" class="mobile-menu" src="assets/img/menu.svg" alt="Open nav">
+                <img id="mobile-cta" class="mobile-menu" src="assets/img/menu.svg" alt="Open nav">
 
-            <nav>
-                <img id="mobile-exit" class="mobile-menu-exit" src="assets/img/exit.svg" alt="Close nav">
-                <a class="a-start" href="index.html">Start</a>
-                <div class="subnav">
+                <nav>
+                    <img id="mobile-exit" class="mobile-menu-exit" src="assets/img/exit.svg" alt="Close nav">
+                    <a class="a-start" href="index.html">Start</a>
+                    <div class="subnav">
 
-                    <div id="div-click1" class="div-click">Firma <i id="i1" class="fa fa-caret-down ii"></i></div>
-                    <div id="subnav-content1" class="subnav-content">
-                        <a href="about.html">O firmie</a>
-                        <a href="partners.html">Partnerzy</a>
-                        <a href="certificates.html">Certyfikaty</a>
+                        <div id="div-click1" class="div-click">Firma <i id="i1" class="fa fa-caret-down ii"></i></div>
+                        <div id="subnav-content1" class="subnav-content">
+                            <a href="about.html">O firmie</a>
+                            <a href="partners.html">Partnerzy</a>
+                            <a href="certificates.html">Certyfikaty</a>
+                        </div>
                     </div>
-                </div>
-                <div class="subnav">
-                    <div id="div-click2" class="div-click currently-active-nav">Usługi <i id="i2"
-                            class="fa fa-caret-down ii"></i></div>
-                    <div id="subnav-content2" class="subnav-content">
-                        <a href="offer.html" class="currently-active-nav">Oferta</a>
-                        <a href="project.html">Projekt</a>
-                        <a href="execution.html">Wykonanie</a>
-                        <a href="activation.html">Uruchomienie</a>
+                    <div class="subnav">
+                        <div id="div-click2" class="div-click currently-active-nav">Usługi <i id="i2"
+                                class="fa fa-caret-down ii"></i></div>
+                        <div id="subnav-content2" class="subnav-content">
+                            <a href="offer.html" class="currently-active-nav">Oferta</a>
+                            <a href="project.html">Projekt</a>
+                            <a href="execution.html">Wykonanie</a>
+                            <a href="activation.html">Uruchomienie</a>
+                        </div>
                     </div>
-                </div>
-                <div class="subnav">
-                    <div id="div-click3" class="div-click">Instalacje <i id="i3" class="fa fa-caret-down ii"></i></div>
-                    <div id="subnav-content3" class="subnav-content">
-                        <a href="introduction.html">Wstęp</a>
-                        <a href="electric.html">Elektryczne</a>
-                        <a href="intelligent.html">Inteligentne</a>
-                        <a href="alarm.html">Alarmowe</a>
-                        <a href="telecommunication.html">Teletechniczne</a>
+                    <div class="subnav">
+                        <div id="div-click3" class="div-click">Instalacje <i id="i3" class="fa fa-caret-down ii"></i>
+                        </div>
+                        <div id="subnav-content3" class="subnav-content">
+                            <a href="introduction.html">Wstęp</a>
+                            <a href="electric.html">Elektryczne</a>
+                            <a href="intelligent.html">Inteligentne</a>
+                            <a href="alarm.html">Alarmowe</a>
+                            <a href="telecommunication.html">Teletechniczne</a>
+                        </div>
                     </div>
-                </div>
-                <div class="subnav">
-                    <div id="div-click4" class="div-click">Inteligentny Budynek <i id="i4"
-                            class="fa fa-caret-down ii"></i></div>
-                    <div id="subnav-content4" class="subnav-content">
-                        <a href="definition.html">Definicja</a>
-                        <a href="benefits.html">Korzyści</a>
-                        <a href="application.html">Zastosowanie</a>
+                    <div class="subnav">
+                        <div id="div-click4" class="div-click">Inteligentny Budynek <i id="i4"
+                                class="fa fa-caret-down ii"></i></div>
+                        <div id="subnav-content4" class="subnav-content">
+                            <a href="definition.html">Definicja</a>
+                            <a href="benefits.html">Korzyści</a>
+                            <a href="application.html">Zastosowanie</a>
+                        </div>
                     </div>
-                </div>
-                <a class="contact" href="contact.html">Kontakt</a>
-            </nav>
-        </div>
-    </header>
-    <main class="subpages click">
-        <h1>NASZA OFERTA</h1>
-        <p class="subhead">szeroki zakres USŁUG ELEKTROINSTALACYJNYCH dla każdego!</p>
-        <h2>Ogólny zarys oferowanych usług</h2>
-        <p>Szeroka oferta usług elektroinstalacyjnych, którą firma "IQ SYSTEM" proponuje, skierowana jest głównie do
-            podmiotów ze Śląska (województwo śląskie), które realizują inwestycje budowlane, budują, modernizują lub
-            remontują, zarówno do firm, jak i osób prywatnych. Oferujemy kompleksowe usługi obejmujące doradztwo,
-            zaopatrzenie, montaż, pomiary, uruchomienie oraz serwisowanie szeroko pojętych instalacji elektrycznych,
-            mających zastosowanie głównie w budownictwie jedno i wielorodzinnym, w niedużych obiektach usługowych oraz
-            użyteczności publicznej. Dominującą rolę, pośród proponowanych usług elektroinstalacyjnych, odgrywają
-            rozwiązania inteligentne (tzw. Inteligentny Dom), instalacje zabezpieczenia technicznego budynków, osób i
-            mienia (systemy alarmowe i telewizja przemysłowa), okablowanie strukturalne (strukturalna sieć
-            teleinformatyczna) oraz tradycyjne instalacje elektryczne.
-            Klientom indywidualnym, materiały i urządzenia do oferowanych przez nas instalacji elektrycznych,
-            sprzedajemy z obniżonym podatkiem VAT <b>(8% VAT na materiał z usługą)</b>. Jest to bardzo wygodne i
-            opłacalne rozwiązanie. Klient zyskuje 15% na cenie towaru i nie jest obciążony jego zakupem ani dowozem na
-            miejsce inwestycji. Po zakończeniu każdego etapu robót klient otrzyma rachunek za wbudowane ilości
-            materiałów a nie za hurtowe opakowania zbiorcze.
-            Poniżej przedstawiono szczegółowy zakres usług elektroinstalacyjnych, oferowanych przez Firmę - z podziałem
-            na rodzaj wykonywanej instalacji.</p>
-        <h2>Oferowane usługi elektroinstalacyjne</h2>
-        <h3 class="h3-non-margin"><a href="definition.html">Inteligentny Budynek</a></h3>
-        <p>Ofertę tą kierujemy zarówno do klientów indywidualnych (rezydencje, wille, domy jednorodzinne i mieszkania),
-            jak i do podmiotów gospodarczych (hotele, pensjonaty, biura, restauracje i inne prestiżowe obiekty),</p>
-        <div class="container">
+                    <a class="contact" href="contact.html">Kontakt</a>
+                </nav>
+            </div>
+        </header>
+        <div class="scroll-line"></div>
+    </div>
+    <article>
+        <main class="subpages click">
+            <h1>NASZA OFERTA</h1>
+            <p class="subhead">szeroki zakres USŁUG ELEKTROINSTALACYJNYCH dla każdego!</p>
+            <h2>Ogólny zarys oferowanych usług</h2>
+            <p>Szeroka oferta usług elektroinstalacyjnych, którą firma "IQ SYSTEM" proponuje, skierowana jest głównie do
+                podmiotów ze Śląska (województwo śląskie), które realizują inwestycje budowlane, budują, modernizują lub
+                remontują, zarówno do firm, jak i osób prywatnych. Oferujemy kompleksowe usługi obejmujące doradztwo,
+                zaopatrzenie, montaż, pomiary, uruchomienie oraz serwisowanie szeroko pojętych instalacji elektrycznych,
+                mających zastosowanie głównie w budownictwie jedno i wielorodzinnym, w niedużych obiektach usługowych
+                oraz
+                użyteczności publicznej. Dominującą rolę, pośród proponowanych usług elektroinstalacyjnych, odgrywają
+                rozwiązania inteligentne (tzw. Inteligentny Dom), instalacje zabezpieczenia technicznego budynków, osób
+                i
+                mienia (systemy alarmowe i telewizja przemysłowa), okablowanie strukturalne (strukturalna sieć
+                teleinformatyczna) oraz tradycyjne instalacje elektryczne.
+                Klientom indywidualnym, materiały i urządzenia do oferowanych przez nas instalacji elektrycznych,
+                sprzedajemy z obniżonym podatkiem VAT <b>(8% VAT na materiał z usługą)</b>. Jest to bardzo wygodne i
+                opłacalne rozwiązanie. Klient zyskuje 15% na cenie towaru i nie jest obciążony jego zakupem ani dowozem
+                na
+                miejsce inwestycji. Po zakończeniu każdego etapu robót klient otrzyma rachunek za wbudowane ilości
+                materiałów a nie za hurtowe opakowania zbiorcze.
+                Poniżej przedstawiono szczegółowy zakres usług elektroinstalacyjnych, oferowanych przez Firmę - z
+                podziałem
+                na rodzaj wykonywanej instalacji.</p>
+            <h2>Oferowane usługi elektroinstalacyjne</h2>
+            <h3 class="h3-non-margin"><a href="definition.html">Inteligentny Budynek</a></h3>
+            <p>Ofertę tą kierujemy zarówno do klientów indywidualnych (rezydencje, wille, domy jednorodzinne i
+                mieszkania),
+                jak i do podmiotów gospodarczych (hotele, pensjonaty, biura, restauracje i inne prestiżowe obiekty),</p>
+            <div class="container">
+                <ul>
+                    <p><b><i>zakres usług:</i></b></p>
+                    <li>ogólnie pojęte usługi elektroinstalacyjne z zakresu automatyki domowej,</li>
+                    <li>opracowanie koncepcji i projektu technicznego inteligentnej instalacji elektrycznej,</li>
+                    <li>wykonanie inteligentnej instalacji elektrycznej,</li>
+                    <li>modernizacja i rozbudowa istniejącej instalacji na potrzeby "Inteligentnego Domu",</li>
+                    <li>dobór odpowiedniego systemu automatyki - sterowanie magistralowe
+                        (EIB, Teletask, D2000), bezprzewodowe (Xcomfort, Teleco),
+                        po istniejącej sieci 230V (Sienna) bądź mieszane,</li>
+                    <li>dobór urządzeń sterujących,</li>
+                    <li>integracja wszystkich instalacji i urządzeń elektrycznych w budynku
+                        oraz na terenie do niego przyległym,</li>
+                    <li>opracowanie funkcjonalnych procedur obsługi automatyki budynkowej,</li>
+                    <li>konfiguracja urządzeń automatyki i uruchomienie inteligentnej instalacji,</li>
+                    <li>opieka serwisowa, konserwacja oraz możliwość przeprogramowania funkcji urządzeń
+                        w celu dopasowania ich do zmieniających się potrzeb użytkowników systemu,</li>
+                </ul>
+                <ul>
+                    <p><b><i>możliwości systemów:</i></b></p>
+                    <li>zaawansowane sterowanie oświetleniem (sceny świetlne),</li>
+                    <li>sterowanie ogrzewaniem, klimatyzacją i wentylacją,</li>
+                    <li>sterowanie roletami, markizami, żaluzjami,</li>
+                    <li>sterowanie urządzeniami AGD i systemami audio-wideo/multiroom,</li>
+                    <li>sterowanie zraszaczami w ogrodzie,</li>
+                    <li>sterowanie ręczne, automatyczne, czasowe oraz zmierzchowe,</li>
+                    <li>automatyczne odcięcie wody, gazu i wybranych obwodów elektrycznych w razie awarii,</li>
+                    <li>selektywne odcięcie zasilania w przypadku wyjazdu na urlop,</li>
+                    <li>symulacja obecności domowników podczas dłuższej ich nieobecności w domu.</li>
+                </ul>
+            </div>
+            <h3><a href="electric.html">Tradycyjna instalacja elektryczna</a></h3>
+            <p>Choć w nowo budowanych obiektach coraz większą popularność zdobywają inteligentne instalacje, to jednak
+                tradycyjne instalacje mają i będą miały spory udział w rynku. Dlatego nie mogło zabraknąć w naszej
+                ofercie
+                usług związanych z tradycyjnymi instalacjami elektrycznymi.</p>
             <ul>
                 <p><b><i>zakres usług:</i></b></p>
-                <li>ogólnie pojęte usługi elektroinstalacyjne z zakresu automatyki domowej,</li>
-                <li>opracowanie koncepcji i projektu technicznego inteligentnej instalacji elektrycznej,</li>
-                <li>wykonanie inteligentnej instalacji elektrycznej,</li>
-                <li>modernizacja i rozbudowa istniejącej instalacji na potrzeby "Inteligentnego Domu",</li>
-                <li>dobór odpowiedniego systemu automatyki - sterowanie magistralowe
-                    (EIB, Teletask, D2000), bezprzewodowe (Xcomfort, Teleco),
-                    po istniejącej sieci 230V (Sienna) bądź mieszane,</li>
-                <li>dobór urządzeń sterujących,</li>
-                <li>integracja wszystkich instalacji i urządzeń elektrycznych w budynku
-                    oraz na terenie do niego przyległym,</li>
-                <li>opracowanie funkcjonalnych procedur obsługi automatyki budynkowej,</li>
-                <li>konfiguracja urządzeń automatyki i uruchomienie inteligentnej instalacji,</li>
-                <li>opieka serwisowa, konserwacja oraz możliwość przeprogramowania funkcji urządzeń
-                    w celu dopasowania ich do zmieniających się potrzeb użytkowników systemu,</li>
+                <li>ogólnie pojęte usługi elektroinstalacyjne,</li>
+                <li>wykonanie i uruchomienie tradycyjnej instalacji elektrycznej,</li>
+                <li>modernizacja i rozbudowa tradycyjnej instalacji elektrycznej,</li>
+                <li>prefabrykacja i montaż rozdzielnic NN wraz z wykonaniem pomiarów odbiorczych,</li>
+                <li>pomiary eksploatacyjne instalacji elektrycznej (odbiorcze i okresowe),</li>
+                <li>przygotowanie dokumentów do odbioru instalacji przez Zakład Energetyczny,</li>
+                <li>inwentaryzacja instalacji elektrycznych,</li>
+                <li>wykonanie instalacji odgromowej,</li>
+                <li>pomiary eksploatacyjne instalacji odgromowej (odbiorcze i okresowe).</li>
             </ul>
-            <ul>
-                <p><b><i>możliwości systemów:</i></b></p>
-                <li>zaawansowane sterowanie oświetleniem (sceny świetlne),</li>
-                <li>sterowanie ogrzewaniem, klimatyzacją i wentylacją,</li>
-                <li>sterowanie roletami, markizami, żaluzjami,</li>
-                <li>sterowanie urządzeniami AGD i systemami audio-wideo/multiroom,</li>
-                <li>sterowanie zraszaczami w ogrodzie,</li>
-                <li>sterowanie ręczne, automatyczne, czasowe oraz zmierzchowe,</li>
-                <li>automatyczne odcięcie wody, gazu i wybranych obwodów elektrycznych w razie awarii,</li>
-                <li>selektywne odcięcie zasilania w przypadku wyjazdu na urlop,</li>
-                <li>symulacja obecności domowników podczas dłuższej ich nieobecności w domu.</li>
-            </ul>
-        </div>
-        <h3><a href="electric.html">Tradycyjna instalacja elektryczna</a></h3>
-        <p>Choć w nowo budowanych obiektach coraz większą popularność zdobywają inteligentne instalacje, to jednak
-            tradycyjne instalacje mają i będą miały spory udział w rynku. Dlatego nie mogło zabraknąć w naszej ofercie
-            usług związanych z tradycyjnymi instalacjami elektrycznymi.</p>
-        <ul>
-            <p><b><i>zakres usług:</i></b></p>
-            <li>ogólnie pojęte usługi elektroinstalacyjne,</li>
-            <li>wykonanie i uruchomienie tradycyjnej instalacji elektrycznej,</li>
-            <li>modernizacja i rozbudowa tradycyjnej instalacji elektrycznej,</li>
-            <li>prefabrykacja i montaż rozdzielnic NN wraz z wykonaniem pomiarów odbiorczych,</li>
-            <li>pomiary eksploatacyjne instalacji elektrycznej (odbiorcze i okresowe),</li>
-            <li>przygotowanie dokumentów do odbioru instalacji przez Zakład Energetyczny,</li>
-            <li>inwentaryzacja instalacji elektrycznych,</li>
-            <li>wykonanie instalacji odgromowej,</li>
-            <li>pomiary eksploatacyjne instalacji odgromowej (odbiorcze i okresowe).</li>
-        </ul>
-        <h3><a href="alarm.html">Zabezpieczenie techniczne budynków, osób i mienia</a></h3>
-        <p>Oferta przeznaczona zarówno dla klienta indywidualnego (rezydencje, wille, domy jednorodzinne i mieszkania),
-            jak i dla podmiotów gospodarczych czy instytucji użytku publicznego (zakłady produkcyjne i hale magazynowe,
-            dworce autobusowe i kolejowe, szkoły i uczelnie, hotele i pensjonaty, sklepy i centra handlowe, biurowce,
-            restauracje, parkingi itp.),</p>
-        <div class="container">
+            <h3><a href="alarm.html">Zabezpieczenie techniczne budynków, osób i mienia</a></h3>
+            <p>Oferta przeznaczona zarówno dla klienta indywidualnego (rezydencje, wille, domy jednorodzinne i
+                mieszkania),
+                jak i dla podmiotów gospodarczych czy instytucji użytku publicznego (zakłady produkcyjne i hale
+                magazynowe,
+                dworce autobusowe i kolejowe, szkoły i uczelnie, hotele i pensjonaty, sklepy i centra handlowe,
+                biurowce,
+                restauracje, parkingi itp.),</p>
+            <div class="container">
+                <ul>
+                    <p><b><i>zakres usług:</i></b></p>
+                    <li>sporządzenie kompleksowego projektu rozmieszczenia urządzeń systemu zabezpieczenia
+                        technicznego budynku, osób, mienia oraz terenów przyległych do chronionego obiektu,</li>
+                    <li>kompleksowe wykonanie, modernizacja i rozbudowa istniejącej instalacji
+                        zabezpieczenia technicznego,</li>
+                    <li>rozplanowanie, montaż i uruchomienie sytemu alarmowego
+                        (przewodowego, bezprzewodowego, mieszanego),</li>
+                    <li>rozplanowanie, montaż i uruchomienie systemu telewizji przemysłowej CCTV
+                        (analogowej i cyfrowej),</li>
+                    <li>rozplanowanie, montaż i uruchomienie systemu kontroli dostępu,</li>
+                    <li>zabezpieczenie antysabotażowe dla wykonanych instalacji zabezpieczenia
+                        technicznego,</li>
+                    <li>opieka serwisowa, konserwacja oraz możliwość przekonfigurowania zamontowanych
+                        wcześniej urządzeń systemów alarmowych i telewizji dozorowej.</li>
+                </ul>
+                <ul>
+                    <p><b><i>możliwości systemów:</i></b></p>
+                    <li>optyczno - akustyczna sygnalizacja próby wtargnięcia do chronionego obszaru
+                        (ochrona obwodowa),</li>
+                    <li>optyczno - akustyczna sygnalizacja włamania i napadu (ochrona wewnątrz obiektu),</li>
+                    <li>automatyczne powiadamianie telefoniczne lub SMS-em (za pomocą bramki GSM)
+                        właściciela i odpowiednich służb o niepokojących zdarzeniach, mających miejsce
+                        w chronionym obiekcie (tzw. cichy alarm),</li>
+                    <li>sygnalizowanie o różnego rodzaju zagrożeniach, takich jak: ulatniający się gaz,
+                        dwutlenek węgla, zadymienie, wysoka temperatura oraz zalanie wodą,</li>
+                    <li>kontrola dostępu (zamki szyfrowe, czytniki magnetyczne i bezstykowe),</li>
+                    <li>monitoring i ciągła rejestracja przekazywanych obrazów z zainstalowanych kamer.</li>
+                </ul>
+            </div>
+            <h3><a href="telecommunication.html">Strukturalna sieć teleinformatyczna</a></h3>
+            <p>Oferta skierowana jest głównie do podmiotów gospodarczych i instytucji użytku publicznego (biura różnego
+                rodzaju instytucji publicznych, biblioteki publiczne, szkoły i uczelnie, biurowce, hotele, sale
+                konferencyjne itp.),</p>
+
             <ul>
                 <p><b><i>zakres usług:</i></b></p>
-                <li>sporządzenie kompleksowego projektu rozmieszczenia urządzeń systemu zabezpieczenia
-                    technicznego budynku, osób, mienia oraz terenów przyległych do chronionego obiektu,</li>
-                <li>kompleksowe wykonanie, modernizacja i rozbudowa istniejącej instalacji
-                    zabezpieczenia technicznego,</li>
-                <li>rozplanowanie, montaż i uruchomienie sytemu alarmowego
-                    (przewodowego, bezprzewodowego, mieszanego),</li>
-                <li>rozplanowanie, montaż i uruchomienie systemu telewizji przemysłowej CCTV
-                    (analogowej i cyfrowej),</li>
-                <li>rozplanowanie, montaż i uruchomienie systemu kontroli dostępu,</li>
-                <li>zabezpieczenie antysabotażowe dla wykonanych instalacji zabezpieczenia
-                    technicznego,</li>
-                <li>opieka serwisowa, konserwacja oraz możliwość przekonfigurowania zamontowanych
-                    wcześniej urządzeń systemów alarmowych i telewizji dozorowej.</li>
+                <li>rozplanowanie i montaż lokalnych sieci teleinformatycznych,</li>
+                <li>modernizacja i rozbudowa istniejących sieci teleinformatycznych,</li>
+                <li>sieci miedziane i światłowodowe*,</li>
+                <li>teleinformatyczne okablowanie strukturalne,</li>
+                <li>systemy kanałów kablowych,</li>
+                <li>szafy teleinformatyczne i serwerowe,</li>
+                <li>dedykowana sieć zasilająca 230V,</li>
+                <li>zasilanie awaryjne - UPS'y,</li>
+                <li>stały nadzór eksploatacyjny,</li>
+                <li>modernizacja sprzętu komputerowego,</li>
+                <li>instalacja i reinstalacja oprogramowania*,</li>
+                <li>certyfikacja instalacji oraz opieka serwisowa,</li>
+                <li>centrale telefoniczne.</li>
             </ul>
-            <ul>
-                <p><b><i>możliwości systemów:</i></b></p>
-                <li>optyczno - akustyczna sygnalizacja próby wtargnięcia do chronionego obszaru
-                    (ochrona obwodowa),</li>
-                <li>optyczno - akustyczna sygnalizacja włamania i napadu (ochrona wewnątrz obiektu),</li>
-                <li>automatyczne powiadamianie telefoniczne lub SMS-em (za pomocą bramki GSM)
-                    właściciela i odpowiednich służb o niepokojących zdarzeniach, mających miejsce
-                    w chronionym obiekcie (tzw. cichy alarm),</li>
-                <li>sygnalizowanie o różnego rodzaju zagrożeniach, takich jak: ulatniający się gaz,
-                    dwutlenek węgla, zadymienie, wysoka temperatura oraz zalanie wodą,</li>
-                <li>kontrola dostępu (zamki szyfrowe, czytniki magnetyczne i bezstykowe),</li>
-                <li>monitoring i ciągła rejestracja przekazywanych obrazów z zainstalowanych kamer.</li>
-            </ul>
-        </div>
-        <h3><a href="telecommunication.html">Strukturalna sieć teleinformatyczna</a></h3>
-        <p>Oferta skierowana jest głównie do podmiotów gospodarczych i instytucji użytku publicznego (biura różnego
-            rodzaju instytucji publicznych, biblioteki publiczne, szkoły i uczelnie, biurowce, hotele, sale
-            konferencyjne itp.),</p>
-
-        <ul>
-            <p><b><i>zakres usług:</i></b></p>
-            <li>rozplanowanie i montaż lokalnych sieci teleinformatycznych,</li>
-            <li>modernizacja i rozbudowa istniejących sieci teleinformatycznych,</li>
-            <li>sieci miedziane i światłowodowe*,</li>
-            <li>teleinformatyczne okablowanie strukturalne,</li>
-            <li>systemy kanałów kablowych,</li>
-            <li>szafy teleinformatyczne i serwerowe,</li>
-            <li>dedykowana sieć zasilająca 230V,</li>
-            <li>zasilanie awaryjne - UPS'y,</li>
-            <li>stały nadzór eksploatacyjny,</li>
-            <li>modernizacja sprzętu komputerowego,</li>
-            <li>instalacja i reinstalacja oprogramowania*,</li>
-            <li>certyfikacja instalacji oraz opieka serwisowa,</li>
-            <li>centrale telefoniczne.</li>
-        </ul>
-    </main>
-    <footer class="partners-footer">
-        <p>Copyright © 2008 - 2009 IQ SYSTEM Artur Niemczyk. Wszelkie prawa zastrzeżone.</p>
+        </main>
+    </article>
+    <footer>
+        <p>Copyright © 2022 - <span class="date"></span> IQ SYSTEM Artur Niemczyk. Wszelkie prawa zastrzeżone.
+        </p>
     </footer>
     <script src="assets/js/main.js"></script>
-    <!-- Code writed by: Kamil Kruszona -->
+    <!-- Writed by: Kamil Kruszona -->
 </body>
 
 </html>

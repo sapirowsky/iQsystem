@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pl">
 
 <head>
 
@@ -7,6 +7,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- Font awesome dla strzałek menu -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+
+
+
 
     <link rel="stylesheet" href="assets/css/style.css">
     <title>iQsystem - Kontakt</title>
@@ -18,126 +24,133 @@
 </head>
 
 <body>
-    <header>
-        <div class="container">
-            <a class="logo" href="index.html"><span>iQ</span>system</a>
+    <div class="position-fixed">
+        <header>
+            <div class="container">
+                <a class="logo" href="index.html"><span>iQ</span>system</a>
 
-            <img id="mobile-cta" class="mobile-menu" src="assets/img/menu.svg" alt="Open nav">
+                <img id="mobile-cta" class="mobile-menu" src="assets/img/menu.svg" alt="Open nav">
 
-            <nav>
-                <img id="mobile-exit" class="mobile-menu-exit" src="assets/img/exit.svg" alt="Close nav">
-                <a class="a-start" href="index.html">Start</a>
-                <div class="subnav">
+                <nav>
+                    <img id="mobile-exit" class="mobile-menu-exit" src="assets/img/exit.svg" alt="Close nav">
+                    <a class="a-start" href="index.html">Start</a>
+                    <div class="subnav">
 
-                    <div id="div-click1" class="div-click">Firma <i id="i1" class="fa fa-caret-down ii"></i></div>
-                    <div id="subnav-content1" class="subnav-content">
-                        <a href="about.html">O firmie</a>
-                        <a href="partners.html">Partnerzy</a>
-                        <a href="certificates.html">Certyfikaty</a>
+                        <div id="div-click1" class="div-click">Firma <i id="i1" class="fa fa-caret-down ii"></i></div>
+                        <div id="subnav-content1" class="subnav-content">
+                            <a href="about.html">O firmie</a>
+                            <a href="partners.html">Partnerzy</a>
+                            <a href="certificates.html">Certyfikaty</a>
+                        </div>
                     </div>
-                </div>
-                <div class="subnav">
-                    <div id="div-click2" class="div-click">Usługi <i id="i2" class="fa fa-caret-down ii"></i></div>
-                    <div id="subnav-content2" class="subnav-content">
-                        <a href="offer.html">Oferta</a>
-                        <a href="project.html">Projekt</a>
-                        <a href="execution.html">Wykonanie</a>
-                        <a href="activation.html">Uruchomienie</a>
+                    <div class="subnav">
+                        <div id="div-click2" class="div-click">Usługi <i id="i2" class="fa fa-caret-down ii"></i></div>
+                        <div id="subnav-content2" class="subnav-content">
+                            <a href="offer.html">Oferta</a>
+                            <a href="project.html">Projekt</a>
+                            <a href="execution.html">Wykonanie</a>
+                            <a href="activation.html">Uruchomienie</a>
+                        </div>
                     </div>
-                </div>
-                <div class="subnav">
-                    <div id="div-click3" class="div-click">Instalacje <i id="i3" class="fa fa-caret-down ii"></i></div>
-                    <div id="subnav-content3" class="subnav-content">
-                        <a href="introduction.html">Wstęp</a>
-                        <a href="electric.html">Elektryczne</a>
-                        <a href="intelligent.html">Inteligentne</a>
-                        <a href="alarm.html">Alarmowe</a>
-                        <a href="telecommunication.html">Teletechniczne</a>
+                    <div class="subnav">
+                        <div id="div-click3" class="div-click">Instalacje <i id="i3" class="fa fa-caret-down ii"></i>
+                        </div>
+                        <div id="subnav-content3" class="subnav-content">
+                            <a href="introduction.html">Wstęp</a>
+                            <a href="electric.html">Elektryczne</a>
+                            <a href="intelligent.html">Inteligentne</a>
+                            <a href="alarm.html">Alarmowe</a>
+                            <a href="telecommunication.html">Teletechniczne</a>
+                        </div>
                     </div>
-                </div>
-                <div class="subnav">
-                    <div id="div-click4" class="div-click">Inteligentny Budynek <i id="i4"
-                            class="fa fa-caret-down ii"></i></div>
-                    <div id="subnav-content4" class="subnav-content">
-                        <a href="definition.html">Definicja</a>
-                        <a href="benefits.html">Korzyści</a>
-                        <a href="application.html">Zastosowanie</a>
+                    <div class="subnav">
+                        <div id="div-click4" class="div-click">Inteligentny Budynek <i id="i4"
+                                class="fa fa-caret-down ii"></i></div>
+                        <div id="subnav-content4" class="subnav-content">
+                            <a href="definition.html">Definicja</a>
+                            <a href="benefits.html">Korzyści</a>
+                            <a href="application.html">Zastosowanie</a>
+                        </div>
                     </div>
-                </div>
-                <a class="contact" href="contact.html">Kontakt</a>
-            </nav>
-        </div>
-    </header>
-    <section class="contact-section click">
-        <div class="container">
-            <div class="contact-left">
-                <ul class="contact-left-left">
-                    <li>
-                        <h2>Dane firmy:</h2>
-                    </li>
-                    <li>
-                        <p>iQ system</p>
-                    </li>
-                    <li>
-                        <p>43-400 Cieszyn</p>
-                    </li>
-                    <li>
-                        <p>ul. Zaleskiego 29</p>
-                    </li>
-                    <li>
-                        <p><b>NIP: </b>5481295298</p>
-                    </li>
-                    <li>
-                        <p><b>Regon: </b>070492069</p>
-                    </li>
-                </ul>
-                <ul class="contact-left-right">
-                    <li>
-                        <h2 class="contactData-h2">Dane kontaktowe:</h2>
-                    </li>
-                    <li class="container">
-                        <ul class="contact-data-left">
-                            <li>
-                                <h4>Siedziba:</h4>
-                            </li>
-                            <li>
-                                <p>43-400 Cieszyn</p>
-                            </li>
-                            <li>
-                                <p>ul. Zaleskiego 29</p>
-                            </li>
-                            <li>
-                                <p>tel. (33) 8512601</p>
-                            </li>
-                        </ul>
-                        <ul class="contact-data-right">
-                            <li>
-                                <h4>Kontakt bezpośredni:</h4>
-                            </li>
-                            <li>
-                                <p>Artur Niemczyk</p>
-                            </li>
-                            <li>
-                                <p>tel. kom. +48 607461501</p>
-                            </li>
-                        </ul>
-                    </li>
-                </ul>
-
-
+                    <a class="contact" href="contact.html">Kontakt</a>
+                </nav>
             </div>
-            <div class="contact-right">
-                <iframe
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2578.1073287462823!2d18.641596815706027!3d49.74642427938447!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4714040a6a480a0d%3A0x84c886754d501eb0!2sJ%C3%B3zefa%20Zaleskiego%2029%2C%2043-400%20Cieszyn!5e0!3m2!1spl!2spl!4v1644524842258!5m2!1spl!2spl"
-                    width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+        </header>
+        <div class="scroll-line"></div>
+    </div>
+    <article>
+        <section class="contact-section click">
+            <div class="container">
+                <div class="contact-left">
+                    <ul class="contact-left-left">
+                        <li>
+                            <h2>Dane firmy:</h2>
+                        </li>
+                        <li>
+                            <p>iQ system</p>
+                        </li>
+                        <li>
+                            <p>43-400 Cieszyn</p>
+                        </li>
+                        <li>
+                            <p>ul. Zaleskiego 29</p>
+                        </li>
+                        <li>
+                            <p><b>NIP: </b>5481295298</p>
+                        </li>
+                        <li>
+                            <p><b>Regon: </b>070492069</p>
+                        </li>
+                    </ul>
+                    <ul class="contact-left-right">
+                        <li>
+                            <h2 class="contactData-h2">Dane kontaktowe:</h2>
+                        </li>
+                        <li class="container">
+                            <ul class="contact-data-left">
+                                <li>
+                                    <h4>Siedziba:</h4>
+                                </li>
+                                <li>
+                                    <p>43-400 Cieszyn</p>
+                                </li>
+                                <li>
+                                    <p>ul. Zaleskiego 29</p>
+                                </li>
+                                <li>
+                                    <p>tel. (33) 8512601</p>
+                                </li>
+                            </ul>
+                            <ul class="contact-data-right">
+                                <li>
+                                    <h4>Kontakt bezpośredni:</h4>
+                                </li>
+                                <li>
+                                    <p>Artur Niemczyk</p>
+                                </li>
+                                <li>
+                                    <p>tel. kom. +48 607461501</p>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+
+
+                </div>
+                <div class="contact-right">
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2578.1073287462823!2d18.641596815706027!3d49.74642427938447!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4714040a6a480a0d%3A0x84c886754d501eb0!2sJ%C3%B3zefa%20Zaleskiego%2029%2C%2043-400%20Cieszyn!5e0!3m2!1spl!2spl!4v1644524842258!5m2!1spl!2spl"
+                        width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                </div>
             </div>
-        </div>
-    </section>
+        </section>
+    </article>
     <footer>
-        <p>Copyright © 2008 - 2009 IQ SYSTEM Artur Niemczyk. Wszelkie prawa zastrzeżone.</p>
+        <p>Copyright © 2022 - <span class="date"></span> IQ SYSTEM Artur Niemczyk. Wszelkie prawa zastrzeżone.
+        </p>
     </footer>
     <script src="assets/js/main.js"></script>
-    <!-- Code writed by: Kamil Kruszona -->
+    <!-- Writed by: Kamil Kruszona -->
 </body>
 
 </html>

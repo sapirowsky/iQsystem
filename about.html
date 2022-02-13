@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pl">
 
 <head>
 
@@ -7,6 +7,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- Font awesome dla strzałek menu -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+
 
     <link rel="stylesheet" href="assets/css/style.css">
     <title>iQsystem - O firmie</title>
@@ -18,155 +22,174 @@
 </head>
 
 <body>
-    <header>
-        <div class="container">
-            <a class="logo" href="index.html"><span>iQ</span>system</a>
+    <div class="position-fixed">
+        <header>
+            <div class="container">
+                <a class="logo" href="index.html"><span>iQ</span>system</a>
 
-            <img id="mobile-cta" class="mobile-menu" src="assets/img/menu.svg" alt="Open nav">
+                <img id="mobile-cta" class="mobile-menu" src="assets/img/menu.svg" alt="Open nav">
 
-            <nav>
-                <img id="mobile-exit" class="mobile-menu-exit" src="assets/img/exit.svg" alt="Close nav">
-                <a class="a-start" href="index.html">Start</a>
-                <div class="subnav">
+                <nav>
+                    <img id="mobile-exit" class="mobile-menu-exit" src="assets/img/exit.svg" alt="Close nav">
+                    <a class="a-start" href="index.html">Start</a>
+                    <div class="subnav">
 
-                    <div id="div-click1" class="div-click currently-active-nav">Firma <i id="i1"
-                            class="fa fa-caret-down ii"></i></div>
-                    <div id="subnav-content1" class="subnav-content">
-                        <a href="about.html" class="currently-active-nav">O firmie</a>
-                        <a href="partners.html">Partnerzy</a>
-                        <a href="certificates.html">Certyfikaty</a>
+                        <div id="div-click1" class="div-click currently-active-nav">Firma <i id="i1"
+                                class="fa fa-caret-down ii"></i></div>
+                        <div id="subnav-content1" class="subnav-content">
+                            <a href="about.html" class="currently-active-nav">O firmie</a>
+                            <a href="partners.html">Partnerzy</a>
+                            <a href="certificates.html">Certyfikaty</a>
+                        </div>
                     </div>
-                </div>
-                <div class="subnav">
-                    <div id="div-click2" class="div-click">Usługi <i id="i2" class="fa fa-caret-down ii"></i></div>
-                    <div id="subnav-content2" class="subnav-content">
-                        <a href="offer.html">Oferta</a>
-                        <a href="project.html">Projekt</a>
-                        <a href="execution.html">Wykonanie</a>
-                        <a href="activation.html">Uruchomienie</a>
+                    <div class="subnav">
+                        <div id="div-click2" class="div-click">Usługi <i id="i2" class="fa fa-caret-down ii"></i></div>
+                        <div id="subnav-content2" class="subnav-content">
+                            <a href="offer.html">Oferta</a>
+                            <a href="project.html">Projekt</a>
+                            <a href="execution.html">Wykonanie</a>
+                            <a href="activation.html">Uruchomienie</a>
+                        </div>
                     </div>
-                </div>
-                <div class="subnav">
-                    <div id="div-click3" class="div-click">Instalacje <i id="i3" class="fa fa-caret-down ii"></i></div>
-                    <div id="subnav-content3" class="subnav-content">
-                        <a href="introduction.html">Wstęp</a>
-                        <a href="electric.html">Elektryczne</a>
-                        <a href="intelligent.html">Inteligentne</a>
-                        <a href="alarm.html">Alarmowe</a>
-                        <a href="telecommunication.html">Teletechniczne</a>
+                    <div class="subnav">
+                        <div id="div-click3" class="div-click">Instalacje <i id="i3" class="fa fa-caret-down ii"></i>
+                        </div>
+                        <div id="subnav-content3" class="subnav-content">
+                            <a href="introduction.html">Wstęp</a>
+                            <a href="electric.html">Elektryczne</a>
+                            <a href="intelligent.html">Inteligentne</a>
+                            <a href="alarm.html">Alarmowe</a>
+                            <a href="telecommunication.html">Teletechniczne</a>
+                        </div>
                     </div>
-                </div>
-                <div class="subnav">
-                    <div id="div-click4" class="div-click">Inteligentny Budynek <i id="i4"
-                            class="fa fa-caret-down ii"></i></div>
-                    <div id="subnav-content4" class="subnav-content">
-                        <a href="definition.html">Definicja</a>
-                        <a href="benefits.html">Korzyści</a>
-                        <a href="application.html">Zastosowanie</a>
+                    <div class="subnav">
+                        <div id="div-click4" class="div-click">Inteligentny Budynek <i id="i4"
+                                class="fa fa-caret-down ii"></i></div>
+                        <div id="subnav-content4" class="subnav-content">
+                            <a href="definition.html">Definicja</a>
+                            <a href="benefits.html">Korzyści</a>
+                            <a href="application.html">Zastosowanie</a>
+                        </div>
                     </div>
-                </div>
-                <a class="contact" href="contact.html">Kontakt</a>
-            </nav>
-        </div>
-    </header>
-    <main class="about click">
-        <div class="container">
-            <div class="fewwords">
-                <div class="caption">
-                    <h1 class="start">Kilka słów</h1>
-                    <h1 class="end">o firmie...</h1>
-                    <div class="line"></div>
-                </div>
+                    <a class="contact" href="contact.html">Kontakt</a>
+                </nav>
             </div>
-            <section class="hero click">
-                <div class="container">
-                    <div class="left-col">
-
-                        <h4>Kim jesteśmy...</h4>
-                        <p class="whoweare-p">Firma elektroinstalacyjna "IQ SYSTEM" powstała w roku 2008, z inicjatywy
-                            dwóch
-                            osób, których
-                            wykształcenie i doświadczenie zawodowe spotkało się w jednym punkcie i zaowocowało nowym
-                            pomysłem na życie, zakładającym stworzenie wspólnego przedsięwzięcia branży usług
-                            elektrycznych,
-                            sieci komputerowych oraz zabezpieczenia technicznego osób i mienia. Szybko okazało się, że
-                            wszystkie te usługi mają jeden wspólny mianownik - inteligentne instalacje elektryczne.
-                            Firma skupia osoby wykwalifikowane, odpowiedzialne i solidne, ukierunkowane na ciągłe
-                            poszerzanie wiedzy. Kierujemy się zasadą, że najlepszą reklamą jest zadowolony klient, w
-                            związku
-                            z czym postawiliśmy na wysoką jakość świadczonych usług i oferowanych materiałów oraz
-                            rzetelność. Zawsze pomagamy w optymalnym wyborze rozwiązania oraz chętnie służymy radą i
-                            swoim
-                            doświadczeniem. Głównym celem firmy, postawionym już na samym starcie, jest zbudowanie
-                            wiarygodnej marki, która będzie gwarancją naszej solidności, fachowości oraz elastycznego
-                            podejścia do każdej inwestycji. </p>
+        </header>
+        <div class="scroll-line"></div>
+    </div>
+    <article class="about">
+        <main class="about click">
+            <div class="container">
+                <div class="fewwords">
+                    <div class="caption">
+                        <h1 class="start">Kilka słów</h1>
+                        <h1 class="end">o firmie...</h1>
+                        <div class="line"></div>
                     </div>
-                    <img src="assets/img/undraw_team_spirit_re_yl1v.svg" class="hero-img" alt="illustration">
                 </div>
-            </section>
+                <section class="hero click">
+                    <div class="container">
+                        <div class="left-col">
 
-            <div class="fewwords2" id="zakresDzialalnosci">
-                <div class="caption2">
-                    <h1 class="end2">Czym się</h1>
-                    <h1 class="start2">zajmujemy?</h1>
-                    <div class="line2"></div>
+                            <h4>Kim jesteśmy...</h4>
+                            <p class="whoweare-p">Firma elektroinstalacyjna "IQ SYSTEM" powstała w roku 2008, z
+                                inicjatywy
+                                dwóch
+                                osób, których
+                                wykształcenie i doświadczenie zawodowe spotkało się w jednym punkcie i zaowocowało nowym
+                                pomysłem na życie, zakładającym stworzenie wspólnego przedsięwzięcia branży usług
+                                elektrycznych,
+                                sieci komputerowych oraz zabezpieczenia technicznego osób i mienia. Szybko okazało się,
+                                że
+                                wszystkie te usługi mają jeden wspólny mianownik - inteligentne instalacje elektryczne.
+                                Firma skupia osoby wykwalifikowane, odpowiedzialne i solidne, ukierunkowane na ciągłe
+                                poszerzanie wiedzy. Kierujemy się zasadą, że najlepszą reklamą jest zadowolony klient, w
+                                związku
+                                z czym postawiliśmy na wysoką jakość świadczonych usług i oferowanych materiałów oraz
+                                rzetelność. Zawsze pomagamy w optymalnym wyborze rozwiązania oraz chętnie służymy radą i
+                                swoim
+                                doświadczeniem. Głównym celem firmy, postawionym już na samym starcie, jest zbudowanie
+                                wiarygodnej marki, która będzie gwarancją naszej solidności, fachowości oraz
+                                elastycznego
+                                podejścia do każdej inwestycji. </p>
+                        </div>
+                        <img src="assets/img/undraw_team_spirit_re_yl1v.svg" class="hero-img" alt="illustration">
+                    </div>
+                </section>
+
+                <div class="fewwords2" id="zakresDzialalnosci">
+                    <div class="caption2">
+                        <h1 class="end2">Czym się</h1>
+                        <h1 class="start2">zajmujemy?</h1>
+                        <div class="line2"></div>
+                    </div>
                 </div>
+
+                <section class="hero click">
+                    <div class="container">
+                        <img src="assets/img/undraw_organizing_projects_re_9p1k.svg" class="hero-img"
+                            alt="illustration">
+                        <div class="left-col">
+                            <h4 class="left-col-range">Zakres działalności</h4>
+                            <p class="whoweare-p">Głównym profilem działalności firmy są tzw. inteligentne instalacje
+                                (inteligentny dom) oraz wszystkie instalacje z tym powiązane. Należą do nich instalacje
+                                elektryczne, alarmowe, telewizji przemysłowej, domofonowe i video-domofonowe, sieci
+                                telefoniczne i komputerowe (tzw. teleinformatyczne okablowanie strukturalne) oraz
+                                systemy
+                                audio-video (tzw. multiroom'y) itp.
+                                Prowadzimy kompleksową obsługę każdej inwestycji - począwszy od określenia wymagań
+                                inwestora
+                                w stosunku do lokalizacji i ergonomii poszczególnych urządzeń i osprzętu
+                                elektroinstalacyjnego, poprzez sporządzenie kosztorysu, realizację i integrację
+                                instalacji
+                                wchodzących w skład projektu, a skończywszy na pomiarach odbiorczych i serwisie.
+                                Współpraca
+                                z innymi firmami umożliwia nam obsłużenie nawet bardzo wymagających klientów - jeżeli
+                                niebezpośrednio, to właśnie za pośrednictwem zaprzyjaźnionych firm.
+                                Firma wyposażona jest w sprzęt, narzędzia i środki transportu niezbędne do świadczenia
+                                w/w
+                                usług. </p>
+                        </div>
+
+                    </div>
+                </section>
+                <div class="fewwords3" id="obszarDzialalnosci">
+                    <div class="caption3">
+                        <h1 class="start3">Gdzie</h1>
+                        <h1 class="end3">działamy?</h1>
+                        <div class="line3"></div>
+                    </div>
+                </div>
+
+                <section class="hero click">
+                    <div class="container">
+                        <div class="left-col">
+
+                            <h4>Obszar działalności</h4>
+                            <p class="whoweare-p">Działamy na terenie województwa śląskiego. Nasze
+                                usługi elektryczne
+                                kierujemy głównie do inwestorów z powiatów: cieszyńskiego (w Cieszynie mamy swoją
+                                siedzibę),
+                                bielskiego, pszczyńskiego, wodzisławskiego, żywieckiego oraz powiatów grodzkich: Żory i
+                                Bielsko-Biała, Jastrzębie-Zdrój. W przypadku większych inwestycji - takich jak
+                                inteligentny
+                                budynek, jesteśmy w stanie obsłużyć inwestycje spoza w/w obszaru (woj. śląskie,
+                                małopolskie).</p>
+                        </div>
+                        <img src="" class="hero-img"
+                            alt="tutaj będzie pokazane gdzie działamy jak wymysle jak to zrobic">
+                    </div>
+                </section>
+
             </div>
-
-            <section class="hero click">
-                <div class="container">
-                    <img src="assets/img/undraw_organizing_projects_re_9p1k.svg" class="hero-img" alt="illustration">
-                    <div class="left-col">
-                        <h4 class="left-col-range">Zakres działalności</h4>
-                        <p class="whoweare-p">Głównym profilem działalności firmy są tzw. inteligentne instalacje
-                            (inteligentny dom) oraz wszystkie instalacje z tym powiązane. Należą do nich instalacje
-                            elektryczne, alarmowe, telewizji przemysłowej, domofonowe i video-domofonowe, sieci
-                            telefoniczne i komputerowe (tzw. teleinformatyczne okablowanie strukturalne) oraz systemy
-                            audio-video (tzw. multiroom'y) itp.
-                            Prowadzimy kompleksową obsługę każdej inwestycji - począwszy od określenia wymagań inwestora
-                            w stosunku do lokalizacji i ergonomii poszczególnych urządzeń i osprzętu
-                            elektroinstalacyjnego, poprzez sporządzenie kosztorysu, realizację i integrację instalacji
-                            wchodzących w skład projektu, a skończywszy na pomiarach odbiorczych i serwisie. Współpraca
-                            z innymi firmami umożliwia nam obsłużenie nawet bardzo wymagających klientów - jeżeli
-                            niebezpośrednio, to właśnie za pośrednictwem zaprzyjaźnionych firm.
-                            Firma wyposażona jest w sprzęt, narzędzia i środki transportu niezbędne do świadczenia w/w
-                            usług. </p>
-                    </div>
-
-                </div>
-            </section>
-            <div class="fewwords3" id="obszarDzialalnosci">
-                <div class="caption3">
-                    <h1 class="start3">Gdzie</h1>
-                    <h1 class="end3">działamy?</h1>
-                    <div class="line3"></div>
-                </div>
-            </div>
-
-            <section class="hero click">
-                <div class="container">
-                    <div class="left-col">
-
-                        <h4>Obszar działalności</h4>
-                        <p class="whoweare-p">Działamy na terenie województwa śląskiego. Nasze
-                            usługi elektryczne
-                            kierujemy głównie do inwestorów z powiatów: cieszyńskiego (w Cieszynie mamy swoją siedzibę),
-                            bielskiego, pszczyńskiego, wodzisławskiego, żywieckiego oraz powiatów grodzkich: Żory i
-                            Bielsko-Biała, Jastrzębie-Zdrój. W przypadku większych inwestycji - takich jak inteligentny
-                            budynek, jesteśmy w stanie obsłużyć inwestycje spoza w/w obszaru (woj. śląskie,
-                            małopolskie).</p>
-                    </div>
-                    <img src="" class="hero-img" alt="tutaj będzie pokazane gdzie działamy jak wymysle jak to zrobic">
-                </div>
-            </section>
-
-        </div>
-    </main>
+        </main>
+    </article>
     <footer>
-        <p>Copyright © 2008 - 2009 IQ SYSTEM Artur Niemczyk. Wszelkie prawa zastrzeżone.</p>
+        <p>Copyright © 2022 - <span class="date"></span> IQ SYSTEM Artur Niemczyk. Wszelkie prawa zastrzeżone.
+        </p>
     </footer>
     <script src="assets/js/main.js"></script>
-    <!-- Code writed by: Kamil Kruszona -->
+    <!-- Writed by: Kamil Kruszona -->
 </body>
 
 </html>

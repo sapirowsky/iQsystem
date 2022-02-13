@@ -51,6 +51,26 @@ header{
         cursor: pointer;
     }
 }
+.position-fixed{
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  width: 100%;
+  border-bottom: 1px solid #ccc;
+}
+.scroll-line{
+  height: 2px;
+  margin-bottom: -4px;
+  background: var(--secondary-color);
+  width: 0%;
+}
+article{
+  margin-top: 72px;
+}
+article.about{
+  margin-top: 100px;
+}
 .currently-active-nav{
   font-weight: bold;
 }
@@ -79,6 +99,7 @@ padding: 1em;
 text-align: right;
     .a-start{
         margin-top: 5em;
+        width: 3rem;
     }
     a{
         color: white;
@@ -105,6 +126,18 @@ text-align: right;
             font-weight: bold;
         }
     }
+}
+#div-click1{
+  width: 4rem;
+}
+#div-click2{
+  width: 4.5rem;
+}
+#div-click3{
+  width: 6rem;
+}
+#div-click4{
+  width: 12rem;
 }
 .subnav-content{
     display: none;
@@ -600,6 +633,7 @@ main.subpages{
     background: none;
     position: unset;
     height: auto;
+    // width: 650px;          -------------------------------
     width: 100%;
     padding: 0;
     a {
@@ -611,6 +645,7 @@ main.subpages{
     div.div-click{
       color: black;
       font-size: 1em;
+      // position: fixed;
     }
   }
   .contact-section {

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pl">
 
 <head>
 
@@ -7,6 +7,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- Font awesome dla strzałek menu -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+
+
+
     <link rel="stylesheet" href="assets/css/style.css">
     <title>iQsystem - Projekt</title>
     <meta name="description"
@@ -17,125 +23,141 @@
 </head>
 
 <body>
-    <header>
-        <div class="container">
-            <a class="logo" href="index.html"><span>iQ</span>system</a>
+    <div class="position-fixed">
+        <header>
+            <div class="container">
+                <a class="logo" href="index.html"><span>iQ</span>system</a>
 
-            <img id="mobile-cta" class="mobile-menu" src="assets/img/menu.svg" alt="Open nav">
+                <img id="mobile-cta" class="mobile-menu" src="assets/img/menu.svg" alt="Open nav">
 
-            <nav>
-                <img id="mobile-exit" class="mobile-menu-exit" src="assets/img/exit.svg" alt="Close nav">
-                <a class="a-start" href="index.html">Start</a>
-                <div class="subnav">
+                <nav>
+                    <img id="mobile-exit" class="mobile-menu-exit" src="assets/img/exit.svg" alt="Close nav">
+                    <a class="a-start" href="index.html">Start</a>
+                    <div class="subnav">
 
-                    <div id="div-click1" class="div-click">Firma <i id="i1" class="fa fa-caret-down ii"></i></div>
-                    <div id="subnav-content1" class="subnav-content">
-                        <a href="about.html">O firmie</a>
-                        <a href="partners.html">Partnerzy</a>
-                        <a href="certificates.html">Certyfikaty</a>
+                        <div id="div-click1" class="div-click">Firma <i id="i1" class="fa fa-caret-down ii"></i></div>
+                        <div id="subnav-content1" class="subnav-content">
+                            <a href="about.html">O firmie</a>
+                            <a href="partners.html">Partnerzy</a>
+                            <a href="certificates.html">Certyfikaty</a>
+                        </div>
                     </div>
-                </div>
-                <div class="subnav">
-                    <div id="div-click2" class="div-click currently-active-nav">Usługi <i id="i2"
-                            class="fa fa-caret-down ii"></i></div>
-                    <div id="subnav-content2" class="subnav-content">
-                        <a href="offer.html">Oferta</a>
-                        <a href="project.html" class="currently-active-nav">Projekt</a>
-                        <a href="execution.html">Wykonanie</a>
-                        <a href="activation.html">Uruchomienie</a>
+                    <div class="subnav">
+                        <div id="div-click2" class="div-click currently-active-nav">Usługi <i id="i2"
+                                class="fa fa-caret-down ii"></i></div>
+                        <div id="subnav-content2" class="subnav-content">
+                            <a href="offer.html">Oferta</a>
+                            <a href="project.html" class="currently-active-nav">Projekt</a>
+                            <a href="execution.html">Wykonanie</a>
+                            <a href="activation.html">Uruchomienie</a>
+                        </div>
                     </div>
-                </div>
-                <div class="subnav">
-                    <div id="div-click3" class="div-click">Instalacje <i id="i3" class="fa fa-caret-down ii"></i></div>
-                    <div id="subnav-content3" class="subnav-content">
-                        <a href="introduction.html">Wstęp</a>
-                        <a href="electric.html">Elektryczne</a>
-                        <a href="intelligent.html">Inteligentne</a>
-                        <a href="alarm.html">Alarmowe</a>
-                        <a href="telecommunication.html">Teletechniczne</a>
+                    <div class="subnav">
+                        <div id="div-click3" class="div-click">Instalacje <i id="i3" class="fa fa-caret-down ii"></i>
+                        </div>
+                        <div id="subnav-content3" class="subnav-content">
+                            <a href="introduction.html">Wstęp</a>
+                            <a href="electric.html">Elektryczne</a>
+                            <a href="intelligent.html">Inteligentne</a>
+                            <a href="alarm.html">Alarmowe</a>
+                            <a href="telecommunication.html">Teletechniczne</a>
+                        </div>
                     </div>
-                </div>
-                <div class="subnav">
-                    <div id="div-click4" class="div-click">Inteligentny Budynek <i id="i4"
-                            class="fa fa-caret-down ii"></i></div>
-                    <div id="subnav-content4" class="subnav-content">
-                        <a href="definition.html">Definicja</a>
-                        <a href="benefits.html">Korzyści</a>
-                        <a href="application.html">Zastosowanie</a>
+                    <div class="subnav">
+                        <div id="div-click4" class="div-click">Inteligentny Budynek <i id="i4"
+                                class="fa fa-caret-down ii"></i></div>
+                        <div id="subnav-content4" class="subnav-content">
+                            <a href="definition.html">Definicja</a>
+                            <a href="benefits.html">Korzyści</a>
+                            <a href="application.html">Zastosowanie</a>
+                        </div>
                     </div>
+                    <a class="contact" href="contact.html">Kontakt</a>
+                </nav>
+            </div>
+        </header>
+        <div class="scroll-line"></div>
+    </div>
+    <article>
+        <main class="subpages project click">
+            <h1>PROJEKT INSTALACJI</h1>
+            <p class="subhead">NOWOCZESNE i OPTYMALNE rozwiązania ELEKTROINSTALACYJNE!</p>
+            <div class="container">
+                <div class="text-container">
+                    <h3>Definicja projektu branżowego</h3>
+                    <p>Projekt - niezależnie od rodzaju instalacji, której dotyczy - stanowi integralną część procesu
+                        inwestycyjnego. Jest dokumentem, umożliwiającym prawidłową realizację robót, który zawiera
+                        niezbędne
+                        informacje i ustalenia z branżystami, wytyczne dla inwestora oraz rysunki techniczne,
+                        przedstawiające
+                        ogólny
+                        rozkład pomieszczeń w budynku (rzut kondygnacji z góry) wraz z naniesionymi na nie instalacjami.
+                        Stanowi
+                        także bazę dla wykonania kosztorysu i rozliczeń z wykonawcą, zabezpieczając w ten sposób interes
+                        inwestora.
+                    </p>
                 </div>
-                <a class="contact" href="contact.html">Kontakt</a>
-            </nav>
-        </div>
-    </header>
-    <main class="subpages project click">
-        <h1>PROJEKT INSTALACJI</h1>
-        <p class="subhead">NOWOCZESNE i OPTYMALNE rozwiązania ELEKTROINSTALACYJNE!</p>
-        <div class="container">
-            <div class="text-container">
-                <h3>Definicja projektu branżowego</h3>
-                <p>Projekt - niezależnie od rodzaju instalacji, której dotyczy - stanowi integralną część procesu
-                    inwestycyjnego. Jest dokumentem, umożliwiającym prawidłową realizację robót, który zawiera niezbędne
-                    informacje i ustalenia z branżystami, wytyczne dla inwestora oraz rysunki techniczne,
-                    przedstawiające
-                    ogólny
-                    rozkład pomieszczeń w budynku (rzut kondygnacji z góry) wraz z naniesionymi na nie instalacjami.
-                    Stanowi
-                    także bazę dla wykonania kosztorysu i rozliczeń z wykonawcą, zabezpieczając w ten sposób interes
-                    inwestora.
-                </p>
+                <div class="text-container">
+                    <h3>Istota projektu</h3>
+                    <p>Dobry projekt, to podstawa udanej inwestycji. Jest indywidualnym spojrzeniem na potrzeby
+                        inwestora.
+                        Właściwe
+                        przygotowanie projektu instalacji i ustalenie przyszłych potrzeb użytkownika, pozwala uniknąć
+                        różnego
+                        rodzaju niedomówień pomiędzy inwestorem i wykonawcą - zarówno w trakcie, jak i po ukończeniu
+                        inwestycji.
+                        Nie
+                        bez powodu kładziemy tak duży nacisk na dopracowanie każdego projektu. Każdy inwestor ma pewne
+                        oczekiwania
+                        co do inwestycji, dlatego każdy projekt powinien je zawierać i dokładnie precyzować.</p>
+                </div>
             </div>
-            <div class="text-container">
-                <h3>Istota projektu</h3>
-                <p>Dobry projekt, to podstawa udanej inwestycji. Jest indywidualnym spojrzeniem na potrzeby inwestora.
-                    Właściwe
-                    przygotowanie projektu instalacji i ustalenie przyszłych potrzeb użytkownika, pozwala uniknąć
-                    różnego
-                    rodzaju niedomówień pomiędzy inwestorem i wykonawcą - zarówno w trakcie, jak i po ukończeniu
-                    inwestycji.
-                    Nie
-                    bez powodu kładziemy tak duży nacisk na dopracowanie każdego projektu. Każdy inwestor ma pewne
-                    oczekiwania
-                    co do inwestycji, dlatego każdy projekt powinien je zawierać i dokładnie precyzować.</p>
+            <div class="container">
+                <div class="text-container">
+                    <h3>Proces powstawania projektu</h3>
+                    <p>Projekt instalacji to przedsięwzięcie czasochłonne i przy tym wyjątkowo skomplikowane.
+                        Przystępuje
+                        się do
+                        niego najczęściej z wcześniej zatwierdzonym przez inwestora rozplanowaniem projektowanej
+                        instalacji
+                        w
+                        budynku. Proces projektowania nadal umożliwia wprowadzanie różnego rodzaju zmian i korekt w
+                        rozplanowaniu.
+                        Korekty te są najczęściej wynikiem ustaleń, będących efektem przeprowadzanych zwykle na tym
+                        etapie
+                        uzgodnień
+                        międzybranżowych, podczas których wyznaczone zostaje rozmieszczenie poszczególnych instalacji i
+                        urządzeń, w
+                        sposób nie kolidujący z innymi instalacjami. Z uwagi na to, że zastosowane w projekcie
+                        rozwiązania i
+                        urządzenia powinny spełniać zasady ergonomii i pasować do aranżacji wnętrza, wszelkie ewentualne
+                        zmiany
+                        w
+                        aranżacji muszą być dokonane zanim projekt instalacji uzyska ostateczny wygląd. Prawidłowo
+                        wykonany
+                        projekt
+                        umożliwi elektroinstalatorowi poprawne wykonanie instalacji oraz jej uruchomienie.</p>
+                </div>
+                <div class="text-container">
+                    <h3>Projekt powykonawczy</h3>
+                    <p>Każda poważna zmiana w projektowanej instalacji elektrycznej czy teletechnicznej, dokonana przez
+                        elektryka
+                        podczas montażu, skutkować będzie koniecznością wykonania korekty projektu (zwykle na podstawie
+                        dostarczonej
+                        przez elektroinstalatora dokumentacji powykonawczej), która uwzględni wprowadzone zmiany.
+                        Dotyczy to
+                        modyfikacji, które mogą mieć wpływ na jej parametry oraz bezpieczeństwo przyszłego użytkownika.
+                    </p>
+                </div>
             </div>
-        </div>
-        <div class="container">
-            <div class="text-container">
-                <h3>Proces powstawania projektu</h3>
-                <p>Projekt instalacji to przedsięwzięcie czasochłonne i przy tym wyjątkowo skomplikowane. Przystępuje
-                    się do
-                    niego najczęściej z wcześniej zatwierdzonym przez inwestora rozplanowaniem projektowanej instalacji
-                    w
-                    budynku. Proces projektowania nadal umożliwia wprowadzanie różnego rodzaju zmian i korekt w
-                    rozplanowaniu.
-                    Korekty te są najczęściej wynikiem ustaleń, będących efektem przeprowadzanych zwykle na tym etapie
-                    uzgodnień
-                    międzybranżowych, podczas których wyznaczone zostaje rozmieszczenie poszczególnych instalacji i
-                    urządzeń, w
-                    sposób nie kolidujący z innymi instalacjami. Z uwagi na to, że zastosowane w projekcie rozwiązania i
-                    urządzenia powinny spełniać zasady ergonomii i pasować do aranżacji wnętrza, wszelkie ewentualne
-                    zmiany
-                    w
-                    aranżacji muszą być dokonane zanim projekt instalacji uzyska ostateczny wygląd. Prawidłowo wykonany
-                    projekt
-                    umożliwi elektroinstalatorowi poprawne wykonanie instalacji oraz jej uruchomienie.</p>
-            </div>
-            <div class="text-container">
-                <h3>Projekt powykonawczy</h3>
-                <p>Każda poważna zmiana w projektowanej instalacji elektrycznej czy teletechnicznej, dokonana przez
-                    elektryka
-                    podczas montażu, skutkować będzie koniecznością wykonania korekty projektu (zwykle na podstawie
-                    dostarczonej
-                    przez elektroinstalatora dokumentacji powykonawczej), która uwzględni wprowadzone zmiany. Dotyczy to
-                    modyfikacji, które mogą mieć wpływ na jej parametry oraz bezpieczeństwo przyszłego użytkownika.</p>
-            </div>
-        </div>
-    </main>
-    <footer class="partners-footer">
-        <p>Copyright © 2008 - 2009 IQ SYSTEM Artur Niemczyk. Wszelkie prawa zastrzeżone.</p>
+        </main>
+    </article>
+    <footer>
+        <p>Copyright © 2022 - <span class="date"></span> IQ SYSTEM Artur Niemczyk. Wszelkie prawa zastrzeżone.
+        </p>
     </footer>
     <script src="assets/js/main.js"></script>
-    <!-- Code writed by: Kamil Kruszona -->
+    <!-- Writed by: Kamil Kruszona -->
 </body>
 
 </html>

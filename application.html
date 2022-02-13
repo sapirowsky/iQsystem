@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pl">
 
 <head>
 
@@ -7,6 +7,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- Font awesome dla strzałek menu -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+
+
+
     <link rel="stylesheet" href="assets/css/style.css">
     <title>iQsystem - Zastosowanie</title>
     <meta name="description"
@@ -17,276 +23,328 @@
 </head>
 
 <body>
-    <header>
-        <div class="container">
-            <a class="logo" href="index.html"><span>iQ</span>system</a>
+    <div class="position-fixed">
+        <header>
+            <div class="container">
+                <a class="logo" href="index.html"><span>iQ</span>system</a>
 
-            <img id="mobile-cta" class="mobile-menu" src="assets/img/menu.svg" alt="Open nav">
+                <img id="mobile-cta" class="mobile-menu" src="assets/img/menu.svg" alt="Open nav">
 
-            <nav>
-                <img id="mobile-exit" class="mobile-menu-exit" src="assets/img/exit.svg" alt="Close nav">
-                <a class="a-start" href="index.html">Start</a>
-                <div class="subnav">
+                <nav>
+                    <img id="mobile-exit" class="mobile-menu-exit" src="assets/img/exit.svg" alt="Close nav">
+                    <a class="a-start" href="index.html">Start</a>
+                    <div class="subnav">
 
-                    <div id="div-click1" class="div-click">Firma <i id="i1" class="fa fa-caret-down ii"></i></div>
-                    <div id="subnav-content1" class="subnav-content">
-                        <a href="about.html">O firmie</a>
-                        <a href="partners.html">Partnerzy</a>
-                        <a href="certificates.html">Certyfikaty</a>
+                        <div id="div-click1" class="div-click">Firma <i id="i1" class="fa fa-caret-down ii"></i></div>
+                        <div id="subnav-content1" class="subnav-content">
+                            <a href="about.html">O firmie</a>
+                            <a href="partners.html">Partnerzy</a>
+                            <a href="certificates.html">Certyfikaty</a>
+                        </div>
                     </div>
-                </div>
-                <div class="subnav">
-                    <div id="div-click2" class="div-click">Usługi <i id="i2" class="fa fa-caret-down ii"></i></div>
-                    <div id="subnav-content2" class="subnav-content">
-                        <a href="offer.html">Oferta</a>
-                        <a href="project.html">Projekt</a>
-                        <a href="execution.html">Wykonanie</a>
-                        <a href="activation.html">Uruchomienie</a>
+                    <div class="subnav">
+                        <div id="div-click2" class="div-click">Usługi <i id="i2" class="fa fa-caret-down ii"></i></div>
+                        <div id="subnav-content2" class="subnav-content">
+                            <a href="offer.html">Oferta</a>
+                            <a href="project.html">Projekt</a>
+                            <a href="execution.html">Wykonanie</a>
+                            <a href="activation.html">Uruchomienie</a>
+                        </div>
                     </div>
-                </div>
-                <div class="subnav">
-                    <div id="div-click3" class="div-click">Instalacje <i id="i3" class="fa fa-caret-down ii"></i></div>
-                    <div id="subnav-content3" class="subnav-content">
-                        <a href="introduction.html">Wstęp</a>
-                        <a href="electric.html">Elektryczne</a>
-                        <a href="intelligent.html">Inteligentne</a>
-                        <a href="alarm.html">Alarmowe</a>
-                        <a href="telecommunication.html">Teletechniczne</a>
+                    <div class="subnav">
+                        <div id="div-click3" class="div-click">Instalacje <i id="i3" class="fa fa-caret-down ii"></i>
+                        </div>
+                        <div id="subnav-content3" class="subnav-content">
+                            <a href="introduction.html">Wstęp</a>
+                            <a href="electric.html">Elektryczne</a>
+                            <a href="intelligent.html">Inteligentne</a>
+                            <a href="alarm.html">Alarmowe</a>
+                            <a href="telecommunication.html">Teletechniczne</a>
+                        </div>
                     </div>
-                </div>
-                <div class="subnav">
-                    <div id="div-click4" class="div-click currently-active-nav">Inteligentny Budynek <i id="i4"
-                            class="fa fa-caret-down ii"></i></div>
-                    <div id="subnav-content4" class="subnav-content">
-                        <a href="definition.html">Definicja</a>
-                        <a href="benefits.html">Korzyści</a>
-                        <a href="application.html" class="currently-active-nav">Zastosowanie</a>
+                    <div class="subnav">
+                        <div id="div-click4" class="div-click currently-active-nav">Inteligentny Budynek <i id="i4"
+                                class="fa fa-caret-down ii"></i></div>
+                        <div id="subnav-content4" class="subnav-content">
+                            <a href="definition.html">Definicja</a>
+                            <a href="benefits.html">Korzyści</a>
+                            <a href="application.html" class="currently-active-nav">Zastosowanie</a>
+                        </div>
                     </div>
-                </div>
-                <a class="contact" href="contact.html">Kontakt</a>
-            </nav>
-        </div>
-    </header>
-    <main class="subpages click">
-        <h1>GDZIE STOSOWAĆ INTELIGENTNE ROZWIĄZANIA</h1>
-        <p class="subhead">sprawdź, gdzie możesz zastosować INTELIGENTNE ROZWIĄZANIA domowe!</p>
-        <h3>W budynkach już użytkowanych</h3>
-        <p>Pragniesz podnieść komfort swojego życia w już użytkowanym przez Ciebie i Twą rodzinę domu? Myślisz o
-            poprawieniu funkcjonalności pomieszczeń biurowych? Jest na to sposób - i to niejeden. W budynku wyposażonym
-            w tradycyjną instalację zasilającą, swój cel osiągniesz, wykorzystując jedno z niżej wymienionych rozwiązań:
-        </p>
-        <ul>
-            <li>
-                Wymiana tradycyjnego okablowania na zintegrowaną instalację magistralową, składającą się z dwóch
-                niezależnych,
-                oddzielonych od siebie galwanicznie, obwodów: zasilającego wszystkie urządzenia domowe oraz sterującego
-                tymi
-                urządzeniami.
-                Jest to rozwiązanie, stosowane głównie podczas kompleksowego remontu użytkowanych pomieszczeń
-                lub/i instalacji elektrycznej.
-            </li>
-            <li>
-                Modernizacja istniejącej instalacji, ograniczająca się do położenia dodatkowego kabla magistralowego,
-                który umożliwi sterowanie istniejącymi już obwodami zasilającymi urządzenia elektryczne. Rozwiązanie
-                możliwe
-                do zastosowania w instalacjach, których wszystkie obwody wykonane są w tzw. topologii gwiazdy.
-            </li>
-            <li>
-                Jeśli przeraża Cię rozpruwanie tynków w budynku lub z różnych względów, nie ma możliwości, aby układać
-                od nowa
-                kable i przewody, najlepszym rozwiązaniem będzie instalacja bezprzewodowa. W miejsce tradycyjnych
-                wyłączników
-                montowane są specjalne przyciski (sensory) systemu inteligentnego, które obok nadajnika radiowego,
-                zaopatrzyć
-                możemy w dodatkowe urządzenie, umożliwiające nam, nie tylko załączanie/wyłączanie danego obwodu, ale
-                także
-                scentralizowane sterowanie urządzeniami w danym lub dowolnym innym pomieszczeniu w budynku. Rozwiązanie
-                to,
-                przewiduje także współpracę z pilotem bezprzewodowym, komunikującym się z tymi przyciskami.
-            </li>
-            <li>
-                Jest jeszcze możliwość zastosowania miniaturowych modułów, które po zamontowaniu do puszek gniazd i
-                wyłączników, umożliwią sterowanie urządzeniami elektrycznymi poprzez istniejącą sieć elektryczną 230V.
-                Jest to
-                najprostsza droga do "Inteligentnego Domu", bez inwestowania w kosztowne projekty i remonty. Tego
+                    <a class="contact" href="contact.html">Kontakt</a>
+                </nav>
+            </div>
+        </header>
+        <div class="scroll-line"></div>
+    </div>
+    <article>
+        <main class="subpages click">
+            <h1>GDZIE STOSOWAĆ INTELIGENTNE ROZWIĄZANIA</h1>
+            <p class="subhead">sprawdź, gdzie możesz zastosować INTELIGENTNE ROZWIĄZANIA domowe!</p>
+            <h3>W budynkach już użytkowanych</h3>
+            <p>Pragniesz podnieść komfort swojego życia w już użytkowanym przez Ciebie i Twą rodzinę domu? Myślisz o
+                poprawieniu funkcjonalności pomieszczeń biurowych? Jest na to sposób - i to niejeden. W budynku
+                wyposażonym
+                w tradycyjną instalację zasilającą, swój cel osiągniesz, wykorzystując jedno z niżej wymienionych
+                rozwiązań:
+            </p>
+            <ul>
+                <li>
+                    Wymiana tradycyjnego okablowania na zintegrowaną instalację magistralową, składającą się z dwóch
+                    niezależnych,
+                    oddzielonych od siebie galwanicznie, obwodów: zasilającego wszystkie urządzenia domowe oraz
+                    sterującego
+                    tymi
+                    urządzeniami.
+                    Jest to rozwiązanie, stosowane głównie podczas kompleksowego remontu użytkowanych pomieszczeń
+                    lub/i instalacji elektrycznej.
+                </li>
+                <li>
+                    Modernizacja istniejącej instalacji, ograniczająca się do położenia dodatkowego kabla
+                    magistralowego,
+                    który umożliwi sterowanie istniejącymi już obwodami zasilającymi urządzenia elektryczne. Rozwiązanie
+                    możliwe
+                    do zastosowania w instalacjach, których wszystkie obwody wykonane są w tzw. topologii gwiazdy.
+                </li>
+                <li>
+                    Jeśli przeraża Cię rozpruwanie tynków w budynku lub z różnych względów, nie ma możliwości, aby
+                    układać
+                    od nowa
+                    kable i przewody, najlepszym rozwiązaniem będzie instalacja bezprzewodowa. W miejsce tradycyjnych
+                    wyłączników
+                    montowane są specjalne przyciski (sensory) systemu inteligentnego, które obok nadajnika radiowego,
+                    zaopatrzyć
+                    możemy w dodatkowe urządzenie, umożliwiające nam, nie tylko załączanie/wyłączanie danego obwodu, ale
+                    także
+                    scentralizowane sterowanie urządzeniami w danym lub dowolnym innym pomieszczeniu w budynku.
+                    Rozwiązanie
+                    to,
+                    przewiduje także współpracę z pilotem bezprzewodowym, komunikującym się z tymi przyciskami.
+                </li>
+                <li>
+                    Jest jeszcze możliwość zastosowania miniaturowych modułów, które po zamontowaniu do puszek gniazd i
+                    wyłączników, umożliwią sterowanie urządzeniami elektrycznymi poprzez istniejącą sieć elektryczną
+                    230V.
+                    Jest to
+                    najprostsza droga do "Inteligentnego Domu", bez inwestowania w kosztowne projekty i remonty. Tego
+                    rodzaju
+                    system stosować można z powodzeniem wyłącznie do realizacji podstawowych funkcji automatyki w
+                    budynku
+                    (np. sterowanie światłem: włącz/wyłącz i funkcja ściemniania, sterowania silnikami rolet i bram,
+                    załączania i
+                    wyłączania innych urządzeń elektrycznych.)
+                </li>
+            </ul>
+            <p>Jeżeli w budynku istnieje już inteligentna instalacja, a na etapie jej budowy uznaliście Państwo, że
+                wykonacie ją na razie w wersji uproszczonej (np. wszystkie lampy w danym pomieszczeniu czy rolety mają
+                być
+                włączane wspólnie - przy pomocy tradycyjnych wyłączników, a temperatura w budynku regulowana
+                centralnie), to
+                nic nie stoi na przeszkodzie, by zwiększyć jej funkcjonalność.</p>
+            <p>W odróżnieniu od instalacji tradycyjnej, operację tą możemy wykonać w prosty i nieinwazyjny sposób.
+                Wystarczy
+                podzielić interesujące nas obwody, a wyłączniki zamienić na przyciski dedykowane systemom inteligentnym,
+                które pozwolą na niezależne sterowanie każdym źródłem oświetlenia, roletą, strefą grzewczą oraz każdym
+                innym
+                urządzeniem elektrycznym w domu - wszystko to z poziomu jednego estetycznego urządzenia sterującego.</p>
+            <h3>W mieszkaniach i apartamentach</h3>
+            <p>Inteligentne rozwiązania w mieszkaniach czy apartamentach, to temat, którym najlepiej zająć się już na
+                etapie
+                projektowania i budowy. Takie podejście do inwestycji poprawi atrakcyjność lokalu, a jego przyszłemu
+                lokatorowi (właścicielowi) zapewni dużą elastyczność i swobodę w kształtowaniu własnej, najbardziej
+                funkcjonalnej dla niego i jego rodziny, przestrzeni życiowej. Rezygnując z tradycyjnej instalacji na
+                rzecz
+                niewiele droższej - w podstawowej wersji - inteligentnej instalacji, inwestor (deweloper) zapewni
+                przyszłemu
+                właścicielowi takiego lokalu, niemal nieograniczony wpływ na to, co i którym przyciskiem będzie
+                włączane,
+                wyłączane oraz sterowane. Inteligentna instalacja umożliwi mu tworzenie różnych scen świetlnych dla
+                różnych
+                pomieszczeń (poprzez automatyczną regulację natężenia oświetlenia, załączanie grupowe bądź centralne
+                różnych
+                źródeł światła), sterowanie żaluzjami (pojedynczą jak i wybranymi grupami), tworzenie własnych
+                harmonogramów
+                dla oświetlenia, rolet, żaluzji (zależnych np. od pory dnia i nasłonecznienia), a także sterowanie
+                urządzeniami AGD i audio-video. Odpowiednio zaprojektowana i wykonana inteligentna instalacja, pozwoli
+                stopniowo (etapami) zwiększać funkcjonalność lokalu, poprzez dodawanie kolejnych urządzeń sterujących
+                lub
+                wzbogacając, już istniejące, o kolejne funkcje (programowo). Wpłynie to znacząco na poprawienie komfortu
+                życia mieszkańców.</p>
+            <h3>W domach jedno- i wielorodzinnych</h3>
+            <p>Dom, to idealny obiekt do pełnego wykorzystania bogatej oferty, jaką oferują inteligentne systemy
+                automatyki
+                budynkowej. Do dyspozycji mamy tu niemal nieograniczą ilość funkcji w różnych obszarach zastosowania:
+                począwszy od sterowania oświetleniem (wewnętrznym oraz zewnętrznym), ogrzewaniem (indywidualnie dla
+                każdego
+                pomieszczenia), żaluzjami (każdą z osobna bądź grupami), bramami, urządzeniami AGD i Audio-Video
+                (Multiroom), poprzez sterowanie podlewaniem ogrodu, aż po integrację z systemem alarmowym i telewizją
+                dozorową (symulacja obecności, sterowanie zasilaniem awaryjnym, informowanie o awariach i różnego
                 rodzaju
-                system stosować można z powodzeniem wyłącznie do realizacji podstawowych funkcji automatyki w budynku
-                (np. sterowanie światłem: włącz/wyłącz i funkcja ściemniania, sterowania silnikami rolet i bram,
-                załączania i
-                wyłączania innych urządzeń elektrycznych.)
-            </li>
-        </ul>
-        <p>Jeżeli w budynku istnieje już inteligentna instalacja, a na etapie jej budowy uznaliście Państwo, że
-            wykonacie ją na razie w wersji uproszczonej (np. wszystkie lampy w danym pomieszczeniu czy rolety mają być
-            włączane wspólnie - przy pomocy tradycyjnych wyłączników, a temperatura w budynku regulowana centralnie), to
-            nic nie stoi na przeszkodzie, by zwiększyć jej funkcjonalność.</p>
-        <p>W odróżnieniu od instalacji tradycyjnej, operację tą możemy wykonać w prosty i nieinwazyjny sposób. Wystarczy
-            podzielić interesujące nas obwody, a wyłączniki zamienić na przyciski dedykowane systemom inteligentnym,
-            które pozwolą na niezależne sterowanie każdym źródłem oświetlenia, roletą, strefą grzewczą oraz każdym innym
-            urządzeniem elektrycznym w domu - wszystko to z poziomu jednego estetycznego urządzenia sterującego.</p>
-        <h3>W mieszkaniach i apartamentach</h3>
-        <p>Inteligentne rozwiązania w mieszkaniach czy apartamentach, to temat, którym najlepiej zająć się już na etapie
-            projektowania i budowy. Takie podejście do inwestycji poprawi atrakcyjność lokalu, a jego przyszłemu
-            lokatorowi (właścicielowi) zapewni dużą elastyczność i swobodę w kształtowaniu własnej, najbardziej
-            funkcjonalnej dla niego i jego rodziny, przestrzeni życiowej. Rezygnując z tradycyjnej instalacji na rzecz
-            niewiele droższej - w podstawowej wersji - inteligentnej instalacji, inwestor (deweloper) zapewni przyszłemu
-            właścicielowi takiego lokalu, niemal nieograniczony wpływ na to, co i którym przyciskiem będzie włączane,
-            wyłączane oraz sterowane. Inteligentna instalacja umożliwi mu tworzenie różnych scen świetlnych dla różnych
-            pomieszczeń (poprzez automatyczną regulację natężenia oświetlenia, załączanie grupowe bądź centralne różnych
-            źródeł światła), sterowanie żaluzjami (pojedynczą jak i wybranymi grupami), tworzenie własnych harmonogramów
-            dla oświetlenia, rolet, żaluzji (zależnych np. od pory dnia i nasłonecznienia), a także sterowanie
-            urządzeniami AGD i audio-video. Odpowiednio zaprojektowana i wykonana inteligentna instalacja, pozwoli
-            stopniowo (etapami) zwiększać funkcjonalność lokalu, poprzez dodawanie kolejnych urządzeń sterujących lub
-            wzbogacając, już istniejące, o kolejne funkcje (programowo). Wpłynie to znacząco na poprawienie komfortu
-            życia mieszkańców.</p>
-        <h3>W domach jedno- i wielorodzinnych</h3>
-        <p>Dom, to idealny obiekt do pełnego wykorzystania bogatej oferty, jaką oferują inteligentne systemy automatyki
-            budynkowej. Do dyspozycji mamy tu niemal nieograniczą ilość funkcji w różnych obszarach zastosowania:
-            począwszy od sterowania oświetleniem (wewnętrznym oraz zewnętrznym), ogrzewaniem (indywidualnie dla każdego
-            pomieszczenia), żaluzjami (każdą z osobna bądź grupami), bramami, urządzeniami AGD i Audio-Video
-            (Multiroom), poprzez sterowanie podlewaniem ogrodu, aż po integrację z systemem alarmowym i telewizją
-            dozorową (symulacja obecności, sterowanie zasilaniem awaryjnym, informowanie o awariach i różnego rodzaju
-            zagrożeniach - pożar, zadymienie, czad, zalanie itp.). W przeciwieństwie do właścicieli mieszkań i
-            apartamentów, przyszły właściciel domu jest także inwestorem i ma dużo większy wpływ na to, jaki rodzaj
-            instalacji zostanie zastosowany w budynku na etapie jego budowy. Sam decyduje, jak ważny jest dla niego
-            przyszły komfort i koszty użytkowania budynku oraz bezpieczeństwo jego rodziny, a tym samym czy dojrzał do
-            zainwestowania w inteligentną instalację. Może to być na początek podstawowa wersja (obejmująca okablowanie
-            i najprostsze urządzenia sterujące), którą następnie można poddawać rozbudowie przez kolejne lata - ale już
-            bez konieczności kucia ścian i kosztownej modernizacji okablowania. Dla kredytobiorców na pewno ważne będzie
-            to, że koszt instalacji jest składową ogólnej wartości nieruchomości (inwestycji) - warto to wziąć pod
-            uwagę.</p>
-        <h3>W biurach, bankach, urzędach...</h3>
-        <p>Do podstawowych zadań inteligentnego systemu sterowania, w tego typu obiektach użyteczności publicznej,
-            należy:</p>
-        <ul>
-            <li>
-                <b>Całodobowy monitoring</b>
-                <p>
-                    Monitorowanie - istotnych dla bezpieczeństwa osób i mienia - zdarzeń, polegające na wykrywaniu,
-                    rejestracji i
-                    powiadamianiu odpowiednich służb o ewentualnych zagrożeniach, mających miejsce w chronionych
-                    strefach.</p>
-            </li>
-            <li>
-                <b>Kontrola dostępu</b>
-                <p>
-                    Urządzenia identyfikacji personalnej (czytniki, karty chipowe, sensory biometryczne) kontrolują
-                    każdą
-                    próbę
-                    uzyskania dostępu do określonego pomieszczenia. Integrując je z inteligentną instalacją, otrzymujemy
-                    możliwość
-                    przyporządkowania poszczególnym osobom określonego stanu urządzeń i zachowania instalacji
-                    (włączenie oświetlenia, ustawienie żądanej temperatury, blokada pewnych funkcji instalacji dla
-                    personelu
-                    sprzątającego - celem ochrony przed nieautoryzowanym dostępem do sprzętu i danych).</p>
-            </li>
-            <li>
-                <b>Ekonomiczne wykorzystanie energii</b>
-                <p>
-                    Obiekty użyteczności publicznej mają to do siebie, że mało kto zwraca uwagę na marnotrawstwo energii
-                    (zarówno elektrycznej, jak i cieplnej). Z pomocą przychodzi, w tym miejscu, inteligentny system
-                    automatyki.
-                    Wykorzystując czujniki obecności i ruchu, wyłączy bądź zredukuje oświetlenie w mało uczęszczanych
-                    pomieszczeniach i ciągach komunikacyjnych (do sterowania możemy wykorzystać także wyłączniki
-                    zmierzchowe
-                    i
-                    zegarowe). Zastosowanie natomiast, indywidualnego sterowania temperaturą dla każdego z pomieszczeń,
-                    wyraźnie
-                    podwyższy komfort ich użytkowania oraz wniesie spore oszczędności do budżetu (zamontowane w oknach
-                    czujniki
-                    otwarcia, spowodują automatyczne wyłączenie ogrzewania lub klimatyzacji na czas wietrzenia
-                    pomieszczenia).</p>
-            </li>
-            <li>
-                <b>Centralne zarządzanie budynkiem</b>
-                <p>
-                    Integracja infrastruktury teleinformatycznej z instalacją inteligentną, umożliwia - w łatwy do
-                    opanowania
-                    sposób, sterowanie oraz centralne zarządzanie inteligentnym budynkiem. Nie bez znaczenia jest tu
-                    możliwość
-                    zarządzania zdalnego - poprzez Internet. Osoba nadzorująca budynek może skorzystać nie tylko z
-                    podglądu
-                    z
-                    kamer, ale także - poprzez wizualizację, centralnie sterować różnymi urządzeniami zintegrowanymi z
-                    inteligentną instalacją bądź mieć stały podgląd wszystkich urządzeń alarmowych.</p>
-            </li>
-        </ul>
-        <h3>W hotelach i pensjonatach</h3>
-        <p>Hotelarstwo jest chyba jedną z nielicznych branż, inwestujących w nieruchomości, o której można śmiało
-            powiedzieć, że jest liderem wśród inwestorów, wykorzystujących inteligentne rozwiązania w swych obiektach.
-            Początkowo, jedynie właściciele hoteli o największym prestiżu, wdrażali zintegrowane systemy sterowania w
-            swych obiektach. Jednak z czasem, kiedy to oferta systemów została wzbogacona o kolejne funkcje,
-            usprawniające życie zarówno gościom, jak i właścicielom hoteli, rozwiązania te zagościły także w motelach i
-            różnego rodzaju pensjonatach. Najbardziej popularnymi obszarami zastosowań inteligentnych instalacji w
-            branży hotelarskiej są obecnie:</p>
-        <ul>
-            <li>
-                <b>Bezpieczeństwo gości i personelu</b>
-                <p>
-                    Inteligentny system czuwa nad bezpieczeństwem osób znajdujących się w budynku i w jego bezpośrednim
-                    otoczeniu.
-                    Integracja z systemem przeciwpożarowym oraz alarmowym powoduje, że zarówno goście, jak i personel,
-                    mogą
-                    czuć
-                    się bezpiecznie.
-                    Całodobowy monitoring gwarantuje, że inteligentny system wychwyci każde niepokojące zdarzenie, a w
-                    sytuacji alarmowej
-                    poinformuje wszystkich o zagrożeniu i ułatwi ewakuację (podczas pożaru uruchomi system gaśniczy,
-                    odetnie
-                    obwody elektryczne, włączy oświetlenie awaryjne, wskaże właściwą - w danej sytuacji - drogę
-                    ewakuacji
-                    oraz wezwie
-                    odpowiednie służby ratownicze).</p>
-            </li>
-            <li>
-                <b>Kontrola dostępu i obecności</b>
-                <p>
-                    Przy pomocy systemu zarządzania budynkiem - zintegrowanego z systemem alarmowym czy kontroli
-                    dostępu,
-                    zarządzający jest w stanie monitorować czas przebywania gości hotelowych w swych pokojach lub
-                    ogólnie w
-                    budynku (karta chipowa, którą gość hotelowy otrzymuje, może służyć zarówno za klucz do pokoju czy
-                    bilet
-                    parkingowy, jak i narzędzie dla właściciela obiektu, do przeprowadzania różnego rodzaju statystyk i
-                    obliczeń rentowności inwestycji).</p>
-            </li>
-            <li>
-                <b>Ekonomiczne wykorzystanie energii</b>
-                <p>
-                    Zastosowanie indywidualnego sterowania temperaturą dla każdego z pomieszczeń, wyraźnie obniży koszty
-                    zużycia
-                    energii. Jeżeli gość hotelowy postanowi wywietrzyć swój pokój lub opuszczając go, pozostawi otwarte
-                    okno, to
-                    zamontowane w oknach czujniki otwarcia spowodują, że system automatycznie wyłączy na ten czas
-                    ogrzewanie
-                    lub
-                    klimatyzację. Ponad to, system dopilnuje, by w nieużytkowanych pokojach obniżyć temperaturę
-                    ogrzewania
-                    lub ograniczyć pracę klimatyzacji oraz wyłączyć oświetlenie.</p>
-            </li>
-        </ul>
-        <h3>W salach konferencyjnych, szkołach i uczelniach</h3>
-        <p>Prowadzący konferencje, wykłady czy prezentacje, często tracą sporo czasu na przygotowanie sali i
-            uruchomienie potrzebnych do projekcji urządzeń. Problem ten można rozwiązać, integrując urządzenia
-            multimedialne, oświetlenie, klimatyzację czy żaluzje, z systemem inteligentnym, który sprawi, że sterowanie
-            nimi będzie dużo łatwiejsze i mniej czasochłonne. Tego typu rozwiązanie będzie realizowane za pomocą
-            wygodnego w użyciu touchpanelu, na zasadzie scen - wcześniej zaprogramowanych. Sprawi, że obsługa tych
-            wszystkich urządzeń stanie się wyjątkowo prosta i intuicyjna, a prowadzący będzie mógł skupić się już tylko
-            na swoim zadaniu. Przykładowe sceny, dostępne z poziomu touchpanelu, będą wyglądały następująco:</p>
-        <ul>
-            <li>Scena "dyskusja" podniesie rolety, dostosuje oświetlenie, ustawi odpowiednią temperaturę,</li>
-            <li>Scena "wykład" przysłoni okna bądź przyciemni światła, opuści ekran, włączy projektor z prezentacją,
-                dostosuje
-                temperaturę,</li>
-            <li>Scena "projekcja" opuści rolety, załączy oświetlenie orientacyjne - wyłączając główne, opuści ekran,
-                włączy projektor z filmem, ustawi komfortową temperaturę.</li>
-        </ul>
-    </main>
-    <footer class="partners-footer">
-        <p>Copyright © 2008 - 2009 IQ SYSTEM Artur Niemczyk. Wszelkie prawa zastrzeżone.</p>
+                zagrożeniach - pożar, zadymienie, czad, zalanie itp.). W przeciwieństwie do właścicieli mieszkań i
+                apartamentów, przyszły właściciel domu jest także inwestorem i ma dużo większy wpływ na to, jaki rodzaj
+                instalacji zostanie zastosowany w budynku na etapie jego budowy. Sam decyduje, jak ważny jest dla niego
+                przyszły komfort i koszty użytkowania budynku oraz bezpieczeństwo jego rodziny, a tym samym czy dojrzał
+                do
+                zainwestowania w inteligentną instalację. Może to być na początek podstawowa wersja (obejmująca
+                okablowanie
+                i najprostsze urządzenia sterujące), którą następnie można poddawać rozbudowie przez kolejne lata - ale
+                już
+                bez konieczności kucia ścian i kosztownej modernizacji okablowania. Dla kredytobiorców na pewno ważne
+                będzie
+                to, że koszt instalacji jest składową ogólnej wartości nieruchomości (inwestycji) - warto to wziąć pod
+                uwagę.</p>
+            <h3>W biurach, bankach, urzędach...</h3>
+            <p>Do podstawowych zadań inteligentnego systemu sterowania, w tego typu obiektach użyteczności publicznej,
+                należy:</p>
+            <ul>
+                <li>
+                    <b>Całodobowy monitoring</b>
+                    <p>
+                        Monitorowanie - istotnych dla bezpieczeństwa osób i mienia - zdarzeń, polegające na wykrywaniu,
+                        rejestracji i
+                        powiadamianiu odpowiednich służb o ewentualnych zagrożeniach, mających miejsce w chronionych
+                        strefach.</p>
+                </li>
+                <li>
+                    <b>Kontrola dostępu</b>
+                    <p>
+                        Urządzenia identyfikacji personalnej (czytniki, karty chipowe, sensory biometryczne) kontrolują
+                        każdą
+                        próbę
+                        uzyskania dostępu do określonego pomieszczenia. Integrując je z inteligentną instalacją,
+                        otrzymujemy
+                        możliwość
+                        przyporządkowania poszczególnym osobom określonego stanu urządzeń i zachowania instalacji
+                        (włączenie oświetlenia, ustawienie żądanej temperatury, blokada pewnych funkcji instalacji dla
+                        personelu
+                        sprzątającego - celem ochrony przed nieautoryzowanym dostępem do sprzętu i danych).</p>
+                </li>
+                <li>
+                    <b>Ekonomiczne wykorzystanie energii</b>
+                    <p>
+                        Obiekty użyteczności publicznej mają to do siebie, że mało kto zwraca uwagę na marnotrawstwo
+                        energii
+                        (zarówno elektrycznej, jak i cieplnej). Z pomocą przychodzi, w tym miejscu, inteligentny system
+                        automatyki.
+                        Wykorzystując czujniki obecności i ruchu, wyłączy bądź zredukuje oświetlenie w mało
+                        uczęszczanych
+                        pomieszczeniach i ciągach komunikacyjnych (do sterowania możemy wykorzystać także wyłączniki
+                        zmierzchowe
+                        i
+                        zegarowe). Zastosowanie natomiast, indywidualnego sterowania temperaturą dla każdego z
+                        pomieszczeń,
+                        wyraźnie
+                        podwyższy komfort ich użytkowania oraz wniesie spore oszczędności do budżetu (zamontowane w
+                        oknach
+                        czujniki
+                        otwarcia, spowodują automatyczne wyłączenie ogrzewania lub klimatyzacji na czas wietrzenia
+                        pomieszczenia).</p>
+                </li>
+                <li>
+                    <b>Centralne zarządzanie budynkiem</b>
+                    <p>
+                        Integracja infrastruktury teleinformatycznej z instalacją inteligentną, umożliwia - w łatwy do
+                        opanowania
+                        sposób, sterowanie oraz centralne zarządzanie inteligentnym budynkiem. Nie bez znaczenia jest tu
+                        możliwość
+                        zarządzania zdalnego - poprzez Internet. Osoba nadzorująca budynek może skorzystać nie tylko z
+                        podglądu
+                        z
+                        kamer, ale także - poprzez wizualizację, centralnie sterować różnymi urządzeniami zintegrowanymi
+                        z
+                        inteligentną instalacją bądź mieć stały podgląd wszystkich urządzeń alarmowych.</p>
+                </li>
+            </ul>
+            <h3>W hotelach i pensjonatach</h3>
+            <p>Hotelarstwo jest chyba jedną z nielicznych branż, inwestujących w nieruchomości, o której można śmiało
+                powiedzieć, że jest liderem wśród inwestorów, wykorzystujących inteligentne rozwiązania w swych
+                obiektach.
+                Początkowo, jedynie właściciele hoteli o największym prestiżu, wdrażali zintegrowane systemy sterowania
+                w
+                swych obiektach. Jednak z czasem, kiedy to oferta systemów została wzbogacona o kolejne funkcje,
+                usprawniające życie zarówno gościom, jak i właścicielom hoteli, rozwiązania te zagościły także w
+                motelach i
+                różnego rodzaju pensjonatach. Najbardziej popularnymi obszarami zastosowań inteligentnych instalacji w
+                branży hotelarskiej są obecnie:</p>
+            <ul>
+                <li>
+                    <b>Bezpieczeństwo gości i personelu</b>
+                    <p>
+                        Inteligentny system czuwa nad bezpieczeństwem osób znajdujących się w budynku i w jego
+                        bezpośrednim
+                        otoczeniu.
+                        Integracja z systemem przeciwpożarowym oraz alarmowym powoduje, że zarówno goście, jak i
+                        personel,
+                        mogą
+                        czuć
+                        się bezpiecznie.
+                        Całodobowy monitoring gwarantuje, że inteligentny system wychwyci każde niepokojące zdarzenie, a
+                        w
+                        sytuacji alarmowej
+                        poinformuje wszystkich o zagrożeniu i ułatwi ewakuację (podczas pożaru uruchomi system gaśniczy,
+                        odetnie
+                        obwody elektryczne, włączy oświetlenie awaryjne, wskaże właściwą - w danej sytuacji - drogę
+                        ewakuacji
+                        oraz wezwie
+                        odpowiednie służby ratownicze).</p>
+                </li>
+                <li>
+                    <b>Kontrola dostępu i obecności</b>
+                    <p>
+                        Przy pomocy systemu zarządzania budynkiem - zintegrowanego z systemem alarmowym czy kontroli
+                        dostępu,
+                        zarządzający jest w stanie monitorować czas przebywania gości hotelowych w swych pokojach lub
+                        ogólnie w
+                        budynku (karta chipowa, którą gość hotelowy otrzymuje, może służyć zarówno za klucz do pokoju
+                        czy
+                        bilet
+                        parkingowy, jak i narzędzie dla właściciela obiektu, do przeprowadzania różnego rodzaju
+                        statystyk i
+                        obliczeń rentowności inwestycji).</p>
+                </li>
+                <li>
+                    <b>Ekonomiczne wykorzystanie energii</b>
+                    <p>
+                        Zastosowanie indywidualnego sterowania temperaturą dla każdego z pomieszczeń, wyraźnie obniży
+                        koszty
+                        zużycia
+                        energii. Jeżeli gość hotelowy postanowi wywietrzyć swój pokój lub opuszczając go, pozostawi
+                        otwarte
+                        okno, to
+                        zamontowane w oknach czujniki otwarcia spowodują, że system automatycznie wyłączy na ten czas
+                        ogrzewanie
+                        lub
+                        klimatyzację. Ponad to, system dopilnuje, by w nieużytkowanych pokojach obniżyć temperaturę
+                        ogrzewania
+                        lub ograniczyć pracę klimatyzacji oraz wyłączyć oświetlenie.</p>
+                </li>
+            </ul>
+            <h3>W salach konferencyjnych, szkołach i uczelniach</h3>
+            <p>Prowadzący konferencje, wykłady czy prezentacje, często tracą sporo czasu na przygotowanie sali i
+                uruchomienie potrzebnych do projekcji urządzeń. Problem ten można rozwiązać, integrując urządzenia
+                multimedialne, oświetlenie, klimatyzację czy żaluzje, z systemem inteligentnym, który sprawi, że
+                sterowanie
+                nimi będzie dużo łatwiejsze i mniej czasochłonne. Tego typu rozwiązanie będzie realizowane za pomocą
+                wygodnego w użyciu touchpanelu, na zasadzie scen - wcześniej zaprogramowanych. Sprawi, że obsługa tych
+                wszystkich urządzeń stanie się wyjątkowo prosta i intuicyjna, a prowadzący będzie mógł skupić się już
+                tylko
+                na swoim zadaniu. Przykładowe sceny, dostępne z poziomu touchpanelu, będą wyglądały następująco:</p>
+            <ul>
+                <li>Scena "dyskusja" podniesie rolety, dostosuje oświetlenie, ustawi odpowiednią temperaturę,</li>
+                <li>Scena "wykład" przysłoni okna bądź przyciemni światła, opuści ekran, włączy projektor z prezentacją,
+                    dostosuje
+                    temperaturę,</li>
+                <li>Scena "projekcja" opuści rolety, załączy oświetlenie orientacyjne - wyłączając główne, opuści ekran,
+                    włączy projektor z filmem, ustawi komfortową temperaturę.</li>
+            </ul>
+        </main>
+    </article>
+    <footer>
+        <p>Copyright © 2022 - <span class="date"></span> IQ SYSTEM Artur Niemczyk. Wszelkie prawa zastrzeżone.
+        </p>
     </footer>
     <script src="assets/js/main.js"></script>
-    <!-- Code writed by: Kamil Kruszona -->
+    <!-- Writed by: Kamil Kruszona -->
 </body>
 
 </html>
