@@ -769,7 +769,7 @@ main.subpages h2 {
   }
 }
 
-@media only screen and (min-width: 700px) and (max-width: 860px) {
+@media only screen and (min-width: 700px) and (max-width: 900px) {
   .contact-section .container .contact-left {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -791,7 +791,7 @@ main.subpages h2 {
   }
 }
 
-@media only screen and (min-width: 860px) {
+@media only screen and (min-width: 900px) {
   .mobile-menu,
   .mobile-menu-exit {
     display: none;
