@@ -501,7 +501,27 @@ main.partners-page{
 .img-margin-top{
   margin-top: 3rem !important;
 }
-
+main.subpages{
+  padding: 2rem 3rem;
+  ul{
+    list-style-type: disc;
+    ol{
+      list-style-type: circle;
+    }
+    li{
+      margin-left: 3rem;
+    }
+  }
+  h3{
+    margin-top: 4rem;
+  }
+  .h3-non-margin{
+    margin-top: 0;
+  }
+  h2{
+    margin-top: 4rem;
+  }
+}
 @media only screen and (max-width: 500px){
   .contact-left{
     margin-left: 2em;
@@ -844,6 +864,32 @@ main.partners-page{
       width: 2px;
       left: 50%;
       background-image: linear-gradient(var(--addons-color), var(--secondary-color));
+    }
+  }
+  main.subpages{
+    padding: 2rem 6rem;
+    .container{
+      display: flex;
+      justify-content: center;
+      ul{
+        width: 45vw;
+        margin-top: 1rem;
+      }
+    }
+    ul{
+      list-style-type: disc;
+      li{
+        margin-left: 3rem;
+      }
+    }
+  }
+  main.project{
+    .container{
+      gap: 2rem;
+      justify-content: space-between;
+      .text-container{
+        max-width: 45vw;
+      }
     }
   }
 }
