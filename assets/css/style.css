@@ -609,6 +609,26 @@ main.partners-page .right-col .active .partner-link-div .partner-link:hover {
   background-color: var(--secondary-color2);
 }
 
+.nexwell-logo {
+  width: 15%;
+}
+
+.moeller-logo {
+  width: 15%;
+}
+
+.legrand-logo {
+  width: 15%;
+}
+
+.satel-logo {
+  width: auto;
+}
+
+.gacbud-logo {
+  width: 25%;
+}
+
 .partnership {
   padding: 0 2rem 1rem 2rem;
 }
