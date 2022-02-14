@@ -18,7 +18,6 @@ body{
     margin: 0;
     font-family: "Poppins";
     line-height: 1.5;
-    
 }
 
 header{
@@ -99,7 +98,6 @@ padding: 1em;
 text-align: right;
     .a-start{
         margin-top: 5em;
-        width: 3rem;
     }
     a{
         color: white;
@@ -126,18 +124,6 @@ text-align: right;
             font-weight: bold;
         }
     }
-}
-#div-click1{
-  width: 4rem;
-}
-#div-click2{
-  width: 4.5rem;
-}
-#div-click3{
-  width: 6rem;
-}
-#div-click4{
-  width: 12rem;
 }
 .subnav-content{
     display: none;
@@ -610,6 +596,21 @@ main.subpages{
   }  
 }
 @media only screen and (min-width: 900px) {
+  .a-start{
+    width: 3rem;
+  }
+  #div-click1{
+    width: 4rem;
+  }
+  #div-click2{
+    width: 4.5rem;
+  }
+  #div-click3{
+    width: 6rem;
+  }
+  #div-click4{
+    width: 12rem;
+  }
   .mobile-menu,
   .mobile-menu-exit {
     display: none;

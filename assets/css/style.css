@@ -114,7 +114,6 @@ nav {
 
 nav .a-start {
   margin-top: 5em;
-  width: 3rem;
 }
 
 nav a {
@@ -141,22 +140,6 @@ nav .div-click {
 nav .div-click:hover {
   cursor: pointer;
   font-weight: bold;
-}
-
-#div-click1 {
-  width: 4rem;
-}
-
-#div-click2 {
-  width: 4.5rem;
-}
-
-#div-click3 {
-  width: 6rem;
-}
-
-#div-click4 {
-  width: 12rem;
 }
 
 .subnav-content {
@@ -792,6 +775,21 @@ main.subpages h2 {
 }
 
 @media only screen and (min-width: 900px) {
+  .a-start {
+    width: 3rem;
+  }
+  #div-click1 {
+    width: 4rem;
+  }
+  #div-click2 {
+    width: 4.5rem;
+  }
+  #div-click3 {
+    width: 6rem;
+  }
+  #div-click4 {
+    width: 12rem;
+  }
   .mobile-menu,
   .mobile-menu-exit {
     display: none;
