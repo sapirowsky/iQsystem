@@ -255,6 +255,8 @@ footer{
     padding: 0.2em;
     display: flex;
     align-items: center;
+    margin-top: 2rem;
+    height: 72px;
     justify-content: center;
     p{
         font-size: 0.7em;
@@ -809,9 +811,6 @@ main.partners-page{
       
     }
   }
-}
-.partners-footer{
-  margin-top: 5rem;
 }
 }
 
