@@ -251,15 +251,15 @@ iframe {
 }
 footer{
     box-shadow: 0 1px 10px 0 rgba(0, 0, 0, .4);
-    // background-image: linear-gradient(var(--background-color), gray);
-    padding: 0.2em;
+    padding-left: 3rem;
+    padding-right: 3rem;
     display: flex;
     align-items: center;
     margin-top: 2rem;
-    height: 72px;
-    justify-content: center;
+    height: 55px;
+    justify-content: start;
     p{
-        font-size: 0.7em;
+        font-size: .9rem;
     }
 }
 h2{
@@ -388,15 +388,15 @@ main.partners-page{
     display: grid;
     grid-template-columns: auto;
     grid-template-rows: auto;
-    grid-template-areas:"nexwell moeller" "legrand satel";
+    grid-template-areas:"nexwell eaton" "legrand satel";
     
     .nexwell{
       grid-area: nexwell;
       border: 1px solid rgba(0,0,0,.125);
       border-top-left-radius: .25rem;
     }
-    .moeller{
-      grid-area: moeller;
+    .eaton{
+      grid-area: eaton;
       border: 1px solid rgba(0,0,0,.125);
       border-left: 0;
       border-top-right-radius: .25rem;
@@ -414,7 +414,7 @@ main.partners-page{
       border-top: 0;
       
     }
-    .nexwell,.moeller,.legrand,.satel{
+    .nexwell,.eaton,.legrand,.satel{
       display: flex;
       justify-content: center;
       align-items: center;
@@ -470,20 +470,13 @@ main.partners-page{
     }
   }
 }
-.nexwell-logo{
- width: 15%;
-}
-.moeller-logo{
-  width: 15%;
-}
+
+
 .legrand-logo{
-  width: 15%;
-}
-.satel-logo{
-  width: auto;
+  max-width: 210px;
 }
 .gacbud-logo{
-  width: 25%;
+  max-width: 100px;
 }
 .partnership{
   padding: 0 2rem 1rem 2rem;
@@ -768,7 +761,7 @@ main.partners-page{
       border-bottom: 0;
       border-top-left-radius: 5px;
     }
-    .moeller{
+    .eaton{
       border: 1px solid rgba(0,0,0,.125);
       border-radius: 0;
       border-right: 0;

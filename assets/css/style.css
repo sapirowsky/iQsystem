@@ -307,7 +307,8 @@ iframe {
 footer {
   -webkit-box-shadow: 0 1px 10px 0 rgba(0, 0, 0, 0.4);
           box-shadow: 0 1px 10px 0 rgba(0, 0, 0, 0.4);
-  padding: 0.2em;
+  padding-left: 3rem;
+  padding-right: 3rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -315,14 +316,14 @@ footer {
       -ms-flex-align: center;
           align-items: center;
   margin-top: 2rem;
-  height: 72px;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  height: 55px;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: start;
 }
 
 footer p {
-  font-size: 0.7em;
+  font-size: .9rem;
 }
 
 h2 {
@@ -498,7 +499,7 @@ main.partners-page .left-col {
       grid-template-columns: auto;
   -ms-grid-rows: auto;
       grid-template-rows: auto;
-      grid-template-areas: "nexwell moeller" "legrand satel";
+      grid-template-areas: "nexwell eaton" "legrand satel";
 }
 
 main.partners-page .left-col .nexwell {
@@ -509,10 +510,10 @@ main.partners-page .left-col .nexwell {
   border-top-left-radius: .25rem;
 }
 
-main.partners-page .left-col .moeller {
+main.partners-page .left-col .eaton {
   -ms-grid-row: 1;
   -ms-grid-column: 2;
-  grid-area: moeller;
+  grid-area: eaton;
   border: 1px solid rgba(0, 0, 0, 0.125);
   border-left: 0;
   border-top-right-radius: .25rem;
@@ -535,7 +536,7 @@ main.partners-page .left-col .satel {
   border-top: 0;
 }
 
-main.partners-page .left-col .nexwell, main.partners-page .left-col .moeller, main.partners-page .left-col .legrand, main.partners-page .left-col .satel {
+main.partners-page .left-col .nexwell, main.partners-page .left-col .eaton, main.partners-page .left-col .legrand, main.partners-page .left-col .satel {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -548,16 +549,16 @@ main.partners-page .left-col .nexwell, main.partners-page .left-col .moeller, ma
   padding: 12px 20px;
 }
 
-main.partners-page .left-col .nexwell a, main.partners-page .left-col .moeller a, main.partners-page .left-col .legrand a, main.partners-page .left-col .satel a {
+main.partners-page .left-col .nexwell a, main.partners-page .left-col .eaton a, main.partners-page .left-col .legrand a, main.partners-page .left-col .satel a {
   font-weight: normal;
 }
 
-main.partners-page .left-col .nexwell:hover, main.partners-page .left-col .moeller:hover, main.partners-page .left-col .legrand:hover, main.partners-page .left-col .satel:hover {
+main.partners-page .left-col .nexwell:hover, main.partners-page .left-col .eaton:hover, main.partners-page .left-col .legrand:hover, main.partners-page .left-col .satel:hover {
   background-color: var(--secondary-color);
   border-color: var(--secondary-color);
 }
 
-main.partners-page .left-col .nexwell:hover a, main.partners-page .left-col .moeller:hover a, main.partners-page .left-col .legrand:hover a, main.partners-page .left-col .satel:hover a {
+main.partners-page .left-col .nexwell:hover a, main.partners-page .left-col .eaton:hover a, main.partners-page .left-col .legrand:hover a, main.partners-page .left-col .satel:hover a {
   color: white;
 }
 
@@ -611,24 +612,12 @@ main.partners-page .right-col .active .partner-link-div .partner-link:hover {
   background-color: var(--secondary-color2);
 }
 
-.nexwell-logo {
-  width: 15%;
-}
-
-.moeller-logo {
-  width: 15%;
-}
-
 .legrand-logo {
-  width: 15%;
-}
-
-.satel-logo {
-  width: auto;
+  max-width: 210px;
 }
 
 .gacbud-logo {
-  width: 25%;
+  max-width: 100px;
 }
 
 .partnership {
@@ -960,7 +949,7 @@ main.subpages h2 {
     border-bottom: 0;
     border-top-left-radius: 5px;
   }
-  main.partners-page .left-col .moeller {
+  main.partners-page .left-col .eaton {
     border: 1px solid rgba(0, 0, 0, 0.125);
     border-radius: 0;
     border-right: 0;
