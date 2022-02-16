@@ -77,7 +77,7 @@ header{
     margin-bottom: 1.5em;
 }
 .menu-btn{
-    display: block;
+    display: block !important;
 }
 .mobile-menu-exit{
     float: right;
@@ -129,7 +129,7 @@ text-align: right;
     display: none;
 }
 .subnav-content-active{
-    display: block;
+    display: block; 
     color: white;
     text-decoration: none;
     display: block;
