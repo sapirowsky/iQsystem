@@ -20,7 +20,7 @@ body{
     line-height: 1.5;
 }
 
-header{
+.header-container{
     background: var(--background-color);
     padding: 1em 2em;
     box-shadow: 0 1px 10px 0 rgba(0, 0, 0, .4);
@@ -50,7 +50,7 @@ header{
         cursor: pointer;
     }
 }
-.position-fixed{
+header{
   position: fixed;
   top: 0;
   left: 0;
@@ -64,11 +64,11 @@ header{
   background: var(--secondary-color);
   width: 0%;
 }
-article{
+.main-mt{
   margin-top: 72px;
 }
-article.about{
-  margin-top: 100px;
+.about-main{
+  margin-top: 120px;
 }
 .currently-active-nav{
   font-weight: bold;
@@ -274,8 +274,7 @@ margin: 0.2rem 0.4rem;
 
 
 
-main.about{
-  .container{
+.about{
     .fewwords{
       margin-top: 2em;
       display: flex;
@@ -307,10 +306,8 @@ main.about{
       font-weight: normal;
       font-size: large;
     }
-  }
 }
-main.about{
-  .container{
+.about{
     .fewwords2{
       margin-top: 2em;
       display: flex;
@@ -342,10 +339,8 @@ main.about{
       font-weight: normal;
       font-size: large;
     }
-  }
 }
-main.about{
-  .container{
+.about{
     .fewwords3{
       margin-top: 2em;
       display: flex;
@@ -377,10 +372,9 @@ main.about{
       font-weight: normal;
       font-size: large;
     }
-  }
 }
 
-main.partners-page{
+.partners-page{
   section, .partners{
     padding: 1rem 2rem;
   }
@@ -537,7 +531,7 @@ main.partners-page{
 .img-margin-top{
   margin-top: 3rem !important;
 }
-main.subpages{
+.subpages{
   padding: 2rem 3rem;
   ul{
     list-style-type: disc;
@@ -626,16 +620,16 @@ main.subpages{
     display: none;
   }
 
-  header div.container {
+  .header-container .container {
     display: grid;
     grid-template-columns: 180px auto;
   }
-  header nav{
+  .header-container nav{
     display: flex;
 
   }
-  a.logo{
-    font-size: 1.5rem;
+  .logo{
+    font-size: 1.5rem !important;
   }
   nav{
     display: flex;
@@ -653,7 +647,7 @@ main.subpages{
       color: black;
       margin: 0 !important;
     }
-    div.div-click{
+    .div-click{
       color: black;
       font-size: 1em;
       // position: fixed;
@@ -742,11 +736,11 @@ main.subpages{
         }
     }
 }
-main.partners-page{
+.partners-page{
   section, .partners{
     padding: 2rem 6rem;
   }
-  div.partners{
+  .partners{
     display: flex;
   }
   .left-col{
@@ -892,15 +886,13 @@ main.partners-page{
         height: 100%;
       }
     }
-  main.about{
-    .container{
-      section.hero{
+  .about{
+      .hero{
         padding: 1em 1em;
         p{
           max-width: 700px;
         }
       }
-    }
   }
   .contact-left{
     margin: auto auto auto 4em;
@@ -927,7 +919,7 @@ main.partners-page{
       background-image: linear-gradient(var(--addons-color), var(--secondary-color));
     }
   }
-  main.subpages{
+  .subpages{
     padding: 2rem 6rem;
     .container{
       display: flex;
@@ -944,7 +936,7 @@ main.partners-page{
       }
     }
   }
-  main.project{
+  .project{
     .container{
       gap: 2rem;
       justify-content: space-between;
@@ -970,7 +962,7 @@ main.partners-page{
     .contactData-h2{
       margin-top: .7rem !important;
     }
-    main.partners-page{
+    .partners-page{
       padding: 1rem 2rem;
     }
 }
