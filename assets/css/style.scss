@@ -254,6 +254,7 @@ footer{
     padding-left: 3rem;
     padding-right: 3rem;
     display: flex;
+    
     align-items: center;
     margin-top: 2rem;
     height: 55px;
@@ -306,6 +307,9 @@ margin: 0.2rem 0.4rem;
       font-weight: normal;
       font-size: large;
     }
+}
+.caption-whatWeDo{
+  margin-left: 2.3rem;
 }
 .about{
     .fewwords2{
@@ -632,7 +636,7 @@ margin: 0.2rem 0.4rem;
     font-size: 1.5rem !important;
   }
   nav{
-    display: flex;
+    display: flex !important;
     justify-content: space-between;
     overflow-y: hidden;
     background: none;
@@ -674,7 +678,7 @@ margin: 0.2rem 0.4rem;
     }
   }
   .menu-btn{
-    display: flex;
+    display: flex !important;
   }
   .contact{
     background-color: var(--secondary-color);
@@ -691,8 +695,6 @@ margin: 0.2rem 0.4rem;
     position: absolute;
     box-shadow: 0 1px 10px 0 rgba(0, 0, 0, .4);
     width: 8.75rem;
-    top: 72px;
-    
     text-align: left;
     a{
       font-size: 1rem;
@@ -723,6 +725,45 @@ margin: 0.2rem 0.4rem;
       }
     }
   }
+  .subnav:hover{
+    .subnav-content{
+      background-color: var(--background-color);
+      position: absolute;
+      box-shadow: 0 1px 10px 0 rgba(0, 0, 0, .4);
+      padding: 5px;
+      width: 8.75rem;
+      display: block;
+      text-align: left;
+      a{
+        font-size: 1rem;
+        position: relative;
+        &::after{
+          position: absolute;
+          content: '';
+          height: 2px;
+          bottom: 6px;
+  
+          margin: 0 auto;
+          left: 0;
+          // right: 0;
+          width: 20%;
+          background: var(--link-color);
+  
+  
+  
+          -o-transition:.5s;
+          -ms-transition:.5s;
+          -moz-transition:.5s;
+          -webkit-transition:.5s;
+          transition:.5s;
+        }
+        &:hover:after{
+          width: 80%;
+          background: var(--secondary-color2);
+        }
+      }
+    }
+  }
   .tiles{
     display: flex;
     .tile{
@@ -746,7 +787,6 @@ margin: 0.2rem 0.4rem;
   .left-col{
     display: block;
     position: absolute;
-    height: 100%;
     margin: auto;
     .nexwell{
       border: 1px solid rgba(0,0,0,.125);

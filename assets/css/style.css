@@ -388,6 +388,10 @@ p {
   font-size: large;
 }
 
+.caption-whatWeDo {
+  margin-left: 2.3rem;
+}
+
 .about .fewwords2 {
   margin-top: 2em;
   display: -webkit-box;
@@ -820,9 +824,9 @@ p {
     font-size: 1.5rem !important;
   }
   nav {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
+    display: -webkit-box !important;
+    display: -ms-flexbox !important;
+    display: flex !important;
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
@@ -866,9 +870,9 @@ p {
     height: 100%;
   }
   .menu-btn {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
+    display: -webkit-box !important;
+    display: -ms-flexbox !important;
+    display: flex !important;
   }
   .contact {
     background-color: var(--secondary-color);
@@ -886,7 +890,6 @@ p {
     -webkit-box-shadow: 0 1px 10px 0 rgba(0, 0, 0, 0.4);
             box-shadow: 0 1px 10px 0 rgba(0, 0, 0, 0.4);
     width: 8.75rem;
-    top: 72px;
     text-align: left;
   }
   .subnav-content-active a {
@@ -906,6 +909,36 @@ p {
     transition: .5s;
   }
   .subnav-content-active a:hover:after {
+    width: 80%;
+    background: var(--secondary-color2);
+  }
+  .subnav:hover .subnav-content {
+    background-color: var(--background-color);
+    position: absolute;
+    -webkit-box-shadow: 0 1px 10px 0 rgba(0, 0, 0, 0.4);
+            box-shadow: 0 1px 10px 0 rgba(0, 0, 0, 0.4);
+    padding: 5px;
+    width: 8.75rem;
+    display: block;
+    text-align: left;
+  }
+  .subnav:hover .subnav-content a {
+    font-size: 1rem;
+    position: relative;
+  }
+  .subnav:hover .subnav-content a::after {
+    position: absolute;
+    content: '';
+    height: 2px;
+    bottom: 6px;
+    margin: 0 auto;
+    left: 0;
+    width: 20%;
+    background: var(--link-color);
+    -webkit-transition: .5s;
+    transition: .5s;
+  }
+  .subnav:hover .subnav-content a:hover:after {
     width: 80%;
     background: var(--secondary-color2);
   }
@@ -939,7 +972,6 @@ p {
   .partners-page .left-col {
     display: block;
     position: absolute;
-    height: 100%;
     margin: auto;
   }
   .partners-page .left-col .nexwell {
