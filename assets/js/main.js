@@ -118,10 +118,17 @@ currentYear.textContent = date.getFullYear()
 
 //przechwytuje scrolowonie i procenty
 $(window).scroll(function () {
-    let wintop = $(window).scrollTop(), docheight =
-
-        $(document).height(), winheight = $(window).height()
+    let wintop = $(window).scrollTop(),
+        docheight = $(document).height(),
+        winheight = $(window).height()
     let scrolled = (wintop / (docheight - winheight)) * 100
+    if (scrolled == 0) $('.header-container').css('box-shadow', 'none')
+    if (scrolled > 0) $('.header-container').css('box-shadow', '0 1px 10px 0 rgba(0, 0, 0, .1)')
+    if (scrolled > 1.5) $('.header-container').css('box-shadow', '0 1px 10px 0 rgba(0, 0, 0, .2)')
+    if (scrolled > 3) $('.header-container').css('box-shadow', '0 1px 10px 0 rgba(0, 0, 0, .3)')
+    if (scrolled > 6) $('.header-container').css('box-shadow', '0 1px 10px 0 rgba(0, 0, 0, .4)')
+
+
 
     $('.scroll-line').css('width', (scrolled + '%'))
 })
