@@ -1,0 +1,95 @@
+.carousel{
+    width: 100%;
+    min-height: 500px;
+    position: relative;
+    margin-top:3rem
+}
+.carousel > ul{
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.slide{
+    position: absolute;
+    transition: left 200ms ease-in-out, opacity 200ms ease-in-out;
+    opacity: 0;
+  }
+.slide[data-active]{
+  opacity: 1;
+  left: 0%;
+}
+.carousel-button {
+  position: absolute;
+  background: none;
+  border: none;
+  font-size: 3rem;
+  top: 50%;
+  z-index: 2;
+  transform: translateY(-50%);
+  color: rgba(255,255,255, .5);
+  cursor: pointer;
+  border-radius: .25rem;
+  padding: 0 .25rem;
+  background-color: rgba(0, 0, 0, .1)
+}
+.carousel-button:hover,
+.carousel-button:focus{
+  color: white;
+  background-color: rgba(0, 0, 0, .2);
+}
+.carousel-button:focus{
+  outline: 1px solid black;
+}
+.carousel-button.prev{
+  left: -2rem;
+}
+.carousel-button.next{
+  right: -2rem;
+}
+.carousel > ul > .slide > div > .partner-link-container{
+    display: flex;
+    justify-content: end;
+    width: 100%;
+    height: auto;
+  }
+.carousel > ul > .slide > div > .partner-link-container > .partner-link{
+    display: block ;
+    margin: 1rem;
+    padding: 1rem;
+    color: var(--defaultText-color);
+    border-radius: 5rem;
+    background-color: var(--secondary-color);
+    width: auto;
+}
+.carousel > ul > .slide > div > .partner-link-container > .partner-link:hover{
+    background-color: var(--secondary-color2);
+}
+@media only screen and (min-width: 1080px) {
+  .carousel-button.prev{
+    left: -3rem;
+  }
+  .carousel-button.next{
+    right: -3rem;
+  }
+  .carousel{
+    min-height: 450px;
+}
+  .slide > div{
+    height: 100%;
+    width: 40vw;
+  }
+  .carousel > ul{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+  .slide[data-halfactive]{
+    opacity: 1;
+    left: 50%;
+  }
+}
+@media only screen and (min-width: 1500px) {
+  .carousel{
+    min-height: 350px;
+}
+}

@@ -1,38 +1,54 @@
-// menu partnerów
-const nexwell = document.querySelectorAll('#nexwell')
-const eaton = document.querySelectorAll('#eaton')
-const legrand = document.querySelectorAll('#legrand')
-const satel = document.querySelectorAll('#satel')
-const rightCol = document.querySelectorAll('#right-col')
+const buttons = document.querySelectorAll("[data-carousel-button]")
 
-nexwell[0].addEventListener('click', () => {
-    hideActive()
-    addActive(nexwell)
+buttons.forEach(button => {
+    button.addEventListener("click", () => {
+        const offset = button.dataset.carouselButton === "next" ? 1 : -1
+        const slides = button
+            .closest("[data-carousel]")
+            .querySelector("[data-slides]")
 
-})
-eaton[0].addEventListener('click', () => {
-    hideActive()
-    addActive(eaton)
-})
-legrand[0].addEventListener('click', () => {
-    hideActive()
-    addActive(legrand)
-})
-satel[0].addEventListener('click', () => {
-    hideActive()
-    addActive(satel)
-})
+        const activeSlide = slides.querySelector("[data-active]")
+        let newIndex = [...slides.children].indexOf(activeSlide) + offset
+        if (newIndex < 0) newIndex = slides.children.length - 1
+        if (newIndex >= slides.children.length) newIndex = 0
 
-function hideActive() {
-    if (document.querySelector('.active')) {
-        const active = document.querySelectorAll('.active')
-        active.forEach(e => {
-            e.classList.remove('active')
-        })
-    }
-}
-function addActive(item) {
-    item.forEach(element => {
-        element.classList.add('active')
+        slides.children[newIndex].dataset.active = true
+        delete activeSlide.dataset.active
+
+
+        const halfActiveSlide = slides.querySelector("[data-halfactive]")
+        let newHalfindex = [...slides.children].indexOf(halfActiveSlide) + offset
+        if (newHalfindex < 0) newHalfindex = slides.children.length - 1
+        if (newHalfindex >= slides.children.length) newHalfindex = 0
+
+        slides.children[newHalfindex].dataset.halfactive = true
+        delete halfActiveSlide.dataset.halfactive
     })
-}
+    button.addEventListener("mouseover", () => {
+        clearInterval(autoSlideChange)
+    })
+})
+const button = document.querySelector("[data-carousel-button]")
+const slides = button
+    .closest("[data-carousel]")
+    .querySelector("[data-slides]")
+
+
+const autoSlideChange = setInterval(() => {
+    const activeSlide = slides.querySelector("[data-active]")
+    let newIndex = [...slides.children].indexOf(activeSlide) + 1
+    if (newIndex < 0) newIndex = slides.children.length - 1
+    if (newIndex >= slides.children.length) newIndex = 0
+
+    const halfActiveSlide = slides.querySelector("[data-halfactive]")
+    let newHalfindex = [...slides.children].indexOf(halfActiveSlide) + 1
+    if (newHalfindex < 0) newHalfindex = slides.children.length - 1
+    if (newHalfindex >= slides.children.length) newHalfindex = 0
+
+    slides.children[newIndex].dataset.active = true
+    delete activeSlide.dataset.active
+
+    slides.children[newHalfindex].dataset.halfactive = true
+    delete halfActiveSlide.dataset.halfactive
+
+}, 5000)
