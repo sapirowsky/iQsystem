@@ -54,7 +54,7 @@ header{
   position: fixed;
   top: 0;
   left: 0;
-  z-index: 1;
+  z-index: 3;
   width: 100%;
   border-bottom: 1px solid #ccc;
 }
@@ -262,6 +262,9 @@ footer{
     p{
         font-size: .9rem;
     }
+}
+.contact-footer{
+  margin-top: 0
 }
 h2{
   margin: 0.5rem 0rem;
@@ -583,7 +586,6 @@ margin: 0.2rem 0.4rem;
     margin: 0;
   }
 }
-
 @media only screen and (min-width: 700px) and (max-width: 900px){
   .contact-section{
     .container{
@@ -985,6 +987,13 @@ margin: 0.2rem 0.4rem;
       }
     }
   }
+}
+@media only screen and (min-width: 1080px) and (max-width: 1130px){
+  .partnership{
+    .container{
+      max-width: 85vw;
+    }
+  }  
 }
 @media only screen and (min-width: 1260px){
     .contact-left{

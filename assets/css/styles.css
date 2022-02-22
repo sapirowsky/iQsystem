@@ -13,10 +13,13 @@
     position: absolute;
     transition: left 200ms ease-in-out, opacity 200ms ease-in-out;
     opacity: 0;
+    z-index: 0;
+    left: 2.5%;
   }
 .slide[data-active]{
   opacity: 1;
-  left: 0%;
+  left: 2.5%;
+  z-index: 1;
 }
 .carousel-button {
   position: absolute;
@@ -64,6 +67,11 @@
 .carousel > ul > .slide > div > .partner-link-container > .partner-link:hover{
     background-color: var(--secondary-color2);
 }
+@media only screen and (min-width: 700px) {
+  .carousel{
+    min-height: 400px;
+}
+}
 @media only screen and (min-width: 1080px) {
   .carousel-button.prev{
     left: -3rem;
@@ -85,7 +93,8 @@
   }
   .slide[data-halfactive]{
     opacity: 1;
-    left: 50%;
+    left: 52.5%;
+    z-index: 1;
   }
 }
 @media only screen and (min-width: 1500px) {

@@ -58,7 +58,7 @@ header {
   position: fixed;
   top: 0;
   left: 0;
-  z-index: 1;
+  z-index: 3;
   width: 100%;
   border-bottom: 1px solid #ccc;
 }
@@ -322,6 +322,10 @@ footer {
 
 footer p {
   font-size: .9rem;
+}
+
+.contact-footer {
+  margin-top: 0;
 }
 
 h2 {
@@ -1174,6 +1178,12 @@ p {
   }
   .project .container .text-container {
     max-width: 45vw;
+  }
+}
+
+@media only screen and (min-width: 1080px) and (max-width: 1130px) {
+  .partnership .container {
+    max-width: 85vw;
   }
 }
 
